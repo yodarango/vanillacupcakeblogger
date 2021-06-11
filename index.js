@@ -1,5 +1,5 @@
 //dev enviromental variables
-require('dotenv').config();
+//require('dotenv').config();
 
 //load database
 require('./db/db');
