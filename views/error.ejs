@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('./partials/head') %>
+
+		<title>
+			Vanilla Cupcake Blogger | Blogging never tastes so delicious
+		</title>
+	</head>
+	<body>
+		<%- include('./partials/_header') %>
+		<div class="error-wrapper">
+			<img src="../images/x.svg" alt="error psge" />
+			<h1>Oops!</h1>
+			<h2><%=error%></h2>
+			<div class="goBack">Go Back</div>
+			<script src="js/index.js"></script>
+		</div>
+		<script>
+			const goBack = document.querySelector('.goBack');
+			goBack.addEventListener('click', () => {
+				window.history.back();
+			});
+		</script>
+	</body>
+</html>

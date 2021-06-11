@@ -1,0 +1,101 @@
+<div class="header">
+	<div class="header_menu-wrapper">
+		<div class="header_menu">
+			<div class="menu_burger-top"></div>
+			<div class="menu_burger-middle"></div>
+			<div class="menu_burger-bottom"></div>
+		</div>
+	</div>
+	<h1 class="title">
+		<%=blog.firstName%> <span class="saute"><%=blog.secondName%></span>
+	</h1>
+</div>
+<div class="menu-container">
+	<a href="/" class="menu-container_link-one a-close">Home</a>
+	<a href="/about" class="menu-container_link-two a-close">About</a>
+	<a href="/posts" class="menu-container_link-two a-close">All Posts</a>
+	<a href="/contact" class="menu-container_link-three a-close">Contact</a>
+	<a href="#" id="pay-button" class="menu-container_link-three a-close"
+		><%=blog.paypalButtonTitle%></a
+	>
+	<br /><br /><br /><br />
+	<a id="subscribe-menu" class="menu-container_link-three a-close"
+		>Subscribe</a
+	>
+</div>
+
+<form
+	action="/subscribers"
+	method="POST"
+	id="card-on-bck-subscribers"
+	class="card-on-bck"
+>
+	<h1 class="thank-you-for-subscribing">THANK YOU FOR SUBSCRIBING!</h1>
+	<div class="input-wrapper">
+		<input
+			type="text"
+			name="name"
+			id="avatar-name"
+			maxlength="20"
+			placeholder="enter your name"
+			required
+		/>
+	</div>
+	<div class="input-wrapper">
+		<input
+			type="email"
+			name="email"
+			id="avatar-name"
+			maxlength="50"
+			placeholder="enter your email"
+			required
+		/>
+	</div>
+	<p class="once-registered">
+		Once subscribed you will receive updates, news, and more 😊
+	</p>
+	<div class="cancel-post" onclick="hideSubscriptionForm()">CANCEL</div>
+	<button class="send-post" onclick="loader()" type="submit">SUBMIT</button>
+</form>
+
+<!-- button form -->
+<div id="button-form-wrapper">
+	<h3><%= blog.paypalButtonComment %></h3>
+	<%- blog.paypalButton %>
+	<div class="close-button-wrapper" onclick="hideSubscriptionForm()">
+		Close
+	</div>
+</div>
+<!-- subscribe and pay code Code is here so that user has access to it in every page -->
+<script>
+	const hideSubscriptionForm = () => {
+		document.querySelector('.dark-background').remove();
+		const card = document.querySelector('#card-on-bck-subscribers');
+		card.style.display = 'none';
+	};
+
+	const subscribeButtonMenu = document.querySelector('#subscribe-menu');
+	subscribeButtonMenu.addEventListener('click', () => {
+		const background = document.createElement('DIV');
+		background.className = 'dark-background';
+
+		const card = document.querySelector('#card-on-bck-subscribers');
+		card.style.display = 'flex';
+
+		document.body.appendChild(background);
+	});
+
+	//===========Button=============
+
+	const payButton = document.querySelector('#pay-button');
+	const buttonWrapper = document.querySelector('#button-form-wrapper');
+	payButton.addEventListener('click', () => {
+		const background = document.createElement('DIV');
+		background.className = 'dark-background';
+
+		buttonWrapper.style.display = 'block';
+
+		background.appendChild(buttonWrapper);
+		document.body.appendChild(background);
+	});
+</script>

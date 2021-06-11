@@ -1,0 +1,57 @@
+.spacer-account {
+	margin: 7rem;
+}
+
+.title-account {
+	text-align: center;
+	margin: auto;
+}
+.password-form {
+	width: 90%;
+	max-width: 56rem;
+	margin: auto;
+}
+.password-input-wrapper {
+	margin: auto;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.password-input {
+	border: 2px solid #f2f2f2;
+	height: 3rem;
+	background-image: none;
+	background-color: transparent;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	padding-left: 1rem;
+	font: 1.5rem 'Oswald', sans-serif;
+	color: #344e41;
+	width: 80%;
+	max-width: 400px;
+}
+.password-input:focus {
+	outline: none;
+}
+.password-label {
+	color: #344e41;
+	font: 1.5rem 'Oswald', sans-serif;
+	margin: 2rem auto;
+	display: block;
+	text-align: center;
+}
+.password-update {
+	padding: 0.5rem 2rem;
+	color: white;
+	font: 800 1rem 'Oswald', sans-serif;
+	border: none;
+	background-color: #119822;
+	cursor: pointer;
+	display: block;
+	margin: 2rem auto;
+}
+.account-wrapper {
+	height: 25vh;
+}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kristi&display=swap');
+
+//colors
+$main-color: #468faf;
+$secondary-color: #014f86;
+$third-color: #a9d6e5;
+$lettering: rgb(41, 41, 41);
+$fourth-color: rgb(43, 43, 43);
+$cancel-delete: rgb(175, 52, 52);
+
+//fonts
+$main-font: 'Shippori Mincho B1', serif;
+$secondary-font: 'IBM Plex Sans', sans-serif;
+$third-font: 'Oswald', sans-serif;
+$saute: 'Kristi', cursive;
+
+// Spacers
+$micro-space-around-element: 0.3rem;
+$macro-space-around-element: 1rem;
+$space-around-element: 2rem;
+$super-space-around-element: 3rem;
+$giant-space-around-element: 5rem;
+
+//font sizes
+$main-font-size: 1rem;
+$mobile-title-size: 1.3rem;
+$title-font-size: 2rem;
+$line-height: 200%;
+
+//=========IPAD=========
+$main-font-ipad: 1.4rem;

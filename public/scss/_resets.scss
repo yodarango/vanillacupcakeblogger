@@ -1,0 +1,25 @@
+@import './variables';
+
+//global values
+* {
+	font-family: $main-font;
+	color: $lettering;
+	box-sizing: border-box;
+}
+
+//basics
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+//scrollbars for Chrome and Safari
+*::-webkit-scrollbar {
+	display: none;
+}
+//scrollbar for Firefox and IE
+* {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}

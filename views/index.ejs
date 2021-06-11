@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include('./partials/head') %> 
+
+    <!-- GOOGLE ADDS -->
+    <script data-ad-client="ca-pub-3002864427552998" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <title>Vanilla Cupcake Blogger | Blogging never tastes so delicious </title>
+</head>
+<body>
+    <%- include('./partials/_header') %> 
+<!-- general information about the blog -->
+    <div class="page-art" style= "background-image: url(data:image/png;base64,<%=blog.background%>)"">
+        <img src="data:image/png;base64,<%=blog.logo%>" class="page-art_logo">
+    </div>
+
+    <h2 class="all-posts-title">MOST RECENT</h2>
+    <div class="hr"></div>
+
+    <!-- Posts section -->
+    <div class="all-posts-grid all-posts-grid-index">
+        <% posts.forEach((post) => { %>
+            <div class="post-card">
+                <img src="<%=post.postImage%> " alt="image for a post article" class="post-card_post-image">
+                <h3 class="post-card_post-title"><%= post.title %></h3>
+                <h5 class="post-card_date"><%= post.created%></h5>
+                <p class='post-card_constent'> <%=post.content%></p>
+                <a href="/see-post/<%=post._id%> " class="post-card_button--read-more">READ MORE</a>
+            </div>
+
+        <% }) %> 
+    </div>
+<div class="featured-section">
+    <img src="data:image/png;base64,<%=blog.featuredImage%>" alt="a photo" class="featured-section_image">
+    <div class="featured-section-title-content-wrapper">
+    <h2 class="featured-section_title"> <%= blog.featuredTitle.toUpperCase(); %></h2>
+    <p class="featured-section_parragraph"> <%-blog.featuredContent%> </p>
+    </div>
+</div>
+
+<!-- lattest video -->
+<div class="youtube-video-section" id="youtube-video-show-<%=blog.latestYoutubeVideoShow %>">
+    <h3 class="what-others-are-saying"><%=blog.mediaFeedTitle%></h3>
+<%-blog.mediaFeedEmbed%>
+</div>
+
+<!-- comments section  -->
+<h2 class="what-others-are-saying">WHAT ARE OTHERS SAYING</h2>
+<div id="public-comments-anchor" class="public-comments">
+    <% comments.forEach((comment)=>{ %>
+        <div class="public-comments_card">
+            <img src="<%= comment.avatar %> " alt="avatar" class="public-comments_image">
+            <h5 class="public-comments_name"><%= comment.name %></h5>
+            <p class="public-comments_date"><%= comment.createdAt %></p>
+            <p class="public-comments_comment">"<%= comment.comment %></p>
+        </div>
+
+   <% }) %> 
+</div>
+
+<div class="leave-a-comment-wrapper">
+    <button class="leave-a-comment">LEAVE A COMMENT</button>
+</div>
+<form action="/comments" method="POST" id="card-on-bck" class="card-on-bck card-on-bck-comment">
+
+    <h3>Choose Your Avatar</h3>
+    <div class="choose-your-avatar">
+
+        <div class="avatar-wrapper">
+            <label for="avatar-7"> <img class="public-comments_image" src="../images/avatars/Avatar7.png"alt="icon">
+            <input type="radio" id="avatar-7" class="avatar-input" name="avatar" value="../images/avatars/Avatar7.png" required>
+            </label>
+        </div>
+
+        <div class="avatar-wrapper">
+            <label for="avatar-1"> <img class="public-comments_image" src="../images/avatars/Avatar1.png" alt="icon">
+            <input type="radio" id="avatar-1" class="avatar-input" name="avatar" value="../images/avatars/Avatar1.png" required>
+            </label>
+        </div>
+
+        <div class="avatar-wrapper">
+            <label for="avatar-8"> <img class="public-comments_image" src="../images/avatars/Avatar8.png"alt="icon">
+            <input type="radio" id="avatar-8" class="avatar-input" name="avatar" value="../images/avatars/Avatar8.png" required>
+            </label>
+        </div>
+
+        <div class="avatar-wrapper">
+            <label for="avatar-2"> <img class="public-comments_image" src="../images/avatars/Avatar2.png" alt="icon">
+            <input type="radio" id="avatar-2" class="avatar-input" name="avatar" value="../images/avatars/Avatar2.png" required>
+            </label>
+        </div>
+
+        <div class="avatar-wrapper">
+            <label for="avatar-9"> <img class="public-comments_image" src="../images/avatars/Avatar9.png"alt="icon">
+            <input type="radio" id="avatar-9" class="avatar-input" name="avatar" value="../images/avatars/Avatar9.png" required>
+            </label>
+        </div>
+
+        <div class="avatar-wrapper">
+            <label for="avatar-3"> <img class="public-comments_image" src="../images/avatars/Avatar3.png" alt="icon">
+            <input type="radio" id="avatar-3" class="avatar-input" name="avatar" value="../images/avatars/Avatar3.png" required>
+            </label>
+        </div>
+
+        <div class="avatar-wrapper">
+            <label for="avatar-10"> <img class="public-comments_image" src="../images/avatars/Avatar10.png"alt="icon">
+            <input type="radio" id="avatar-10" class="avatar-input" name="avatar" value="../images/avatars/Avatar10.png" required>
+            </label>
+        </div>
+
+        <div class="avatar-wrapper">
+            <label for="avatar-4"> <img class="public-comments_image" src="../images/avatars/Avatar4.png" alt="icon">
+            <input type="radio" id="avatar-4" class="avatar-input" name="avatar" value="../images/avatars/Avatar4.png" required>
+            </label>
+        </div>
+
+        <div class="avatar-wrapper">
+            <label for="avatar-11"> <img class="public-comments_image" src="../images/avatars/Avatar11.png"alt="icon">
+            <input type="radio" id="avatar-11" class="avatar-input" name="avatar" value="../images/avatars/Avatar11.png" required>
+            </label>
+        </div>
+
+        <div class="avatar-wrapper">
+            <label for="avatar-5"> <img class="public-comments_image" src="../images/avatars/Avatar5.png" alt="icon">
+            <input type="radio" id="avatar-5" class="avatar-input" name="avatar" value="../images/avatars/Avatar5.png" required>
+            </label>
+        </div>
+
+        <div class="avatar-wrapper">
+            <label for="avatar-12"> <img class="public-comments_image" src="../images/avatars/Avatar12.png"alt="icon">
+            <input type="radio" id="avatar-12" class="avatar-input" name="avatar" value="../images/avatars/Avatar12.png" required>
+            </label>
+        </div>
+
+        <div class="avatar-wrapper">
+            <label for="avatar-6"> <img class="public-comments_image" src="../images/avatars/Avatar6.png" alt="icon">
+            <input type="radio" id="avatar-6" class="avatar-input" name="avatar" value="../images/avatars/Avatar6.png" required>
+            </label>
+        </div>
+
+    </div>
+
+    <div class="avatar-name-wrapper">
+        <input type="text" name="name" id="avatar-name" maxlength="20" placeholder="Enter your name" required>
+    </div>
+    <textarea name="comment" id="avatar-comment" cols="30" rows="10" placeholder="Enter your comment" maxlength="200" required></textarea>
+    <div class="cancel-post"  onclick="hideCreateComment()">CANCEL</div>
+    <button class="send-post" type="submit">SUBMIT</button>
+</form>
+<%- include('./partials/_footer.ejs') %> 
+<%- include('./partials/_scripts.ejs') %> 
+</body>
+</html>

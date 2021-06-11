@@ -1,0 +1,48 @@
+.login-form-wrapper {
+	width: 100vw;
+	height: 80vh;
+	min-height: 600px;
+	margin-top: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	.login-logo {
+		width: 50vw;
+		max-width: 150px;
+		margin: 2rem auto;
+	}
+
+	.login-form {
+		width: 90%;
+		max-width: 500px;
+		margin-bottom: 5rem;
+
+		label {
+			color: $secondary-color;
+			font: 1.7rem $third-font;
+		}
+		input {
+			display: block;
+			width: 100%;
+			height: 3rem;
+			box-shadow: none;
+			border: 1px solid $third-color;
+			margin: $micro-space-around-element auto $space-around-element;
+			color: $secondary-color;
+			font: 1.3rem $third-font;
+			padding: 0 1rem;
+
+			&:focus {
+				outline: none;
+			}
+		}
+		.contact-form-button {
+			@include standard-button;
+			background: $main-color;
+			box-shadow: 3px 3px 5px rgb(207, 207, 207);
+			margin: $macro-space-around-element auto;
+		}
+	}
+}

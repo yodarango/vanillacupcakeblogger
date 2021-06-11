@@ -1,0 +1,80 @@
+.error-wrapper {
+	width: 90%;
+	max-width: 56rem;
+	margin: 10rem auto;
+	display: Flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	img {
+		width: 80%;
+	}
+
+	h1 {
+		font: 800 5rem $third-font;
+		color: $cancel-delete;
+		margin: $space-around-element;
+	}
+
+	h2 {
+		font: 600 2rem $third-font;
+		color: $main-color;
+	}
+	.goBack {
+		font: 600 1.3rem $third-font;
+		color: white;
+		margin: $macro-space-around-element;
+		background: $main-color;
+		cursor: pointer;
+		padding: 0.5rem 1rem;
+	}
+}
+
+.success-wrapper {
+	width: 90%;
+	max-width: 56rem;
+	margin: 10rem auto;
+	display: Flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	img {
+		width: 60%;
+	}
+
+	h1 {
+		font: 800 2rem $third-font;
+		color: $main-color;
+		margin: $space-around-element auto;
+		width: 100%;
+		text-align: center;
+	}
+
+	p {
+		font: 600 1.5rem $third-font;
+		color: $fourth-color;
+		margin: $space-around-element auto;
+		width: 100%;
+		text-align: center;
+	}
+	.goBack {
+		font: 600 1.3rem $third-font;
+		color: white;
+		margin: $space-around-element auto;
+		background: $fourth-color;
+		cursor: pointer;
+		padding: 1rem 2rem;
+
+		&:hover {
+			transform: scale(0.9);
+			transition: 500ms transform ease-in-out;
+			background-color: rgb(82, 82, 82);
+		}
+	}
+	span {
+		color: $third-color;
+		font: 600 1.3rem $third-font;
+	}
+}

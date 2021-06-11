@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Architects+Daughter&family=Chango&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Unicase:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Dela+Gothic+One&family=Dosis:wght@200;300;400;500;600;700;800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Hind+Guntur:wght@300;400;500;600;700&family=Hind+Madurai:wght@300;400;500;600;700&family=Lobster&family=Pacifico&family=Pangolin&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Shadows+Into+Light&family=Train+One&display=swap');
+
+.editor-wrapper {
+	width: 90%;
+	max-width: 56rem;
+	min-height: 80vh;
+	margin: $space-around-element auto;
+}
+//     .editor-options {
+//         width: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: left;
+//         flex-wrap: wrap;
+//         flex-shrink: 0;
+//         flex-grow: 0;
+//     }
+//         .editor-options_option{
+//             display: block;
+//             background-color: #f2f2f2;
+//             width: 3rem;
+//             height: 3rem;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             position: relative;
+
+//             &:hover{
+//                 cursor: pointer;
+//                 background-color: #c5c5c5;
+//             }
+
+//             svg{
+//                 pointer-events: none;
+//             }
+
+//             input{
+//                 width: 2.5rem;
+//                 height: 2.5rem;
+//                 font: 400 1rem $third-font;
+//             }
+//         }
+// #image-size-options, #image-align-options, #text-type-options{
+//     background: #f2f2f2;
+//     width: 10rem;
+//     height: 20rem;
+//     position: absolute;
+//     top: 3rem;
+//     left: -5rem;
+//     border-top:3px solid #808080;
+//     z-index: 2;
+//     padding: 1rem;
+//     display: none;
+
+//     span{
+//         display: block;
+//         padding: 1rem;
+//         font: 400 1.2rem $third-font;
+//     }
+
+//     span:hover{
+//         background: #c5c5c5;
+//     }
+// }
+
+// #image-align-options{
+//     height: 16rem;
+//     left: 0rem;
+// }
+
+// #text-type-options{
+//     height: 10rem;
+//     left: -7rem;
+// }
+
+// #font-family_options{
+//     position: absolute;
+//     width: 13rem;
+//     height: 30rem;
+//     overflow-y: scroll;
+//     background: #f2f2f2;
+//     border-top:3px solid #808080;
+//     z-index: 2;
+//     padding: 1rem;
+//     top: 3rem;
+//     display: none;
+
+//     span{
+//         display: block;
+//         padding: 1rem
+//     }
+
+//     span:hover{
+//         background: #c5c5c5;
+//     }
+// }
+
+// #dela-gothic-one{
+//     font: 1rem 'Dela Gothic One', cursive;
+// }
+// #train-one{
+//     font: 1rem 'Train One', cursive;
+// }
+// #roboto-mono{
+//     font: 1rem 'Roboto Mono', monospace;
+// }
+// #chango{
+//     font: 1rem 'Chango', cursive;
+// }
+// #quicksand{
+//     font: 1rem 'Quicksand', sans-serif;
+// }
+// #pangolin{
+//     font: 1rem 'Pangolin', cursive;
+// }
+// #dosis{
+//     font: 1rem 'Dosis', sans-serif;
+// }
+// #anton{
+//     font: 1rem 'Anton', sans-serif;
+// }
+// #lobster{
+//     font: 1rem 'Lobster', cursive;
+// }
+// #dancing-script{
+//     font: 1rem 'Dancing Script', cursive;
+// }
+// #pacifico{
+//     font: 1rem 'Pacifico', cursive;
+// }
+// #architects-daughter{
+//     font: 1rem 'Architects Daughter', cursive;
+// }
+// #eb-garamonth{
+//     font: 1rem 'EB Garamond', serif;
+// }
+// #shadows-into-light{
+//     font: 1rem 'Shadows Into Light', cursive;
+// }
+// #rajdhani{
+//     font: 1rem 'Rajdhani', sans-serif;
+// }
+// #hind-madurai{
+//     font: 1rem 'Hind Guntur', sans-serif;
+// }
+// #hind-guntur{
+//     font: 1rem  'Hind Madurai', sans-serif;
+// }
+// #Arial{
+//     font: 1rem  'Arial', sans-serif;
+// }
+
+// #link-to-insert{
+//     height: 2.5rem;
+//     width: 80%;
+//     display: block;
+//     border: 2px solid #f2f2f2;
+//     padding: .5rem;
+//     font-family: $third-font;
+//     color: $fourth-color;
+//     font-size: 1.2rem;
+//     margin-top: $macro-space-around-element;
+
+//     &:focus{
+//         outline: none;
+//     }
+// }
+
+// #post-body{
+//     border: 2px solid #f2f2f2;
+//     resize: none;
+//     margin-top: $macro-space-around-element;
+//     font: 400 1.3rem $third-font;
+//     color: $fourth-color;
+//     padding: 1rem;
+//     width: 100%;
+//     min-height: 25rem;
+
+//     &:focus{
+//         outline: none
+//     }
+// }
+
+// .add-new-block{
+//     position: relative;
+//     left: calc(100% - 3rem);
+// }
+
+// .dark-background{
+//     width: 100vw;
+//     height: 100vh;
+//     background-color:rgba(0, 0, 0, 0.5);
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     z-index: 5;
+// }
+
+// .card-on-bck, #delete-route{
+//     width: 90%;
+//     max-width: 400px;
+//     height: 20rem;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     margin: auto;
+//     background: white;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     padding: .5rem;
+
+//     h3 {
+//         font-family: $third-font;
+//         color: $fourth-color;
+//         text-align: center;
+//     }
+
+// }
+// .send-post{
+//     @include standard-button;
+//     background: $main-color;
+//     box-shadow: 5px 5px 5px rgb(196, 196, 196);
+//     display: inline-block;
+//     margin: $macro-space-around-element;
+//     font: 800 1rem $third-font;
+//     padding: .8rem 1rem;
+// }
+
+// .cancel-post{
+//     @include standard-button;
+//     background: $cancel-delete;
+//     box-shadow: 5px 5px 5px rgb(196, 196, 196);
+//     display: inline-block;
+//     margin: $macro-space-around-element;
+//     font: 800 1rem $third-font;
+//     padding: .8rem 1rem;
+
+//     &:hover{
+//         background: rgb(189, 70, 70);
+//     }
+// }
+// #delete-route{
+//     z-index: 6;
+//     display: none;
+
+//     h3 {
+//         margin: 2rem 0;
+//         }
+
+//         .send-post{
+//             margin: 2rem auto;
+//         }
+
+//         .cancel-post{
+//             margin: 2rem auto;
+
+//             &:hover{
+//                 background: rgb(189, 70, 70);
+//             }
+//         }
+// }
+// .posts-buttons{
+//     width: 90%;
+//     max-width: 25rem;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin: $space-around-element auto;
+
+//     .send-post{
+//         @include standard-button;
+//         background: $main-color;
+//         box-shadow: 5px 5px 5px rgb(196, 196, 196);
+//     }
+
+//     .cancel-post{
+//         @include standard-button;
+//         background: $cancel-delete;
+//         box-shadow: 5px 5px 5px rgb(196, 196, 196);
+
+//         &:hover{
+//             background: rgb(189, 70, 70);
+//         }
+//     }
+// }
+
+// #gap-between-title-and-parragraph{
+//     height: 3rem;
+// }
+// #post-body_title, #post-body_parragraph, #post-body{
+
+//     div, p, ul, ul > li, ol, ol > li, br, ol > div, ul > div, span, b, i, u{
+//         color: inherit !important;
+//         font-size: inherit !important;
+//         font-family: inherit !important;
+//         font-weight: inherit !important;
+//     }
+//     ul {
+//         list-style-type: circle !important;
+//     }
+//     ol{
+//         list-style-type: decimal !important;
+//     }
+//     div u{
+//         text-decoration: underline !important;
+//     }
+//     div b{
+//         font-weight: 800 !important;
+//     }
+// }
+
+// #post-body_parragraph a{
+//     text-decoration: underline !important;
+//     color: $main-color !important;
+//     font-family: sans-serif !important;
+// }
+// #post-body_title, #post-body_parragraph{
+
+//     &:focus{
+//         outline: none;
+//     }
+// }
+
+// ////===================================CKEitor=======================//////
+// .text-editor-wrapper{
+//     width: 100%;
+//     min-height: 80vh;
+// }

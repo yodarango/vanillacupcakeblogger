@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('./partials/head') %>
+
+		<!-- GOOGLE ADDS -->
+		<script
+			data-ad-client="ca-pub-3002864427552998"
+			async
+			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+		></script>
+
+		<title>
+			Vanilla Cupcake Blogger | Blogging never tastes so delicious
+		</title>
+	</head>
+	<body>
+		<%- include('./partials/_header') %>
+		<div class="contact-wrapper">
+			<div class="contact-form-left">
+				<h1 class="all-posts-title">CONTACT ME</h1>
+				<svg
+					class="contact-svg"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					width="24px"
+					fill="#3a0ca3"
+				>
+					<path d="M0 0h24v24H0V0z" fill="#4895ef" />
+					<path
+						d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 4.99L4 6h16zm0 12H4V8l8 5 8-5v10z"
+					/>
+				</svg>
+
+				<p class="contact-me-parragraph"><%-blog.contactInfo%></p>
+			</div>
+
+			<div class="contact-form-left">
+				<form class="contact-form" action="/contact" method="post">
+					<div>
+						<label for="contact-form-name"
+							>Name <span class="contact-form-asterisk">*</span></label
+						>
+						<input
+							type="text"
+							name="name"
+							maxlength="100"
+							id="contact-form-name"
+							required
+						/>
+					</div>
+					<div>
+						<label for="contact-form-email">Email</label>
+						<input
+							type="email"
+							name="email"
+							maxlength="100"
+							id="contact-form-email"
+						/>
+					</div>
+					<div>
+						<label for="contact-form-tel">Phone Number</label>
+						<input type="tel" name="phone" id="contact-form-tel" />
+					</div>
+					<div>
+						<label for="contact-form-message">Enter Your Message</label>
+						<textarea
+							name="message"
+							id="contact-form-message"
+							cols="30"
+							rows="10"
+							maxlength=""
+							placeholder=""
+							required
+						></textarea>
+					</div>
+					<button class="contact-form-button" type="submit">SEND</button>
+				</form>
+			</div>
+		</div>
+		<%- include('./partials/_footer.ejs') %> <%-
+		include('./partials/_scripts.ejs') %>
+	</body>
+</html>

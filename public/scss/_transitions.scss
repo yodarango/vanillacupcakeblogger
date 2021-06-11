@@ -1,0 +1,21 @@
+@keyframes open-menu {
+	0% {
+		width: 0%;
+		opacity: 0.3;
+	}
+	100% {
+		width: 0;
+		opacity: 1;
+	}
+}
+@keyframes close-menu {
+	0% {
+		width: 0%;
+		opacity: 0.3;
+	}
+	100% {
+		width: 0;
+		opacity: 1;
+		display: none;
+	}
+}

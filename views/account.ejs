@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('./partials/head') %>
+
+		<title>
+			Vanilla Cupcake Blogger | Blogging never tastes so delicious
+		</title>
+	</head>
+	<body>
+		<%- include('./partials/_header') %>
+		<div class="spacer-account"></div>
+
+		<h1 class="title title-account">YOUR ACCOUNT</h1>
+
+		<form class="password-form" action="/account?_method=PATCH" method="POST">
+			<label class="password-label" for="">Change Username</label>
+			<div class="password-input-wrapper">
+				<input
+					class="password-input"
+					type="text"
+					name="username"
+					value="<%=user.username%>"
+					required
+				/>
+			</div>
+			<label class="password-label" for="">Change Your Password</label>
+			<div class="password-input-wrapper">
+				<input
+					class="password-input"
+					type="text"
+					name="password"
+					required
+				/>
+			</div>
+			<button class="password-update">UPDATE</button>
+		</form>
+		<a href="/account/logout" id="accuount-logout">Logout</a>
+		<div class="account-wrapper"></div>
+		<%- include('./partials/_profile-menu.ejs') %> <%-
+		include('./partials/_footer.ejs') %> <%-
+		include('./partials/_scripts.ejs') %>
+	</body>
+</html>

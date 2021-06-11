@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('./partials/head') %>
+
+		<!-- GOOGLE ADDS -->
+		<script
+			data-ad-client="ca-pub-3002864427552998"
+			async
+			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+		></script>
+
+		<title>
+			Vanilla Cupcake Blogger | Blogging never tastes so delicious
+		</title>
+	</head>
+	<body>
+		<%- include('./partials/_header') %>
+		<div class="big-spacer"></div>
+		<h1 class="all-posts-title-profile"><%=post.title%></h1>
+		<div class="CKPost-wrapper--date-author">
+			<p class="std-p">Posted On: <span><%=post.created%></span></p>
+			<p class="std-p">Written By: <span><%=post.author%></span></p>
+		</div>
+		<div class="CKPost-wrapper"><%-post.postContent%></div>
+
+		<%- include('./partials/_footer.ejs') %>
+		<script src="/js/new.js"></script>
+		<script src="/js/index.js"></script>
+		<script src="/js/send-post.js"></script>
+	</body>
+</html>

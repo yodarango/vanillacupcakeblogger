@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('./partials/head') %>
+
+		<title>
+			Vanilla Cupcake Blogger | Blogging never tastes so delicious
+		</title>
+	</head>
+	<body>
+		<%- include('./partials/_header') %>
+		<h1 class="all-posts-title-profile">
+			TOTAL POSTS
+			<span class="all-posts-title-profile" id="all-posts-count"
+				>(<%= count %>)</span
+			>
+		</h1>
+
+		<div class="posts-or-comments-wrap">
+			<div class="posts-or-comments-wrap_posts">POSTS</div>
+			<div class="posts-or-comments-wrap_comments">COMMENTS</div>
+			<div class="posts-or-comments-stats">SUBS</div>
+		</div>
+
+		<form class="search-form-profile" action="/account/profile" method="POST">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				height="24px"
+				viewBox="0 0 24 24"
+				width="24px"
+				fill="#000000"
+			>
+				<path d="M0 0h24v24H0V0z" fill="none" />
+				<path
+					d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+				/>
+			</svg>
+			<input
+				type="text"
+				placeholder="Type something..."
+				name="filter"
+				required
+			/>
+			<button type="submit" class="earch-form_button">SEARCH</button>
+		</form>
+
+		<div class="dorpdown">
+			<div class="tagWrapper"></div>
+			<div class="dropdown-button">
+				BY CATEGORY
+				<div class="dropdown-button-arrow"></div>
+			</div>
+			<% blog.categories.forEach((category)=>{ %>
+			<div class="dorpdown-option" value="<%=category.toLowerCase()%>">
+				<%=category.toLowerCase()%>
+			</div>
+			<% }) %>
+		</div>
+
+		<div class="all-posts-grid all-posts-grid-profile">
+			<% posts.forEach((post) => { %>
+			<div class="post-card">
+				<div class="categories-wtapper-filter">
+					<% post.category.forEach((categorie)=>{ %>
+					<span class="<%=categorie.toLowerCase()%>"></span>
+					<% })%>
+				</div>
+				<img
+					src="<%=post.postImage%>"
+					alt="image for a post article"
+					class="post-card_post-image"
+				/>
+				<div class="post-card_title-and-content">
+					<h3 class="post-card_post-title"><%= post.title %></h3>
+					<h5 class="post-card_date"><%= post.created%></h5>
+				</div>
+				<div class="post-card_options">
+					<a href="/see-post/<%=post._id%>" class="post-card-options_read"
+						>READ</a
+					>
+					<a
+						href="/account/edit-post/<%=post._id%>"
+						class="post-card-options_edit"
+						>EDIT</a
+					>
+					<h3
+						class="post-card-options_delete"
+						onclick="confirmDeletePost('<%=post._id%>')"
+					>
+						DELETE
+					</h3>
+				</div>
+			</div>
+
+			<% }) %>
+		</div>
+		<div class="append-resulting-childs-comment"></div>
+		<div class="append-resulting-childs-subs"></div>
+		<div class="paggination-buttons">
+			<a href="/account/profile/?skip=<%=less%>" id="load-less"
+				><div class="paggination-buttons-less">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="24px"
+						viewBox="0 0 24 24"
+						width="24px"
+						fill="#344e41"
+					>
+						<path d="M0 0h24v24H0V0z" fill="none" opacity=".87" />
+						<path
+							d="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z"
+						/>
+					</svg>
+				</div>
+				SEE LESS</a
+			>
+			<a href="/account/profile?skip=<%=more%>" id="load-more"
+				>SEE MORE
+				<div class="paggination-buttons-more">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						enable-background="new 0 0 24 24"
+						height="24px"
+						viewBox="0 0 24 24"
+						width="24px"
+						fill="#344e41"
+					>
+						<g><path d="M0,0h24v24H0V0z" fill="none" /></g>
+						<g>
+							<polygon
+								points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"
+							/>
+						</g>
+					</svg></div
+			></a>
+			<a href="/account/profile" id="skipt-to-extreme">FIRST PAGE</a>
+		</div>
+		<div id="paggination-buttons-page">
+			Seeing <%=more - 10%> to <%=more%>
+		</div>
+		<div class="spacer"></div>
+		<%- include('./partials/_profile-menu.ejs') %> <%-
+		include('./partials/_footer.ejs') %>
+		<script src="/js/index.js"></script>
+		<script src="/js/profile.js"></script>
+		<script src="/js/all-posts.js"></script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('./partials/head') %>
+
+		<title>
+			Vanilla Cupcake Blogger | Blogging never tastes so delicious
+		</title>
+	</head>
+	<body>
+		<%- include('./partials/_header') %>
+		<div class="login-form-wrapper">
+			<img
+				src="data:image/png;base64,<%=blog.logo%>"
+				alt="blog logo"
+				class="login-logo"
+			/>
+			<form action="/account/login" method="POST" class="login-form">
+				<div>
+					<label for="contact-form-name">Username</label>
+					<input
+						type="text"
+						name="username"
+						maxlength="100"
+						id="contact-form-name"
+						required
+					/>
+				</div>
+				<div>
+					<label for="contact-form-email">Password</label>
+					<input
+						type="password"
+						name="password"
+						maxlength="100"
+						id="contact-form-email"
+					/>
+				</div>
+				<button class="contact-form-button" type="submit">LOG IN</button>
+			</form>
+		</div>
+
+		<%- include('./partials/_scripts.ejs') %>
+	</body>
+</html>

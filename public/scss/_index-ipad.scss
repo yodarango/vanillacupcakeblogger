@@ -1,0 +1,147 @@
+@media (min-width: 700px) {
+	.header {
+		height: 7rem;
+	}
+
+	.header_menu {
+		margin: 1rem 0 0 $super-space-around-element;
+		height: 4rem;
+		width: 4rem;
+		border-radius: 4rem;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		div {
+			width: 1.2rem;
+			height: 0.2rem;
+			background: white;
+			margin: 0.2rem 0;
+		}
+	}
+
+	.title {
+		font-size: 1.5rem;
+	}
+
+	.page-art {
+		margin: 4rem auto;
+	}
+	.post-card {
+		.post-card_post-image {
+			height: 13rem;
+		}
+	}
+
+	.featured-section {
+		margin: 7rem auto;
+
+		.featured-section_image {
+			height: 25rem;
+		}
+
+		.featured-section-title-content-wrapper {
+			max-height: 25rem;
+			overflow: scroll;
+
+			.featured-section_title {
+				font: 800 2.5rem $third-font;
+				color: $secondary-color;
+				margin: 0 auto;
+				text-align: left;
+			}
+
+			.featured-section_parragraph {
+				font-size: $main-font-ipad;
+				line-height: $line-height;
+				text-align: left;
+			}
+		}
+	}
+	.youtube-video-section {
+		margin: 7rem auto;
+		.what-others-are-saying {
+			font: 800 1.5rem $third-font;
+		}
+	}
+	.what-others-are-saying {
+		font: 800 1.5rem $third-font;
+	}
+	/////================================ABOUT PAGE========================//////
+
+	.about-me-section {
+		font-size: 1.7rem;
+		width: 80%;
+		max-height: 56rem;
+	}
+
+	.stats-section {
+		margin-top: 9rem;
+	}
+
+	.all-posts-title {
+		margin-top: 9rem;
+	}
+	/////================================CONTACT PAGE========================//////
+
+	.menu-container {
+		a,
+		.a-open {
+			margin-top: $super-space-around-element;
+
+			&:first-of-type {
+				margin-top: 12rem;
+			}
+		}
+	}
+	.contact-form-left {
+		margin-top: 3.5rem !important;
+
+		.contact-me-parragraph {
+			font-size: 1.8rem;
+		}
+	}
+
+	/////================================PROFILE========================//////
+
+	.page-toggle .home-page-toggle {
+		font-size: 1.3rem;
+	}
+
+	.profile-menu {
+		left: calc((100vw - 750px) / 2);
+	}
+
+	.posts-or-comments-wrap {
+		margin: 4rem auto 2rem;
+	}
+
+	.all-posts-grid-profile {
+		.post-card {
+			margin: 1rem;
+		}
+	}
+	.append-resulting-childs-comment {
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
+		.public-comments-profile-comments {
+			width: auto;
+			margin: 1rem;
+		}
+	}
+
+	.append-resulting-childs-subs {
+		flex-wrap: wrap;
+
+		.public-comments-profile-subscriber {
+			width: auto;
+			margin: 1rem 0.5rem;
+		}
+	}
+}
+.all-posts-grid-index {
+	max-width: 60rem;
+}

@@ -1,0 +1,197 @@
+.all-posts-title {
+	font: 800 2rem $third-font;
+	margin: 8rem auto 0;
+	width: 90%;
+	text-align: center;
+	color: $secondary-color;
+}
+
+.search-form {
+	width: 90%;
+	max-width: 48rem;
+	margin: $giant-space-around-element auto $space-around-element;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	#magnifierglass {
+		position: relative;
+		width: 1.5rem;
+		height: 1.5rem;
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		box-sizing: content-box;
+		top: 10px;
+	}
+
+	input {
+		border: none;
+		border-bottom: 1px solid $third-color;
+		height: 3rem;
+		background-image: none;
+		background-color: transparent;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		padding-left: 1rem;
+		font: 1.5rem $third-font;
+		color: $secondary-color;
+		width: 60%;
+		max-width: 400px;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::placeholder {
+			color: rgb(221, 221, 221);
+		}
+	}
+
+	.earch-form_button {
+		@include standard-button;
+		display: inline-block;
+		box-shadow: none;
+		background: $main-color;
+		padding: 1rem;
+		font-size: 0.8rem;
+		margin: 0;
+	}
+}
+
+.dorpdown {
+	width: 90%;
+	max-width: 48rem;
+	margin: auto;
+
+	.dropdown-button {
+		@include dropdown-button;
+		background: $fourth-color;
+
+		&:hover {
+			background: rgb(71, 71, 71);
+			cursor: pointer;
+		}
+	}
+
+	.dorpdown-option {
+		background: #f2f2f2;
+		height: 3rem;
+		width: 12rem;
+		padding: 1rem;
+		font: 1rem $third-font;
+		display: none;
+
+		&:hover {
+			background: rgb(204, 204, 204);
+			cursor: pointer;
+		}
+	}
+
+	.dropdown-tag {
+		@include tagButton;
+	}
+}
+
+.dropdown-category {
+	margin: $space-around-element 0;
+}
+
+.all-posts-grid {
+	max-width: 48rem;
+	margin: auto;
+	min-height: 50vh;
+}
+
+.all-posts-button {
+	@include standard-button;
+	box-shadow: 5px 5px 5px rgb(168, 168, 168);
+	margin: 3rem auto 0;
+	background: $main-color;
+
+	@media (min-width: 1000px) {
+		padding: 1.5rem 2.5rem;
+		font-family: 1.3rem;
+	}
+}
+
+.all-posts-separator {
+	height: 5rem;
+	width: 100%;
+}
+.post-card_constent {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* number of lines to show */
+	-webkit-box-orient: vertical;
+}
+
+.no-posts-found,
+.no-posts-found-yet {
+	width: 90%;
+	max-width: 25rem;
+	background: rgb(255, 148, 148);
+	color: rgb(136, 46, 46);
+	font: 1.3rem $third-font;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	text-align: center;
+	padding: $space-around-element;
+}
+.no-posts-found-yet {
+	color: $secondary-color;
+	background: $third-color;
+}
+
+.categories-wtapper-filter {
+	height: 0;
+	span {
+		font-size: 0px;
+		color: white;
+	}
+}
+.all-posts-grid-public {
+	max-width: 60rem;
+}
+
+.paggination-buttons {
+	width: 80%;
+	max-width: 40rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin: 2rem auto;
+
+	a {
+		font: 800 1rem $third-font;
+		color: $secondary-color;
+
+		div {
+			display: inline-block;
+			width: 1rem;
+			height: 1rem;
+			vertical-align: middle;
+
+			svg {
+				width: 100%;
+				margin: 0;
+				padding: 0 0 0.8rem 0;
+			}
+		}
+	}
+}
+#paggination-buttons-page {
+	color: rgb(168, 168, 168);
+	font: 500 0.8rem $third-font;
+	width: 100%;
+	text-align: center;
+}
+#skipt-to-extreme {
+	display: none;
+	color: $main-color;
+	text-decoration: underline;
+}

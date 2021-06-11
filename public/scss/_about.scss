@@ -1,0 +1,214 @@
+.about-page-wrapper {
+	min-height: 90vh;
+}
+.stats-section {
+	width: 100%;
+	max-width: 700px;
+	margin: auto;
+
+	.about-me {
+		color: $secondary-color;
+		font: 800 2rem $third-font;
+		width: 90%;
+		margin: 7rem auto $space-around-element;
+		text-align: center;
+	}
+
+	.stats-section_image {
+		display: block;
+		width: 16rem;
+		height: 16rem;
+		object-fit: cover;
+		object-position: center;
+		padding: $micro-space-around-element;
+		border: 5px solid $third-color;
+		border-radius: 50%;
+		margin: $space-around-element auto;
+		box-shadow: 3px 3px 2px 3px rgb(201, 201, 201);
+	}
+
+	.stats-section_subscribers {
+		width: 90%;
+		max-width: 700px;
+		margin: $macro-space-around-element auto;
+		text-align: center;
+		font: 800 $title-font-size $third-font;
+		color: $fourth-color;
+
+		@media (min-width: 1000px) {
+			font-size: 3.5rem;
+		}
+
+		#subscribers-count {
+			font-family: $third-font;
+			color: $fourth-color;
+		}
+	}
+
+	.hidden-value {
+		font-size: 1px;
+		visibility: hidden;
+	}
+
+	.hr {
+		background-color: $third-color;
+		max-width: 500px;
+	}
+
+	.about-page-sm-icons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		#show-true {
+			display: inline-block;
+		}
+		#show-false {
+			display: none;
+		}
+		.instagram svg {
+			fill: rgb(127, 29, 146);
+		}
+		.twitter svg {
+			fill: #1da1f2;
+		}
+		.youtube svg {
+			fill: #e62117;
+		}
+		.pinterest svg {
+			fill: #bd081c;
+		}
+		.facebook svg {
+			fill: #1877f2;
+		}
+		.social-media-icon svg {
+			width: 2.5rem;
+			height: 2.5rem;
+			margin: 0 1rem;
+
+			@media (min-width: 1000px) {
+				width: 3.5rem;
+				height: 3.5rem;
+			}
+		}
+		.social-media-icon svg:hover {
+			fill: $fourth-color;
+		}
+	}
+
+	.stats-section_stats-wrapper {
+		width: 90%;
+		max-width: 500px;
+		margin: $micro-space-around-element auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		svg {
+			width: 2rem;
+		}
+		.total-posts {
+			padding-right: $space-around-element;
+			color: $fourth-color;
+			font: 800 $title-font-size $third-font;
+			border-right: 1px solid $third-color;
+			width: 100%;
+			text-align: right;
+
+			#posts-count {
+				font-family: $third-font;
+				color: $fourth-color;
+
+				@media (min-width: 1000px) {
+					font-size: 3rem;
+				}
+			}
+		}
+
+		.total-likes {
+			padding-left: $space-around-element;
+			color: $fourth-color;
+			font: 800 $title-font-size $third-font;
+			border-left: 1px solid $third-color;
+			width: 100%;
+			text-align: left;
+
+			#likes-count {
+				font-family: $third-font;
+				color: $fourth-color;
+
+				@media (min-width: 1000px) {
+					font-size: 3rem;
+				}
+			}
+		}
+	}
+}
+
+.subscribe-button {
+	@include standard-button;
+	box-shadow: 5px 5px 3px rgb(156, 156, 156);
+
+	@media (min-width: 1000px) {
+		margin: 2rem auto;
+	}
+}
+
+//about section
+.about-me-section {
+	width: 90%;
+	max-width: 700px;
+	margin: $super-space-around-element auto $giant-space-around-element;
+	font: 1.5rem $secondary-font;
+	line-height: $line-height;
+	color: $fourth-color;
+	text-align: left;
+	position: relative;
+
+	&:first-letter {
+		-webkit-initial-letter: 3;
+		initial-letter: 3;
+		color: $third-color;
+	}
+}
+
+#card-on-bck-subscribers {
+	height: 25rem;
+	display: none;
+	z-index: 6;
+	padding: 1rem 1.3rem;
+
+	.input-wrapper {
+		width: 90%;
+		margin: $macro-space-around-element auto;
+	}
+
+	input {
+		height: 2.5rem;
+		width: 100%;
+		padding: $micro-space-around-element $macro-space-around-element;
+		font: 1.3rem $third-font;
+		border: 2px solid rgba(211, 211, 211, 0.568);
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	h1,
+	p {
+		font: 1.5rem $third-font;
+		text-align: center;
+		color: $main-color;
+	}
+
+	p {
+		color: $fourth-color;
+		font-size: 1rem;
+		margin: 0 auto $space-around-element;
+	}
+
+	h3 {
+		margin: 0 auto;
+	}
+}

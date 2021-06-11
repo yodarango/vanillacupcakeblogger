@@ -1,0 +1,12 @@
+KNONW ISSUES.....
+Loader() popup only happens when someone sumits or deits a post (CKEditor.js, edit-post.js)
+Profile > toggle between posts, comments, subs: Some elements do not seem to get removed which causes the page to add repeated data
+
+
+⚠️  BEFORE SELLING STEPS!!!! ⚠️  
+1.Update head tags
+2. Update colors in profile.js to custom colors
+3. Update color variables 
+4. Make sure emails are right
+5. admin from 'Lea'
+
