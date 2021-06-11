@@ -16,7 +16,7 @@ const Subscriber = require('../models/subscribers-model');
 const Comment = require('../models/comments-model');
 
 const administrator = 'John Doe';
-const ownerDomain = 'http://www.xharcoal.com';
+const ownerDomain = 'http://www.simplereflections.org';
 
 ////===============PUBLIC POSTS ROUTES=================
 router.get('/see-post/:id', async (req, res) => {
