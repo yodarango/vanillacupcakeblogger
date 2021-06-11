@@ -10,7 +10,15 @@
 			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
 		></script>
 
-		<title>Simple Reflections | Meditating on God's word</title>
+		<meta name="revised" content=<%=post.created%> />
+		<meta name="og:title" content=<%=post.title%> />
+		<meta property="og:url" content="http://simplereflections.org/see-post/<%=post.id%>" />
+		<meta
+		property="og:description"
+		content=<%=post.content%>
+		/>
+
+		<title>Simple Reflections | <%=post.title%></title>
 	</head>
 	<body>
 		<%- include('./partials/_header') %>
