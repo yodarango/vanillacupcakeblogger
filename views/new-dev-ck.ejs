@@ -1,0 +1,128 @@
+<!-- attempting to bring in CK Editor into the mix, currently in dev mode
+see partials/ckeditor...  -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('./partials/head') %>
+		<title>Simple Reflections | Meditating on God's word</title>
+	</head>
+	<body>
+		<%- include('./partials/_header') %>
+		<div class="spacer-account"></div>
+		<div class="text-editor-wrapper">
+			<h1 class="title title-new">CREATE A NEW POST</h1>
+			<div class="post-title-content-wrapper">
+				<input
+					class="CKE-post-title"
+					name="title"
+					type="text"
+					maxlength="40"
+					placeholder="Enter Your Post's Title"
+					required
+				/>
+				<input
+					class="CKE-post-content"
+					name="content"
+					type="text"
+					maxlength="150"
+					placeholder="Enter Your Post's Description"
+					required
+				/>
+				<input
+					class="CKE-post-author"
+					name="author"
+					type="text"
+					maxlength="150"
+					placeholder="Name of author"
+					required
+				/>
+				<label for="postImage">
+					Select Your Post's Thumbnail
+					<div class="spacer"></div>
+					<input
+						id="postImage"
+						type="file"
+						onchange="showResult( this.files[0]);"
+						accept=".png, .jpg, .jpeg"
+					/>
+				</label>
+				<p class="max-file-size">( Max file size is 3MB )</p>
+			</div>
+			<div class="imagePost-preview">
+				<img
+					src="data:image/png;base64,<%=blog.logo%>"
+					alt="image preview"
+					id="result"
+				/>
+			</div>
+			<div class="dorpdown dropdown-category dorpdown-new">
+				<div class="tagWrapper"></div>
+				<div class="standard-h3">Choose the Category for this post</div>
+				<br />
+				<div class="dropdown-button">
+					Your Categories
+					<div class="dropdown-button-arrow"></div>
+				</div>
+				<% blog.categories.forEach((category)=>{ %>
+				<div class="dorpdown-option" value="<%=category%>">
+					<%=category%>
+				</div>
+				<% }) %>
+			</div>
+<%- include('./partials/ckeditor-ready-to-go-pkg/samples/new.ejs') %>
+			<div class="standard-h3 standard-h3-mediaEmbed">
+				Enter Embeding Link Here
+			</div>
+			<textarea
+				name="embededVideo"
+				id="CKE-post-embedVideo"
+				cols="30"
+				rows="10"
+			>
+			</textarea>
+
+			<div id="youtube-link-converter">
+				Are you embeding a youtube video?
+				<p>
+					if you are embeding a Youtube link please past it below to
+					convert it to an iframe link
+				</p>
+				<input
+					type="text"
+					name="youtube-link-converter-link"
+					id="youtube-link-converter-link"
+				/>
+				<div id="getYT-data">Convert to iframe Link</div>
+				<p id="YT-res-message"></p>
+				<div id="YT-res-video"></div>
+				<div id="YT-res-data"></div>
+			</div>
+
+			<div class="posts-buttons-new">
+				<label for="ball-1" class="switch-wrapper">
+					<div class="standard-h3 standard-h3-mediaEmbed">
+						Do you want to send an email to your subscribers when this
+						post is published?
+					</div>
+					<input
+						id="ball-1"
+						type="checkbox"
+						name="sendEmail"
+						value="sendemail"
+					/>
+					<div class="switch"><div class="switch_ball"></div></div>
+				</label>
+			</div>
+
+			<div class="posts-buttons">
+				<div class="cancel-post cancel-post-erase-all">ERASE ALL</div>
+				<div id="submitPost" class="send-post">POST</div>
+			</div>
+		</div>
+		<%- include('./partials/_profile-menu.ejs') %> 
+        <%- include('./partials/_footer.ejs') %>
+		<script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/decoupled-document/ckeditor.js"></script>
+		<script src="/js/CKEditor.js"></script>
+		<script src="/js/index.js"></script>
+	</body>
+</html>
