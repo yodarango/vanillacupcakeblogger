@@ -4,6 +4,13 @@ see partials/ckeditor...  -->
 <html lang="en">
 	<head>
 		<%- include('./partials/head') %>
+		<script src="/ckeditor-ready-to-go-pkg/ckeditor.js"></script>
+		<script src="/ckeditor-ready-to-go-pkg/samples/js/sample.js"></script>
+		<link rel="stylesheet" href="/ckeditor-ready-to-go-pkg/samples/css/samples.css" />
+		<link
+			rel="stylesheet"
+			href="toolbarconfigurator/lib/codemirror/neo.css"
+		/>
 		<title>Simple Reflections | Meditating on God's word</title>
 	</head>
 	<body>
@@ -69,7 +76,20 @@ see partials/ckeditor...  -->
 				</div>
 				<% }) %>
 			</div>
-<%- include('./partials/ckeditor-ready-to-go-pkg/samples/new.ejs') %>
+
+		<!-- CKEditor starts -->
+		<main>
+			<div class="adjoined-top">
+			<div class="adjoined-bottom">
+				<div class="grid-container">
+					<div class="grid-width-100">
+						<div id="editor">
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- Ckeditor Ends -->
 			<div class="standard-h3 standard-h3-mediaEmbed">
 				Enter Embeding Link Here
 			</div>
@@ -121,8 +141,12 @@ see partials/ckeditor...  -->
 		</div>
 		<%- include('./partials/_profile-menu.ejs') %> 
         <%- include('./partials/_footer.ejs') %>
+		<script>
+			initSample();
+			CKEDITOR.replace('editor')
+		</script>
 		<script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/decoupled-document/ckeditor.js"></script>
-		<script src="/js/CKEditor.js"></script>
+		<script src="/js/CKE-editor-full-pkg.js"></script>
 		<script src="/js/index.js"></script>
 	</body>
 </html>

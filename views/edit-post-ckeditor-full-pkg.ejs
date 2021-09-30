@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('./partials/head') %>
+		<meta name="og:title" content="Simple Reflections - Edit Post" />
+        	<script src="/ckeditor-ready-to-go-pkg/ckeditor.js"></script>
+		<script src="/ckeditor-ready-to-go-pkg/samples/js/sample.js"></script>
+		<link rel="stylesheet" href="/ckeditor-ready-to-go-pkg/samples/css/samples.css" />
+		<link
+			rel="stylesheet"
+			href="toolbarconfigurator/lib/codemirror/neo.css"
+		/>
+		<title>Simple Reflections | Meditating on God's word</title>
+	</head>
+	<body>
+		<%- include('./partials/_header') %>
+
+		<div class="spacer-account"></div>
+		<div class="text-editor-wrapper">
+			<h1 id="<%=post.id%>" class="title title-new"><%-post.title%></h1>
+			<div class="post-title-content-wrapper">
+				<input
+					class="CKE-post-title"
+					name="title"
+					type="text"
+					maxlength="40"
+					placeholder="Enter Your Post's Title"
+					required
+					value="<%=post.title%>"
+				/>
+				<input
+					class="CKE-post-content"
+					name="content"
+					type="text"
+					maxlength="150"
+					placeholder="Enter Your Post's Description"
+					required
+					value="<%=post.content%>"
+				/>
+				<label for="postImage">
+					Select Your Post's Thumbnail
+					<div class="spacer"></div>
+					<input
+						id="postImage"
+						type="file"
+						onchange="showResult( this.files[0]);"
+						accept=".png, .jpg, .jpeg"
+					/>
+				</label>
+				<p class="max-file-size">( Max file size is 3MB )</p>
+			</div>
+			<div class="imagePost-preview">
+				<img src="<%=post.postImage%>" alt="image preview" id="result" />
+			</div>
+			<div class="dorpdown dropdown-category dorpdown-new">
+				<div class="tagWrapper">
+					<% post.category.forEach((tag) => { %>
+					<div class="dropdown-tag">
+						<%=tag%>
+						<div
+							class="tag-remove tag-remove-edit"
+							onclick="removeTag(this)"
+						>
+							X
+						</div>
+					</div>
+					<%})%>
+				</div>
+				<div class="standard-h3">Choose the Category for this post</div>
+				<br />
+				<div class="dropdown-button">
+					Your Categories
+					<div class="dropdown-button-arrow"></div>
+				</div>
+				<% blog.categories.forEach((category)=>{ %>
+				<div class="dorpdown-option" value="<%=category%>">
+					<%=category%>
+				</div>
+				<% }) %>
+			</div>
+
+			<div class="page-toggle contact-page-toggle">
+				Upload Images
+				<div></div>
+			</div>
+
+			<!-- CKEditor starts -->
+		<main>
+			<div class="adjoined-top">
+			<div class="adjoined-bottom">
+				<div class="grid-container">
+					<div class="grid-width-100">
+						<div id="editor">
+                            <%-post.postContent%>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- Ckeditor Ends -->
+				
+
+			<div class="standard-h3 standard-h3-mediaEmbed">
+				Enter Your New Embeding Link Here
+			</div>
+			<textarea
+				name="embededVideo"
+				id="CKE-post-embedVideo"
+				cols="30"
+				rows="10"
+			>
+			</textarea>
+
+			<div id="youtube-link-converter">
+				Want to replace a current Youtube Video?
+				<p>Delete thecurrent one and replace it by a new one!</p>
+				<input
+					type="text"
+					name="youtube-link-converter-link"
+					id="youtube-link-converter-link"
+				/>
+				<div id="getYT-data">Convert to iframe Link</div>
+				<p id="YT-res-message"></p>
+				<div id="YT-res-video"></div>
+				<div id="YT-res-data"></div>
+			</div>
+
+			<!-- <div class="posts-buttons-new">
+            <label for="ball-1" class="switch-wrapper"> 
+                <div class="standard-h3 standard-h3-mediaEmbed">Do you want to send an email to your subscribers when this post is published?</div>
+                <input id="ball-1" type="checkbox" name="sendEmail" value="sendemail"> 
+                <div class="switch"><div class="switch_ball"></div></div>
+           </label>
+        </div> -->
+
+			<div class="posts-buttons">
+				<div class="cancel-post go-back-edit">CANCEL</div>
+				<div id="submitPost" class="send-post">UPDATE</div>
+			</div>
+		</div>
+
+		<%- include('./partials/_profile-menu.ejs') %> <%-
+		include('./partials/_footer.ejs') %>
+        <script>
+			initSample();
+			CKEDITOR.replace('editor')
+		</script>
+		<script src="/js/index.js"></script>
+		<script src="/js/edit-post-ckeditor-full-pkg.js"></script>
+	</body>
+</html>

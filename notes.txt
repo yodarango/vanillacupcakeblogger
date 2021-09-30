@@ -10,3 +10,9 @@ Profile > toggle between posts, comments, subs: Some elements do not seem to get
 4. Make sure emails are right
 5. admin from 'Lea'
 
+
+NEWEST UPDATES TO EDITOR: 
+* I switched from using old simple editor to a full package downloaded from the CKEditor switched
+* The ol editor is still available if I need it, all I have to do is switch back the view being rendered
+* No files were deleted or edited, I just made a copy of hte surrent ones and added the name ckeditor... 
+  as edited as needed

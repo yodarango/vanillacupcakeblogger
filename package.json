@@ -13,6 +13,7 @@
     "@ckeditor/ckeditor5-upload": "^27.1.0",
     "@editorjs/editorjs": "^2.20.2",
     "@sendgrid/mail": "^7.4.2",
+    "ajax": "^0.0.4",
     "bcrypt": "^5.0.1",
     "connect-mongo": "^4.4.1",
     "date-fns": "^2.19.0",

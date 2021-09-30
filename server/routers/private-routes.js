@@ -89,7 +89,7 @@ router.get('/new', isLoggedIn, async (req, res) => {
 
 		//if (blog == undefined || blog.length == 0 ) { blog = defaults.defaultBlog }
 
-		res.render('new', { blog });
+		res.render('new-ckeditor-full-pkg', { blog });
 	} catch (error) {
 		res.status(401).render('error', { error: error });
 	}
@@ -107,7 +107,7 @@ router.get('/edit-post/:id', isLoggedIn, async (req, res) => {
 			: (post = post);
 
 		//if (blog == undefined || blog.length == 0 ) { blog = defaults.defaultBlog }
-		res.render('edit-post', { blog, post });
+		res.render('edit-post-ckeditor-full-pkg', { blog, post });
 	} catch (error) {
 		res.send(error);
 	}
