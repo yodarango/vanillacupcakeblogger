@@ -9,7 +9,7 @@ const express = require('express');
 const app = express();
 app.use('/account', require('./server/routers/private-routes'));
 app.use('', require('./server/routers/public-routes'));
-app.use("/setup", require("./server/routers/setup"));
+app.use('/setup', require('./server/routers/setup'));
 
 //middleware
 app.set('view engine', 'ejs');

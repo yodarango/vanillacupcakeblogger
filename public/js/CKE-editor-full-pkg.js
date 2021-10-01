@@ -42,7 +42,6 @@ const addTag = (thiss) => {
 
 	const tagWrapper = document.querySelector('.tagWrapper');
 	tagWrapper.appendChild(tag);
-	console.log(arrayToFilterFrom)
 };
 
 //adding tags button
@@ -74,7 +73,9 @@ const dropdownOption = document.querySelectorAll('.dorpdown-option');
 
 dropdownOption.forEach((tag) => {
 	tag.addEventListener('click', (thiss) => {
-		arrayToFilterFrom.push(thiss.target.textContent.replace(/\s/g, '')/*.split(' ').join('-')*/);
+		arrayToFilterFrom.push(
+			thiss.target.textContent.replace(/\s/g, '') /*.split(' ').join('-')*/
+		);
 		console.log(arrayToFilterFrom);
 	});
 });

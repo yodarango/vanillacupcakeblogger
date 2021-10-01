@@ -41,6 +41,13 @@ router.get('/posts', async (req, res) => {
 	try {
 		let count = await Post.find().countDocuments({});
 		let blog = await Blog.findOne({});
+		// if (req.query.tag) {
+		// 	let posts = await Post.find({ category: req.query.tag })
+		// 		.sort({ date: -1 })
+		// 		.limit(10)
+		// 		.skip(parseInt(req.query.skip))
+		// 		.exec();
+		// }
 		let posts = await Post.find({})
 			.sort({ date: -1 })
 			.limit(10)
