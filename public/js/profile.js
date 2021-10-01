@@ -20,11 +20,11 @@ postsButton.addEventListener('click', () => {
 	//totalPostsTitle.textContent = `TOTAL POSTS (${gridView.childElementCount})`
 
 	gridView.style.display = 'flex';
-	postsButton.style.background = '#468faf';
+	postsButton.style.background = '#cdb4db';
 
 	wrapper.style.display = 'none';
-	commentsButton.style.background = '#a9d6e5';
-	statsButton.style.background = '#a9d6e5';
+	commentsButton.style.background = '#ffafcc';
+	statsButton.style.background = '#ffafcc';
 
 	searchForm.style.display = 'block';
 
@@ -60,9 +60,9 @@ commentsButton.addEventListener('click', async () => {
 	totalPostsTitle.textContent = `TOTAL COMMENTS (${data.count})`;
 
 	gridView.style.display = 'none';
-	postsButton.style.background = '#a9d6e5';
-	commentsButton.style.background = '#468faf';
-	statsButton.style.background = '#a9d6e5';
+	postsButton.style.background = '#ffafcc';
+	commentsButton.style.background = '#cdb4db';
+	statsButton.style.background = '#ffafcc';
 	const searchForm = document.querySelector('.search-form-profile');
 	searchForm.style.display = 'none';
 
@@ -114,12 +114,12 @@ statsButton.addEventListener('click', async () => {
 	totalPostsTitle.textContent = `TOTAL SUBSCRIBERS (${data.count})`;
 
 	gridView.style.display = 'none';
-	postsButton.style.background = '#a9d6e5';
+	postsButton.style.background = '#ffafcc';
 
 	wrapper.style.display = 'none';
-	commentsButton.style.background = '#a9d6e5';
+	commentsButton.style.background = '#ffafcc';
 
-	statsButton.style.background = '#468faf';
+	statsButton.style.background = '#cdb4db';
 
 	searchForm.style.display = 'none';
 

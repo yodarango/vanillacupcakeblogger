@@ -20,8 +20,8 @@ const User = require('../models/User-model');
 
 //default setting for brand new blog
 //const defaults               = require('../../db/default-db-values');
-const administrator = 'Simple Thoughts';
-const ownerDomain = 'paradymuseless@gmail.com';
+const administrator = 'Presson Ponderings';
+const ownerDomain = 'pressonponderings@gmail.com';
 
 //middleware
 router.use(express.json({ limit: '50MB' }));
@@ -134,7 +134,7 @@ router.put('/edit-post/:id', isLoggedIn, async (req, res) => {
 
 router.post('/new', isLoggedIn, async (req, res) => {
 	if (req.body.sendEmail === 'yes') {
-		const html = `<h1>New Post</h1>`;
+		const html = `<h1>${administrator} just posted a new blog post, be the first one to see it 😊</h1>`;
 		const subject = `New by ${ownerDomain} is available`;
 		const receptors = [];
 
@@ -519,7 +519,7 @@ router.get('', isLoggedIn, async (req, res) => {
 
 router.patch('', isLoggedIn, async (req, res) => {
 	const subject = 'Your password has changed';
-	const html = `<h1>New Password</h1>`;
+	const html = `<h1>Your new Password is : ${req.body.password}</h1>`;
 
 	try {
 		email.newCommentContactEmail(subject, html);

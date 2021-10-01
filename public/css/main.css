@@ -91,7 +91,7 @@
 .header_menu {
   position: relative;
   margin: 0 0 0 2rem;
-  background: #014f86;
+  background: #ef476f;
   height: 3rem;
   width: 3rem;
   border-radius: 3rem;
@@ -115,7 +115,7 @@
   margin: 0 5vw 0 0;
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
-  color: #014f86;
+  color: #ef476f;
   flex-grow: 7;
   font-stretch: extra-condensed;
 }
@@ -133,7 +133,7 @@
   left: 0;
   top: 0;
   height: 100vh;
-  background-color: #a9d6e5;
+  background-color: #ffafcc;
   display: block;
   z-index: 2;
 }
@@ -143,7 +143,7 @@
   position: relative;
   left: 0;
   font: 400 2rem "Oswald", sans-serif;
-  color: #014f86;
+  color: #ef476f;
   width: 80%;
   margin: 1rem auto;
   text-decoration: none;
@@ -151,7 +151,7 @@
 }
 .menu-container a:visited,
 .menu-container .a-open:visited {
-  color: #014f86;
+  color: #ef476f;
 }
 .menu-container a:first-of-type,
 .menu-container .a-open:first-of-type {
@@ -231,7 +231,7 @@
 .all-posts-grid .post-card .post-card_post-title {
   font: 600 1.5rem "Oswald", sans-serif;
   margin: 1rem 0;
-  color: #014f86;
+  color: #ef476f;
 }
 .all-posts-grid .post-card .post-card_date {
   font: 400 0.8rem "IBM Plex Sans", sans-serif;
@@ -245,14 +245,14 @@
 }
 .all-posts-grid .post-card .post-card_button--read-more {
   padding: 1rem 2rem;
-  background: #468faf;
+  background: #cdb4db;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #468faf, #a9d6e5);
+  background: linear-gradient(45deg, #cdb4db, #ffafcc);
   border: none;
   box-shadow: 5px 5px 10px black;
   box-shadow: 5px 5px 5px #b3b3b3;
@@ -261,7 +261,7 @@
 .all-posts-grid .post-card .post-card_button--read-more:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 
@@ -296,7 +296,7 @@
 }
 .featured-section .featured-section_title {
   font: 800 2rem "Oswald", sans-serif;
-  color: #014f86;
+  color: #ef476f;
   margin: 0 auto;
   text-align: center;
   white-space: pre-wrap;
@@ -320,7 +320,7 @@
   }
 }
 .youtube-video-section .what-others-are-saying {
-  color: #014f86;
+  color: #ef476f;
   background: white;
   margin: auto;
   text-align: center;
@@ -400,28 +400,28 @@
 }
 .leave-a-comment-wrapper .leave-a-comment {
   padding: 1rem 2rem;
-  background: #468faf;
+  background: #cdb4db;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #468faf, #a9d6e5);
+  background: linear-gradient(45deg, #cdb4db, #ffafcc);
   border: none;
   box-shadow: 5px 5px 10px black;
 }
 .leave-a-comment-wrapper .leave-a-comment:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 
 .footer {
   height: 5rem;
   width: 100%;
-  background: #a9d6e5;
+  background: #ffafcc;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -431,7 +431,7 @@
   width: 2.5rem;
   height: 2.5rem;
   margin: 0 1rem;
-  fill: #014f86;
+  fill: #ef476f;
 }
 .footer .social-media-icon svg:hover {
   fill: white;
@@ -443,7 +443,7 @@
   text-align: center;
   font: 800 0.8rem "Oswald", sans-serif;
   color: white;
-  background: #468faf;
+  background: #cdb4db;
   padding: 1rem 0;
 }
 
@@ -476,7 +476,7 @@
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  border: 5px solid #a9d6e5;
+  border: 5px solid #ffafcc;
   padding: 0.3rem;
 }
 #popup-bkg .public-comments_name {
@@ -504,7 +504,7 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  border: 5px solid #a9d6e5;
+  border: 5px solid #ffafcc;
   padding: 0.3rem;
 }
 
@@ -629,7 +629,7 @@
   text-align: center;
   margin: 0 0 2rem 0;
   font: 800 1.3rem "Oswald", sans-serif;
-  color: #468faf;
+  color: #cdb4db;
 }
 #button-form-wrapper form {
   width: 80%;
@@ -667,7 +667,7 @@
   margin: auto;
 }
 .stats-section .about-me {
-  color: #014f86;
+  color: #ef476f;
   font: 800 2rem "Oswald", sans-serif;
   width: 90%;
   margin: 7rem auto 2rem;
@@ -680,7 +680,7 @@
   object-fit: cover;
   object-position: center;
   padding: 0.3rem;
-  border: 5px solid #a9d6e5;
+  border: 5px solid #ffafcc;
   border-radius: 50%;
   margin: 2rem auto;
   box-shadow: 3px 3px 2px 3px #c9c9c9;
@@ -707,7 +707,7 @@
   visibility: hidden;
 }
 .stats-section .hr {
-  background-color: #a9d6e5;
+  background-color: #ffafcc;
   max-width: 500px;
 }
 .stats-section .about-page-sm-icons {
@@ -765,7 +765,7 @@
   padding-right: 2rem;
   color: #2b2b2b;
   font: 800 2rem "Oswald", sans-serif;
-  border-right: 1px solid #a9d6e5;
+  border-right: 1px solid #ffafcc;
   width: 100%;
   text-align: right;
 }
@@ -782,7 +782,7 @@
   padding-left: 2rem;
   color: #2b2b2b;
   font: 800 2rem "Oswald", sans-serif;
-  border-left: 1px solid #a9d6e5;
+  border-left: 1px solid #ffafcc;
   width: 100%;
   text-align: left;
 }
@@ -798,14 +798,14 @@
 
 .subscribe-button {
   padding: 1rem 2rem;
-  background: #468faf;
+  background: #cdb4db;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #468faf, #a9d6e5);
+  background: linear-gradient(45deg, #cdb4db, #ffafcc);
   border: none;
   box-shadow: 5px 5px 10px black;
   box-shadow: 5px 5px 3px #9c9c9c;
@@ -813,7 +813,7 @@
 .subscribe-button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 @media (min-width: 1000px) {
@@ -835,7 +835,7 @@
 .about-me-section:first-letter {
   -webkit-initial-letter: 3;
   initial-letter: 3;
-  color: #a9d6e5;
+  color: #ffafcc;
 }
 
 #card-on-bck-subscribers {
@@ -862,7 +862,7 @@
 #card-on-bck-subscribers p {
   font: 1.5rem "Oswald", sans-serif;
   text-align: center;
-  color: #468faf;
+  color: #cdb4db;
 }
 #card-on-bck-subscribers p {
   color: #2b2b2b;
@@ -878,7 +878,7 @@
   margin: 8rem auto 0;
   width: 90%;
   text-align: center;
-  color: #014f86;
+  color: #ef476f;
 }
 
 .search-form {
@@ -901,7 +901,7 @@
 }
 .search-form input {
   border: none;
-  border-bottom: 1px solid #a9d6e5;
+  border-bottom: 1px solid #ffafcc;
   height: 3rem;
   background-image: none;
   background-color: transparent;
@@ -910,7 +910,7 @@
   box-shadow: none;
   padding-left: 1rem;
   font: 1.5rem "Oswald", sans-serif;
-  color: #014f86;
+  color: #ef476f;
   width: 60%;
   max-width: 400px;
 }
@@ -922,19 +922,19 @@
 }
 .search-form .earch-form_button {
   padding: 1rem 2rem;
-  background: #468faf;
+  background: #cdb4db;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #468faf, #a9d6e5);
+  background: linear-gradient(45deg, #cdb4db, #ffafcc);
   border: none;
   box-shadow: 5px 5px 10px black;
   display: inline-block;
   box-shadow: none;
-  background: #468faf;
+  background: #cdb4db;
   padding: 1rem;
   font-size: 0.8rem;
   margin: 0;
@@ -942,7 +942,7 @@
 .search-form .earch-form_button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 
@@ -953,19 +953,19 @@
 }
 .dorpdown .dropdown-button {
   padding: 1rem 2rem;
-  background: #468faf;
+  background: #cdb4db;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #468faf, #a9d6e5);
+  background: linear-gradient(45deg, #cdb4db, #ffafcc);
   border: none;
   box-shadow: 5px 5px 10px black;
   display: inline-block;
   box-shadow: none;
-  background: #468faf;
+  background: #cdb4db;
   padding: 1rem;
   font-size: 0.8rem;
   margin: 0;
@@ -974,7 +974,7 @@
 .dorpdown .dropdown-button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 .dorpdown .dropdown-button .dropdown-button-arrow {
@@ -1008,7 +1008,7 @@
   padding: 1rem;
   color: #2b2b2b;
   font: 1rem "Oswald", sans-serif;
-  background: #a9d6e5;
+  background: #ffafcc;
   display: inline-block;
   margin: 0.3rem 0.5rem;
 }
@@ -1033,24 +1033,24 @@
 
 .all-posts-button {
   padding: 1rem 2rem;
-  background: #468faf;
+  background: #cdb4db;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #468faf, #a9d6e5);
+  background: linear-gradient(45deg, #cdb4db, #ffafcc);
   border: none;
   box-shadow: 5px 5px 10px black;
   box-shadow: 5px 5px 5px #a8a8a8;
   margin: 3rem auto 0;
-  background: #468faf;
+  background: #cdb4db;
 }
 .all-posts-button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 @media (min-width: 1000px) {
@@ -1090,8 +1090,8 @@
 }
 
 .no-posts-found-yet {
-  color: #014f86;
-  background: #a9d6e5;
+  color: #ef476f;
+  background: #ffafcc;
 }
 
 .categories-wtapper-filter {
@@ -1116,7 +1116,7 @@
 }
 .paggination-buttons a {
   font: 800 1rem "Oswald", sans-serif;
-  color: #014f86;
+  color: #ef476f;
 }
 .paggination-buttons a div {
   display: inline-block;
@@ -1139,7 +1139,7 @@
 
 #skipt-to-extreme {
   display: none;
-  color: #468faf;
+  color: #cdb4db;
   text-decoration: underline;
 }
 
@@ -1180,7 +1180,7 @@
   margin: 2rem auto 5rem;
 }
 .contact-wrapper .contact-form label {
-  color: #014f86;
+  color: #ef476f;
   font: 1.7rem "Oswald", sans-serif;
 }
 .contact-wrapper .contact-form label .contact-form-asterisk {
@@ -1191,9 +1191,9 @@
   width: 100%;
   height: 3rem;
   box-shadow: none;
-  border: 1px solid #a9d6e5;
+  border: 1px solid #ffafcc;
   margin: 0.3rem auto 2rem;
-  color: #014f86;
+  color: #ef476f;
   font: 1.3rem "Oswald", sans-serif;
   padding: 0 1rem;
 }
@@ -1201,24 +1201,24 @@
   outline: none;
 }
 .contact-wrapper .contact-form textarea {
-  border: 1px solid #a9d6e5;
+  border: 1px solid #ffafcc;
   resize: none;
   font: 1.3rem "Oswald", sans-serif;
   padding: 1rem;
   width: 100%;
   max-width: 600px;
-  color: #014f86;
+  color: #ef476f;
 }
 .contact-wrapper .contact-form .contact-form-button {
   padding: 1rem 2rem;
-  background: #468faf;
+  background: #cdb4db;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #468faf, #a9d6e5);
+  background: linear-gradient(45deg, #cdb4db, #ffafcc);
   border: none;
   box-shadow: 5px 5px 10px black;
   box-shadow: 3px 3px 5px #cfcfcf;
@@ -1227,7 +1227,7 @@
 .contact-wrapper .contact-form .contact-form-button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 @media (min-width: 1000px) {
@@ -1259,7 +1259,7 @@
   margin-bottom: 5rem;
 }
 .login-form-wrapper .login-form label {
-  color: #014f86;
+  color: #ef476f;
   font: 1.7rem "Oswald", sans-serif;
 }
 .login-form-wrapper .login-form input {
@@ -1267,9 +1267,9 @@
   width: 100%;
   height: 3rem;
   box-shadow: none;
-  border: 1px solid #a9d6e5;
+  border: 1px solid #ffafcc;
   margin: 0.3rem auto 2rem;
-  color: #014f86;
+  color: #ef476f;
   font: 1.3rem "Oswald", sans-serif;
   padding: 0 1rem;
 }
@@ -1278,24 +1278,24 @@
 }
 .login-form-wrapper .login-form .contact-form-button {
   padding: 1rem 2rem;
-  background: #468faf;
+  background: #cdb4db;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #468faf, #a9d6e5);
+  background: linear-gradient(45deg, #cdb4db, #ffafcc);
   border: none;
   box-shadow: 5px 5px 10px black;
-  background: #468faf;
+  background: #cdb4db;
   box-shadow: 3px 3px 5px #cfcfcf;
   margin: 1rem auto;
 }
 .login-form-wrapper .login-form .contact-form-button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 
@@ -1362,7 +1362,7 @@
 .header_menu {
   position: relative;
   margin: 0 0 0 2rem;
-  background: #014f86;
+  background: #ef476f;
   height: 3rem;
   width: 3rem;
   border-radius: 3rem;
@@ -1386,7 +1386,7 @@
   margin: 0 5vw 0 0;
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
-  color: #014f86;
+  color: #ef476f;
   flex-grow: 7;
   font-stretch: extra-condensed;
 }
@@ -1404,7 +1404,7 @@
   left: 0;
   top: 0;
   height: 100vh;
-  background-color: #a9d6e5;
+  background-color: #ffafcc;
   display: block;
   z-index: 2;
 }
@@ -1414,7 +1414,7 @@
   position: relative;
   left: 0;
   font: 400 2rem "Oswald", sans-serif;
-  color: #014f86;
+  color: #ef476f;
   width: 80%;
   margin: 1rem auto;
   text-decoration: none;
@@ -1422,7 +1422,7 @@
 }
 .menu-container a:visited,
 .menu-container .a-open:visited {
-  color: #014f86;
+  color: #ef476f;
 }
 .menu-container a:first-of-type,
 .menu-container .a-open:first-of-type {
@@ -1502,7 +1502,7 @@
 .all-posts-grid .post-card .post-card_post-title {
   font: 600 1.5rem "Oswald", sans-serif;
   margin: 1rem 0;
-  color: #014f86;
+  color: #ef476f;
 }
 .all-posts-grid .post-card .post-card_date {
   font: 400 0.8rem "IBM Plex Sans", sans-serif;
@@ -1516,14 +1516,14 @@
 }
 .all-posts-grid .post-card .post-card_button--read-more {
   padding: 1rem 2rem;
-  background: #468faf;
+  background: #cdb4db;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #468faf, #a9d6e5);
+  background: linear-gradient(45deg, #cdb4db, #ffafcc);
   border: none;
   box-shadow: 5px 5px 10px black;
   box-shadow: 5px 5px 5px #b3b3b3;
@@ -1532,7 +1532,7 @@
 .all-posts-grid .post-card .post-card_button--read-more:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 
@@ -1567,7 +1567,7 @@
 }
 .featured-section .featured-section_title {
   font: 800 2rem "Oswald", sans-serif;
-  color: #014f86;
+  color: #ef476f;
   margin: 0 auto;
   text-align: center;
   white-space: pre-wrap;
@@ -1591,7 +1591,7 @@
   }
 }
 .youtube-video-section .what-others-are-saying {
-  color: #014f86;
+  color: #ef476f;
   background: white;
   margin: auto;
   text-align: center;
@@ -1671,28 +1671,28 @@
 }
 .leave-a-comment-wrapper .leave-a-comment {
   padding: 1rem 2rem;
-  background: #468faf;
+  background: #cdb4db;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #468faf, #a9d6e5);
+  background: linear-gradient(45deg, #cdb4db, #ffafcc);
   border: none;
   box-shadow: 5px 5px 10px black;
 }
 .leave-a-comment-wrapper .leave-a-comment:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 
 .footer {
   height: 5rem;
   width: 100%;
-  background: #a9d6e5;
+  background: #ffafcc;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -1702,7 +1702,7 @@
   width: 2.5rem;
   height: 2.5rem;
   margin: 0 1rem;
-  fill: #014f86;
+  fill: #ef476f;
 }
 .footer .social-media-icon svg:hover {
   fill: white;
@@ -1714,7 +1714,7 @@
   text-align: center;
   font: 800 0.8rem "Oswald", sans-serif;
   color: white;
-  background: #468faf;
+  background: #cdb4db;
   padding: 1rem 0;
 }
 
@@ -1747,7 +1747,7 @@
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  border: 5px solid #a9d6e5;
+  border: 5px solid #ffafcc;
   padding: 0.3rem;
 }
 #popup-bkg .public-comments_name {
@@ -1775,7 +1775,7 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  border: 5px solid #a9d6e5;
+  border: 5px solid #ffafcc;
   padding: 0.3rem;
 }
 
@@ -1900,7 +1900,7 @@
   text-align: center;
   margin: 0 0 2rem 0;
   font: 800 1.3rem "Oswald", sans-serif;
-  color: #468faf;
+  color: #cdb4db;
 }
 #button-form-wrapper form {
   width: 80%;
@@ -1933,7 +1933,7 @@
   margin: 8rem auto 0;
   width: 90%;
   text-align: center;
-  color: #014f86;
+  color: #ef476f;
 }
 
 .search-form {
@@ -1956,7 +1956,7 @@
 }
 .search-form input {
   border: none;
-  border-bottom: 1px solid #a9d6e5;
+  border-bottom: 1px solid #ffafcc;
   height: 3rem;
   background-image: none;
   background-color: transparent;
@@ -1965,7 +1965,7 @@
   box-shadow: none;
   padding-left: 1rem;
   font: 1.5rem "Oswald", sans-serif;
-  color: #014f86;
+  color: #ef476f;
   width: 60%;
   max-width: 400px;
 }
@@ -1977,19 +1977,19 @@
 }
 .search-form .earch-form_button {
   padding: 1rem 2rem;
-  background: #468faf;
+  background: #cdb4db;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #468faf, #a9d6e5);
+  background: linear-gradient(45deg, #cdb4db, #ffafcc);
   border: none;
   box-shadow: 5px 5px 10px black;
   display: inline-block;
   box-shadow: none;
-  background: #468faf;
+  background: #cdb4db;
   padding: 1rem;
   font-size: 0.8rem;
   margin: 0;
@@ -1997,7 +1997,7 @@
 .search-form .earch-form_button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 
@@ -2008,19 +2008,19 @@
 }
 .dorpdown .dropdown-button {
   padding: 1rem 2rem;
-  background: #468faf;
+  background: #cdb4db;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #468faf, #a9d6e5);
+  background: linear-gradient(45deg, #cdb4db, #ffafcc);
   border: none;
   box-shadow: 5px 5px 10px black;
   display: inline-block;
   box-shadow: none;
-  background: #468faf;
+  background: #cdb4db;
   padding: 1rem;
   font-size: 0.8rem;
   margin: 0;
@@ -2029,7 +2029,7 @@
 .dorpdown .dropdown-button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 .dorpdown .dropdown-button .dropdown-button-arrow {
@@ -2063,7 +2063,7 @@
   padding: 1rem;
   color: #2b2b2b;
   font: 1rem "Oswald", sans-serif;
-  background: #a9d6e5;
+  background: #ffafcc;
   display: inline-block;
   margin: 0.3rem 0.5rem;
 }
@@ -2088,24 +2088,24 @@
 
 .all-posts-button {
   padding: 1rem 2rem;
-  background: #468faf;
+  background: #cdb4db;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #468faf, #a9d6e5);
+  background: linear-gradient(45deg, #cdb4db, #ffafcc);
   border: none;
   box-shadow: 5px 5px 10px black;
   box-shadow: 5px 5px 5px #a8a8a8;
   margin: 3rem auto 0;
-  background: #468faf;
+  background: #cdb4db;
 }
 .all-posts-button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 @media (min-width: 1000px) {
@@ -2145,8 +2145,8 @@
 }
 
 .no-posts-found-yet {
-  color: #014f86;
-  background: #a9d6e5;
+  color: #ef476f;
+  background: #ffafcc;
 }
 
 .categories-wtapper-filter {
@@ -2171,7 +2171,7 @@
 }
 .paggination-buttons a {
   font: 800 1rem "Oswald", sans-serif;
-  color: #014f86;
+  color: #ef476f;
 }
 .paggination-buttons a div {
   display: inline-block;
@@ -2194,14 +2194,14 @@
 
 #skipt-to-extreme {
   display: none;
-  color: #468faf;
+  color: #cdb4db;
   text-decoration: underline;
 }
 
 .all-posts-title-profile {
   margin: 10rem auto 0;
   font: 800 2rem "Oswald", sans-serif;
-  color: #468faf;
+  color: #cdb4db;
   width: 100%;
   max-width: 56rem;
   text-align: center;
@@ -2217,7 +2217,7 @@
 }
 .search-form-profile input {
   border: none;
-  border-bottom: 1px solid #a9d6e5;
+  border-bottom: 1px solid #ffafcc;
   height: 3rem;
   background-image: none;
   background-color: transparent;
@@ -2226,7 +2226,7 @@
   box-shadow: none;
   padding-left: 1rem;
   font: 1.5rem "Oswald", sans-serif;
-  color: #014f86;
+  color: #ef476f;
   width: 60%;
   max-width: 400px;
 }
@@ -2238,19 +2238,19 @@
 }
 .search-form-profile .earch-form_button {
   padding: 1rem 2rem;
-  background: #468faf;
+  background: #cdb4db;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #468faf, #a9d6e5);
+  background: linear-gradient(45deg, #cdb4db, #ffafcc);
   border: none;
   box-shadow: 5px 5px 10px black;
   display: inline-block;
   box-shadow: none;
-  background: #468faf;
+  background: #cdb4db;
   padding: 1rem;
   font-size: 0.8rem;
   margin: 0;
@@ -2258,7 +2258,7 @@
 .search-form-profile .earch-form_button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 
@@ -2269,20 +2269,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 2px solid #a9d6e5;
+  border-bottom: 2px solid #ffafcc;
 }
 .posts-or-comments-wrap div {
   font: 400 0.8rem "Oswald", sans-serif;
-  background: #a9d6e5;
+  background: #ffafcc;
   color: white;
   padding: 1rem;
 }
 .posts-or-comments-wrap div:hover {
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 .posts-or-comments-wrap .posts-or-comments-wrap_posts {
-  background: #468faf;
+  background: #cdb4db;
 }
 .posts-or-comments-wrap .posts-or-comments-wrap_posts,
 .posts-or-comments-wrap .posts-or-comments-wrap_comments {
@@ -2324,7 +2324,7 @@
 .all-posts-grid-profile .post-card .post-card_title-and-content .post-card_post-title {
   font: 600 1.2rem "Oswald", sans-serif;
   margin: 0.3rem;
-  color: #014f86;
+  color: #ef476f;
 }
 .all-posts-grid-profile .post-card .post-card_title-and-content .post-card_date {
   font: 400 0.8rem "IBM Plex Sans", sans-serif;
@@ -2350,7 +2350,7 @@
   display: inline-block;
 }
 .all-posts-grid-profile .post-card .post-card_options .post-card-options_read {
-  color: #468faf;
+  color: #cdb4db;
   font: 400 1.2rem "Oswald", sans-serif;
   display: inline-block;
 }
@@ -2409,7 +2409,7 @@
 .public-comments-profile .public-comments_read,
 .public-comments-profile-comments .public-comments_read,
 .public-comments-profile-subscriber .public-comments_read {
-  color: #468faf;
+  color: #cdb4db;
   font: 400 1.2rem "Oswald", sans-serif;
   display: inline-block;
   margin: 0 2rem;
@@ -2431,7 +2431,7 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  border: 5px solid #a9d6e5;
+  border: 5px solid #ffafcc;
   padding: 0.3rem;
 }
 .public-comments-profile .public-comments_name,
@@ -2465,7 +2465,7 @@
 .profile-menu {
   width: 100%;
   max-width: 750px;
-  background: #468faf;
+  background: #cdb4db;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -2488,7 +2488,7 @@
   height: 100%;
 }
 .profile-menu a:hover {
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 .profile-menu a svg {
@@ -2522,7 +2522,7 @@
   padding: 0.3rem;
 }
 .stats-card div span {
-  color: #468faf;
+  color: #cdb4db;
   font: 800 1.2rem "Oswald", sans-serif;
 }
 .stats-card .stats-wrap_delete {
@@ -2586,7 +2586,7 @@
 .settings {
   margin: 5rem auto;
   font: 800 1.3rem "Oswald", sans-serif;
-  color: #468faf;
+  color: #cdb4db;
   width: 90%;
   max-width: 56rem;
   text-align: center;
@@ -2627,7 +2627,7 @@
 @media (min-width: 1000px) {
   .home-page-wrapper .page-toggle,
 .edit-general-settings-wrapper .page-toggle {
-    background: #a9d6e5;
+    background: #ffafcc;
     color: white;
     pointer-events: none;
     padding: 2rem 1rem;
@@ -2687,7 +2687,7 @@
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
-  border: 5px solid #a9d6e5;
+  border: 5px solid #ffafcc;
 }
 @media (min-width: 700px) {
   .home-page-wrapper .homepage-images img,
@@ -2711,7 +2711,7 @@
 .home-page-wrapper form label,
 .edit-general-settings-wrapper form label {
   font: 800 1rem "Oswald", sans-serif;
-  color: #468faf;
+  color: #cdb4db;
   display: block;
   margin: 0 0 0.3rem;
 }
@@ -2767,7 +2767,7 @@
   color: white;
   font: 800 1rem "Oswald", sans-serif;
   border: none;
-  background-color: #468faf;
+  background-color: #cdb4db;
   cursor: pointer;
 }
 @media (min-width: 700px) {
@@ -2784,7 +2784,7 @@
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
-  border: 5px solid #a9d6e5;
+  border: 5px solid #ffafcc;
 }
 @media (min-width: 700px) {
   .home-page-wrapper img,
@@ -2829,7 +2829,7 @@
 .edit-general-settings-wrapper h2 {
   margin: 5rem auto 1rem;
   font: 800 1.3rem "Oswald", sans-serif;
-  color: #468faf;
+  color: #cdb4db;
   width: 90%;
   max-width: 56rem;
   text-align: center;
@@ -2910,7 +2910,7 @@
   transform: translateX(2rem);
 }
 .edit-general-settings-wrapper form input:checked + .switch {
-  background: #014f86;
+  background: #ef476f;
 }
 .edit-general-settings-wrapper form .update {
   margin: 1rem 0;
@@ -3053,7 +3053,7 @@
 }
 @media (min-width: 1000px) {
   .page-toggle {
-    background: #a9d6e5;
+    background: #ffafcc;
     color: white;
     pointer-events: none;
     padding: 2rem 1rem;
@@ -3170,7 +3170,7 @@
 }
 .post-title-content-wrapper label {
   font: 800 1rem "Oswald", sans-serif;
-  color: #468faf;
+  color: #cdb4db;
   display: block;
   margin: 0.3rem 0;
   width: 100%;
@@ -3219,7 +3219,7 @@
 
 .standard-h3 {
   font: 800 1rem "Oswald", sans-serif;
-  color: #468faf;
+  color: #cdb4db;
   display: block;
   margin: 0.3rem 0;
 }
@@ -3281,17 +3281,17 @@
 
 .send-post {
   padding: 1rem 2rem;
-  background: #468faf;
+  background: #cdb4db;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #468faf, #a9d6e5);
+  background: linear-gradient(45deg, #cdb4db, #ffafcc);
   border: none;
   box-shadow: 5px 5px 10px black;
-  background: #468faf;
+  background: #cdb4db;
   box-shadow: 5px 5px 5px #c4c4c4;
   display: inline-block;
   margin: 1rem;
@@ -3302,20 +3302,20 @@
 .send-post:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 
 .cancel-post {
   padding: 1rem 2rem;
-  background: #468faf;
+  background: #cdb4db;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #468faf, #a9d6e5);
+  background: linear-gradient(45deg, #cdb4db, #ffafcc);
   border: none;
   box-shadow: 5px 5px 10px black;
   background: #af3434;
@@ -3329,7 +3329,7 @@
 .cancel-post:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #014f86;
+  background: #ef476f;
   cursor: pointer;
 }
 .cancel-post:hover {
@@ -3513,7 +3513,7 @@
   transform: translateX(2rem);
 }
 .posts-buttons-new input:checked + .switch {
-  background: #014f86;
+  background: #ef476f;
 }
 
 #raw-image-grid {
@@ -3549,13 +3549,13 @@
 }
 .error-wrapper h2 {
   font: 600 2rem "Oswald", sans-serif;
-  color: #468faf;
+  color: #cdb4db;
 }
 .error-wrapper .goBack {
   font: 600 1.3rem "Oswald", sans-serif;
   color: white;
   margin: 1rem;
-  background: #468faf;
+  background: #cdb4db;
   cursor: pointer;
   padding: 0.5rem 1rem;
 }
@@ -3574,7 +3574,7 @@
 }
 .success-wrapper h1 {
   font: 800 2rem "Oswald", sans-serif;
-  color: #468faf;
+  color: #cdb4db;
   margin: 2rem auto;
   width: 100%;
   text-align: center;
@@ -3600,16 +3600,17 @@
   background-color: #525252;
 }
 .success-wrapper span {
-  color: #a9d6e5;
+  color: #ffafcc;
   font: 600 1.3rem "Oswald", sans-serif;
 }
 
-.CKPost-wrapper {
+.CKPost-wrapper, .CKPost-wrapper-ck-fill-pkg {
   width: 90%;
   max-width: 56rem;
   margin: 2rem auto 5rem;
   min-height: 50vh;
 }
+
 .CKPost-wrapper #raw-image-grid {
   width: 100%;
   align-items: center;
@@ -3617,16 +3618,18 @@
   flex-wrap: nowrap;
   overflow: hidden;
 }
-.CKPost-wrapper #raw-image-grid img {
+.CKPost-wrapper #raw-image-grid img, .CKPost-wrapper-ck-fill-pkg img{
   object-fit: cover;
   object-position: center;
   -o-object-fit: cover;
   -o-object-position: center;
   width: 50%;
   height: 50vw;
-  max-height: 20rem;
+  /* max-width: 100% !important;
+  max-height: 25rem; */
   margin: 0 0.2rem;
 }
+
 @media (min-width: 700px) {
   .CKPost-wrapper #raw-image-grid img {
     width: 50%;
@@ -3789,7 +3792,7 @@
   }
   .featured-section .featured-section-title-content-wrapper .featured-section_title {
     font: 800 2.5rem "Oswald", sans-serif;
-    color: #014f86;
+    color: #ef476f;
     margin: 0 auto;
     text-align: left;
   }

@@ -27,7 +27,7 @@ cancelPostButton.addEventListener('click', confirmCancel);
 //removing the tag
 const removeTag = (thiss) => {
 	const index = arrayToFilterFrom.indexOf(
-		thiss.parentNode.textContent.split('  ')[0]
+		thiss.parentNode.textContent.split(' ')[0]
 	);
 	arrayToFilterFrom.splice(index, 1);
 	thiss.parentNode.remove();
@@ -42,6 +42,7 @@ const addTag = (thiss) => {
 
 	const tagWrapper = document.querySelector('.tagWrapper');
 	tagWrapper.appendChild(tag);
+	console.log(arrayToFilterFrom)
 };
 
 //adding tags button
@@ -73,7 +74,7 @@ const dropdownOption = document.querySelectorAll('.dorpdown-option');
 
 dropdownOption.forEach((tag) => {
 	tag.addEventListener('click', (thiss) => {
-		arrayToFilterFrom.push(thiss.target.textContent.split(' ').join('-'));
+		arrayToFilterFrom.push(thiss.target.textContent.replace(/\s/g, '')/*.split(' ').join('-')*/);
 		console.log(arrayToFilterFrom);
 	});
 });
@@ -83,21 +84,6 @@ const content = document.querySelector('.CKE-post-content');
 const author = document.querySelector('.CKE-post-author');
 const image = document.querySelector('#CKE-post-image');
 const embed = document.querySelector('#CKE-post-embedVideo');
-
-// DecoupledEditor.create(document.querySelector('#editor'), {
-// 	toolbar: {
-// 		removeItems: ['mediaEmbed', 'uploadImage'],
-// 		shouldNotGroupWhenFull: true,
-// 	},
-// })
-// 	.then((newEditor) => {
-// 		const toolbarContainer = document.querySelector('#toolbar-container');
-// 		editor = newEditor;
-// 		toolbarContainer.appendChild(newEditor.ui.view.toolbar.element);
-// 	})
-// 	.catch((error) => {
-// 		console.error(error);
-// 	});
 
 const showResult = async (file) => {
 	const data = await fileDataURL(file);

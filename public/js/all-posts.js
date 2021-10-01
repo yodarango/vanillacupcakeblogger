@@ -56,7 +56,7 @@ const dropdownOption = document.querySelectorAll('.dorpdown-option');
 
 dropdownOption.forEach((tag) => {
 	tag.addEventListener('click', (thiss) => {
-		arrayToFilterFrom.push(thiss.target.textContent.split(' ').join('-'));
+		arrayToFilterFrom.push(thiss.target.textContent.replace(/\s/g, '')/*.split(' ').join('-')*/);
 	});
 });
 
@@ -75,10 +75,11 @@ if (postGrid.childElementCount === 0) {
 const filterByIdSpan = document.querySelectorAll(
 	'.categories-wtapper-filter span'
 );
-filterByIdSpan.forEach((e) => (e.className = e.className.split(' ').join('-')));
+filterByIdSpan.forEach((e) => (e.className = e.className.replace(/\s/g, '')/*.split(' ').join('-')*/));
 
 //call this function every time a new array item is added or removed
 const filterContent = () => {
+	console.log(arrayToFilterFrom)
 	//1. Hide all posts on tag click
 	postCard.forEach((postToHide) => {
 		postToHide.style.display = 'none';
@@ -94,7 +95,7 @@ const filterContent = () => {
 			-1;
 		const postDisplay = document.querySelectorAll(`.${post}`);
 		postDisplay.forEach((block) => {
-			block.className.split(' ').join('-');
+			block.className.replace(/\s/g, '')/*.split(' ').join('-')*/;
 			block.parentElement.parentElement.style.display = 'block';
 		});
 	});

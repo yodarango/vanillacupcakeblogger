@@ -16,3 +16,7 @@ NEWEST UPDATES TO EDITOR:
 * The ol editor is still available if I need it, all I have to do is switch back the view being rendered
 * No files were deleted or edited, I just made a copy of hte surrent ones and added the name ckeditor... 
   as edited as needed
+
+
+  FILTERS ARE NOT WORKING
+  * only one word filters and one owrd per post is working

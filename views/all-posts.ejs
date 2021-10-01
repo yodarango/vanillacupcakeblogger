@@ -73,7 +73,7 @@
 				<div class="dropdown-button-arrow"></div>
 			</div>
 			<% blog.categories.forEach((category)=>{ %>
-			<div class="dorpdown-option" value="<%=category.toLowerCase()%>">
+			<div class="dorpdown-option" value="<%=category.toLowerCase()%>" data-tag="<%=category.toLowerCase()%>">
 				<%=category.toLowerCase()%>
 			</div>
 			<% }) %>
