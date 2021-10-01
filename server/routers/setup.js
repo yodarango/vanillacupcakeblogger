@@ -1,4 +1,4 @@
-/*onst express = require("express");
+const express = require("express");
 const router = express.Router();
 
 const Blog = require("../models/blog-model");
@@ -57,6 +57,7 @@ router.get("/", async (req, res) => {
   const newPost = {
     title: `What is the Vanilla Blog?`,
     content: `Bloggin had never been so easy and 🤩🧁 !! `,
+    author: `Test`,
     postContent: `<p>The Vanilla Cupcake Blooger is a fully customizable blog for those who take blogging seriously. 
         Built with the best SEO practices, the greatest technologies and the the latest design petterns. The Blog was programmed with the following concepts in mind:
         </p>
@@ -108,4 +109,4 @@ router.get("/", async (req, res) => {
 });
 
 module.exports = router;
-*/
+
