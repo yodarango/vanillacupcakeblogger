@@ -659,6 +659,9 @@
 
 .about-page-wrapper {
   min-height: 90vh;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
 }
 
 .stats-section {
