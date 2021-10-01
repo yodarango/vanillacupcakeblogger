@@ -661,7 +661,8 @@
   min-height: 90vh;
   width: 90%;
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto 2rem;
+  line-height: 2rem;
 }
 
 .stats-section {
