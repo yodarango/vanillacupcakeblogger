@@ -18,6 +18,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //listen to the app
-app.listen(/*process.env.PORT || */ 3000, () => {
+app.listen(process.env.PORT || 3000, () => {
 	console.log(`running on ${process.env.PORT}`);
 });
