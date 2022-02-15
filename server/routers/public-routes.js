@@ -115,6 +115,7 @@ router.get('/about', async (req, res) => {
 		let blog = await Blog.findOne({});
 		let commentCount = await Comment.find({}).countDocuments({});
 
+		console.log(count);
 		// if (postCount == undefined || postCount.length == 0) { postCount = 1}
 		// if (posts == undefined || posts.length == 0) { posts = defaults.defaultPosts}
 		// if (blog == undefined || blog.length == 0 ) { blog = defaults.defaultBlog }
