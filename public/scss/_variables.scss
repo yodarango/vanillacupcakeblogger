@@ -5,22 +5,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Kristi&display=swap');
 
 //colors
-//pressson ponderings
-$main-color: #ffaecd;
-$secondary-color: #ef476f;
-$third-color: #cdb5da;
-$lettering: rgb(41, 41, 41);
-$fourth-color: rgb(43, 43, 43);
-$cancel-delete: #ffaecd;
+// ---pressson - ponderings
+// $main-color: #ffaecd;
+// $secondary-color: #ef476f;
+// $third-color: #cdb5da;
+// $lettering: rgb(41, 41, 41);
+// $fourth-color: rgb(43, 43, 43);
+// $cancel-delete: #ffaecd;
 
 //colors
-//Presson Ponderings
+// ---savvy - saute
 // $main-color: rgb(59, 59, 59);
 // $secondary-color: rgb(0, 0, 0);
 // $third-color: #5f5f5f;
 // $lettering: black;
 // $fourth-color: #242424;
 // $cancel-delete: rgb(175, 52, 52);
+
+// ---vanilla - blog
+$main-color: #ffbe00;
+$secondary-color: #fc7b28;
+$third-color: #f1d45e;
+$lettering: rgb(41, 41, 41);
+$fourth-color: rgb(43, 43, 43);
+$cancel-delete: rgb(175, 52, 52);
 
 //fonts
 $main-font: 'Shippori Mincho B1', serif;

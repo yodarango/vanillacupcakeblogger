@@ -1,7 +1,7 @@
 {
   "name": "simple-reflections",
   "version": "1.0.0",
-  "description": "A personal cooking blog for Presson Ponderings",
+  "description": "A personal cooking blog for vanilla blog",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
