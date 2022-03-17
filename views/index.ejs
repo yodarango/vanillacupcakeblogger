@@ -3,9 +3,19 @@
 <head>
 
     <%- include('./partials/head') %> 
+    
+    <!-- OG TWITTER -->
+    <meta name="twitter:title" content="Savvy Saute" />
+    <meta name="twitter:description" content="Who said exquisit meals had to be expensive? Come learn how to eat like royalty on a budget!" />
 
-    <meta name="og:title" content="Presson Ponderings - Home" />
-    <title>Presson Ponderings | Blog</title>
+        <!-- OG TAGS -->
+    <meta name="og:title" content="Savvy Saute" />
+    <meta property="og:url" content="https://savvysaute.com" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:description"
+        content="Who said exquisit meals had to be expensive? Come learn how to eat like royalty on a budget!" />
+
+    <title>Savvy Saute | Who said exquisit meals had to be expensive? Come learn how to eat like royalty on a budget!</title>
 </head>
 <body>
     <%- include('./partials/_header') %> 
@@ -14,12 +24,13 @@
         <img src="data:image/png;base64,<%=blog.logo%>" class="page-art_logo">
     </div>
 
+ <!-- Posts section -->
+<% if(moreSettings.show_last_posts) {%>
     <h2 class="all-posts-title">MOST RECENT</h2>
     <div class="hr"></div>
 
-    <!-- Posts section -->
     <div class="all-posts-grid all-posts-grid-index">
-        <% posts.forEach((post) => { %>
+        <% if(posts && posts.length > 0) {posts.forEach((post) => { %>
             <div class="post-card">
                 <img src="<%=post.postImage%> " alt="image for a post article" class="post-card_post-image">
                 <h3 class="post-card_post-title"><%= post.title %></h3>
@@ -28,13 +39,16 @@
                 <a href="/see-post/<%=post._id%> " class="post-card_button--read-more">READ MORE</a>
             </div>
 
-        <% }) %> 
+        <% })} %> 
+
     </div>
+
+    <%}%>
 <div class="featured-section">
     <img src="data:image/png;base64,<%=blog.featuredImage%>" alt="a photo" class="featured-section_image">
     <div class="featured-section-title-content-wrapper">
     <h2 class="featured-section_title"> <%= blog.featuredTitle.toUpperCase(); %></h2>
-    <p class="featured-section_parragraph"> <%-blog.featuredContent%> </p>
+    <div class="featured-section_parragraph featured-section_div"> <%-blog.featuredContent%> </div>
     </div>
 </div>
 

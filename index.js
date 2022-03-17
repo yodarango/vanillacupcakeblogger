@@ -7,8 +7,10 @@ require('./db/db');
 //npm pacakges at global level
 const express = require('express');
 const app = express();
-app.use('/account', require('./server/routers/private-routes'));
+app.use('/account', require('./server/routers/private-routes').router);
+app.use('/account', require('./server/routers/private-reoutes_1.2'));
 app.use('', require('./server/routers/public-routes'));
+app.use('', require('./server/routers/public-routes_1.2'));
 app.use('/setup', require('./server/routers/setup'));
 
 //middleware

@@ -137,3 +137,14 @@
 		color: rgb(179, 179, 179);
 	}
 }
+
+.CKPost-wrapper-ck-fill-pkg {
+	width: 90%;
+	margin: 2rem auto;
+	max-width: 56rem;
+	min-height: 50vh;
+
+	p {
+		font: 400 1.2rem $third-font;
+	}
+}

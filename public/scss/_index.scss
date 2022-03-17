@@ -179,7 +179,9 @@
 		}
 
 		.post-card_post-title {
-			font: 600 1.5rem $third-font;
+			font: 600 1.3rem $third-font;
+			white-space: nowrap;
+			text-overflow: ellipsis;
 			margin: $macro-space-around-element 0;
 			color: $secondary-color;
 		}
@@ -200,6 +202,21 @@
 			@include standard-button;
 			box-shadow: 5px 5px 5px rgb(179, 179, 179);
 			padding: 1rem;
+		}
+
+		.post-card_title-and-content {
+			white-space: nowrap;
+			overflow: hidden;
+
+			.post-card_post-title {
+				font: 600 1.3rem $third-font;
+				text-overflow: ellipsis;
+			}
+		}
+
+		@media (min-width: 1000px) {
+			flex-grow: 0;
+			margin: 2rem 0.5rem;
 		}
 	}
 }
@@ -224,7 +241,7 @@
 		width: 16rem;
 		height: 16rem;
 		flex-grow: 1;
-		object-fit: cover;
+		object-fit: contain;
 		object-position: center;
 		margin: $space-around-element;
 		display: block;
@@ -250,6 +267,14 @@
 		text-align: center;
 		line-height: $line-height;
 		white-space: pre-wrap;
+	}
+
+	.featured-section_parragraph.featured-section_div {
+		overflow-x: scroll;
+
+		iframe {
+			max-width: 100%;
+		}
 	}
 }
 

@@ -11,7 +11,7 @@ see partials/ckeditor...  -->
 			rel="stylesheet"
 			href="toolbarconfigurator/lib/codemirror/neo.css"
 		/>
-		<title>Presson Ponderings | Blog</title>
+		<title>Savvy Saute | Blog</title>
 	</head>
 	<body>
 		<%- include('./partials/_header') %>
@@ -24,7 +24,7 @@ see partials/ckeditor...  -->
 					name="title"
 					type="text"
 					maxlength="40"
-					placeholder="Enter Your Post's Title"
+					placeholder="Post's Title (required)"
 					required
 				/>
 				<input
@@ -32,7 +32,7 @@ see partials/ckeditor...  -->
 					name="content"
 					type="text"
 					maxlength="150"
-					placeholder="Enter Your Post's Description"
+					placeholder="Post's Description (required)"
 					required
 				/>
 				<input
@@ -43,16 +43,19 @@ see partials/ckeditor...  -->
 					placeholder="Name of author"
 					required
 				/>
-				<label for="postImage">
+				<label for="">
 					Select Your Post's Thumbnail
 					<div class="spacer"></div>
+				</label>
+					
 					<input
 						id="postImage"
 						type="file"
 						onchange="showResult( this.files[0]);"
 						accept=".png, .jpg, .jpeg"
+						class="hidden-input"
 					/>
-				</label>
+				
 				<p class="max-file-size">( Max file size is 3MB )</p>
 			</div>
 			<div class="imagePost-preview">
@@ -60,6 +63,7 @@ see partials/ckeditor...  -->
 					src="data:image/png;base64,<%=blog.logo%>"
 					alt="image preview"
 					id="result"
+					class="image-result_U-1-2"
 				/>
 			</div>
 			<div class="dorpdown dropdown-category dorpdown-new">
@@ -78,9 +82,6 @@ see partials/ckeditor...  -->
 			</div>
 
 		<!-- CKEditor starts -->
-		<div class="youtube-link-converter">
-				If you are uploading an image we suggest you click the last image icon on the tool bar for better compatibility. <br/> You can also adjust the size of your photo from there.  (for mobile sizes we recommend 320 to 380)
-			</div>
 		<main>
 			<div class="adjoined-top">
 			<div class="adjoined-bottom">
@@ -133,7 +134,7 @@ see partials/ckeditor...  -->
 						name="sendEmail"
 						value="sendemail"
 					/>
-					<div class="switch"><div class="switch_ball"></div></div>
+					<div class="switch  switch-middle_U-1-2"><div class="switch_ball"></div></div>
 				</label>
 			</div>
 

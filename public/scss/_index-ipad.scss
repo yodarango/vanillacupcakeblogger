@@ -145,3 +145,17 @@
 .all-posts-grid-index {
 	max-width: 60rem;
 }
+
+@media (min-width: 1000px) {
+	.profile-menu {
+		left: -22rem !important;
+		top: 30rem;
+		right: 0;
+		bottom: 0;
+		transform: rotate(90deg);
+
+		a svg {
+			transform: rotate(-90deg);
+		}
+	}
+}

@@ -4,62 +4,80 @@
 
     <%- include('./partials/head') %> 
 
-    <title>Presson Ponderings | Blog</title>
+    <title>Savvy Saute | Blog</title>
 </head>
 <body>
     <%- include('./partials/_header') %> 
     <h1 class="settings">SETTINGS</h1>
-    <h1 class="youtube-link-converter">What is a Rich Text Area?
+    <h1 class="youtube-link-converter settings-info-disclaimer max-width-true">What is a Rich Text Area?
         <p>it means you can paste raw HTML code and have it rendered 💻. For example, 
             embeding videos, images, or styling text
         </p>
     </h1>
 
     <div class="div-trigger home-page-wrapper">
-        <!-- home page -->
-        <div class="page-toggle home-page-toggle"> Edit Home Page <div></div></div>
-        <div class="div-trigger_child-wrapper">
-            <div class="homepage-images">
-                <form method="POST" action="/account/edit-home-page?_method=PATCH">
-                    <label for="home-section-logo">Blog Main Name and Accent Name</label>
-                    <input type="text" id="paypalButtonTitle" name="firstName" maxlength="20" value=<%= blog.firstName %> >
-                    <input type="text" id="paypalButtonTitle" name="secondName" maxlength="20" value=<%= blog.secondName %> >
-                    <button class="update">UPDATE</button>
+        <!------------------------------------------ home page edit section ---------------------------------------------------->
+        <div class="page-toggle home-page-toggle" id="header-home-div-trigger_U-1-2"> Edit Home Page <div></div></div>
+        <div class="div-trigger_child-wrapper" id="home-div-trigger_U-1-2">
+            <div class="homepage-images homepage-images_U-1-2">
+
+                <!-- website title -->
+                <form method="POST" action="/account/edit-home-page?_method=PATCH" class="header-title_U-1-2">
+                    <label for="home-section-logo">Blog Header Name</label>
+                    <input type="text" id="paypalButtonTitle" name="firstName" maxlength="20" value="<%= blog.firstName %>" placeholder="Normal Text"/>
+                    <input type="text" id="paypalButtonTitle" name="secondName" maxlength="20" value="<%= blog.secondName %>"  placeholder="Accent Text"/>
+                    <button class="update update_U-1-2">UPDATE</button>
                 </form>
-                <form action="/account/upload-background" method="POST" enctype="multipart/form-data">
+                 <div class="image-updaters-wrapper_U-1-2">
+                <!-- homepage bkg -->
+                <form action="/account/upload-background" method="POST" enctype="multipart/form-data" class="flex-column_1-2 section-gray">
+                    <div class="home-img-info-wrapper">
                     <label for="home-section-logo">Homepage background</label>
                     <img id="home-section-logo-image" src="data:image/png;base64,<%=blog.background%>" alt="some logo">
                     <p class="max-file-size">( Max file size is 3MB )</p>
-                    <input type="file" id="home-section-logo" name="background" accept=".jpg, .jpeg, .png" required>
-                    <button class="update">UPDATE</button>
-                </form>
-                <form action="/account/upload-logo" method="POST" enctype="multipart/form-data">
-                    <label for="home-section-logo">Homepage logo</label>
-                    <img id="home-section-logo-image" src="data:image/png;base64,<%=blog.logo%>" alt="some logo">
-                    <p class="max-file-size">( Max file size is 3MB )</p>
-                    <input type="file" id="home-section-logo" name="logo" accept=".jpg, .jpeg, .png" required>
+                    <p class="success-p_U-1-2"></p>
+                    <input type="file" id="home-section-logo" name="background" accept=".jpg, .jpeg, .png" required class="hidden-input">
+                    </div>
                     <button class="update">UPDATE</button>
                 </form>
 
-                <form action="/account/upload-featured-image" method="POST" enctype="multipart/form-data">
+                <!-- homepage logo -->
+                <form action="/account/upload-logo" method="POST" enctype="multipart/form-data" class="flex-column_1-2 section-gray"> 
+                    <div class="home-img-info-wrapper">
+                    <label for="home-section-logo">Homepage logo</label>
+                    <img id="home-section-logo-image" src="data:image/png;base64,<%=blog.logo%>" alt="some logo" >
+                    <p class="max-file-size">( Max file size is 3MB )</p>
+                    <p class="success-p_U-1-2"></p>
+                    <input type="file" id="home-section-logo" name="logo" accept=".jpg, .jpeg, .png" required required class="hidden-input">
+                    </div>
+                    <button class="update">UPDATE</button>
+                </form>
+                
+                <!-- featured section photo -->
+                <form action="/account/upload-featured-image" method="POST" enctype="multipart/form-data"  class="flex-column_1-2 section-gray">
+                    <div class="home-img-info-wrapper">
                     <label for="profile-section-img"> Featured Section Photo</label>
                     <img id="home-section-logo-image"  src="data:image/png;base64,<%=blog.featuredImage%>" alt="some image">
                     <p class="max-file-size">( Max file size is 3MB )</p>
-                    <input type="file" value="<%= blog.featuredTitle %>" id="featured-section-img" name="featuredImage" accept=".jpg, .jpeg, .png" required>
+                    <p class="success-p_U-1-2"></p>
+                    <input type="file" value="<%= blog.featuredTitle %>" id="featured-section-img" name="featuredImage" accept=".jpg, .jpeg, .png" required required class="hidden-input">
+                    </div>
                     <button class="update">UPDATE</button>
                 </form>
             </div>
+        </div>
 
+            <!-- featured section title and content  -->
             <form class="trigger-form" action="/account/edit-home-page?_method=PATCH" method="POST">
 
                 <label for="featured-section-title">Featured Section Title</label>
                 <p class="max-file-size">( Max length: 50 char )</p>
-                <input type="text" value="<%=blog.featuredTitle%>" id="featured-section-title" name="featuredTitle" maxlength="50">
+                <input type="text" value="<%=blog.featuredTitle%>" id="featured-section-title" name="featuredTitle" maxlength="50" class="input-full-width">
 
                 <label for="featured-section-content">Featured Section Content</label>
                 <p class="max-file-size">( Max length: 500 char )</p>
-                <h4 id="youtube-link-converter">Rich Text Area</h4>
-                <textarea name="featuredContent" id="featured-section-content" cols="30" rows="10" maxlength="500"> <%= blog.featuredContent %> </textarea>
+                <h4 id="youtube-link-converter" class="youtube-link-converter settings-info-disclaimer">Rich Text Area</h4>
+                <textarea name="featuredContent" id="featured-section-content" cols="30" rows="10" maxlength="500" class="input-full-width"> <%= blog.featuredContent %> </textarea>
 
                 <button class="update">UPDATE</button>
             </form>
@@ -69,67 +87,105 @@
 
                 <label for="featured-section-title">Latest Media Feed Title</label>
                 <p class="max-file-size">( Max length: 30 char )</p>
-                <input type="text" value="<%=blog.mediaFeedTitle%>" id="featured-section-title" name="mediaFeedTitle" maxlength="30">
+                <input type="text" value="<%=blog.mediaFeedTitle%>" id="featured-section-title" name="mediaFeedTitle" maxlength="30" class="input-full-width">
 
                 <label for="featured-section-content">Media Feed Embeding Code</label>
                 <p class="max-file-size">( No max char length)</p>
-                <h4 id="youtube-link-converter">Rich Text Area</h4>
-                <textarea class="embeding-textarea" id="featured-section-content" cols="30" rows="10" name="mediaFeedEmbed"><%=blog.mediaFeedEmbed%> </textarea>
+                <h4 id="youtube-link-converter" class="youtube-link-converter settings-info-disclaimer">Rich Text Area</h4>
+                <textarea id="featured-section-content" cols="30" rows="10" name="mediaFeedEmbed" class="embeding-textarea input-full-width"><%=blog.mediaFeedEmbed%> </textarea>
 
                 <button class="update">UPDATE</button>
             </form>
+
+        <!----------------------------------------------------------- release 1.2 --------------------------------->
+            <!-- Show Posts on Home Page?  -->
+            <form class="trigger-form trifer-form-show-home-section" action="/account/edit-show-sections?_method=PATCH" method="POST">
+                <label for="featured-section-title" class="item-with-margin">Show posts on home page</label>
+                <div id="social-media-togglers">
+                    <label for="ball-10" class="switch-wrapper" />
+                        <input id="ball-10" type="checkbox" name="show_last_posts" <%=moreSettings.show_last_posts%> onclick="showPostsToSHowWrapper()"/>
+                        <div class="switch"><div class="switch_ball"></div></div>
+                   </label>
+                </div>
+
+                <input type="text" name='last_posts_to_show' id='posts-ids-selected' class="hidden-input"/>
+                <section class="post-card-row-wrapper-<%=moreSettings.show_last_posts%>" >
+                    <label class="item-with-margin">Select the posts you wish to display</label>
+                    <p class="youtube-link-converter settings-info-disclaimer input-full-width">
+                        You are currently showing the posts with the green indicator.
+                    </p>
+                    <%posts.forEach(post => {%>
+                        <div class="post-card-row" id="post-card-row-1_2" data-post-id="<%=post._id%>">
+                            <h4><%=post.title%></h4>
+                            <p><%=post.created%></p>
+                            <%if(moreSettings.last_posts_to_show.includes(post._id)){%>
+                                <span class="selected-item"></span>
+                            <%}%>
+                        </div>
+
+                    <%})%>
+                </section>
+                <button class="update item-with-margin">UPDATE</button>
+            </form>
         </div>
-        <!-- about page -->
-        <div class="page-toggle about-page-toggle">Edit About Page <div></div> </div>
-        <div class="div-trigger_child-wrapper">
+        <!----------------------------------------------------------- release 1.2 --------------------------------->
+ 
+        <!---------------------------------- about page ------------------>
+        <div class="page-toggle about-page-toggle" id="header-about-div-trigger_U-1-2">Edit About Page <div></div> </div>
+        <div class="div-trigger_child-wrapper" id="about-div-trigger_U-1-2">
             
-                <form class="trigger-form trigger-form-about-photo"  action="/account/update-profile-image" method="POST" enctype="multipart/form-data">
-                    <label for="about-section-img">Your Photo</label>
-                    <img id="home-section-logo-image"  src="data:image/png;base64,<%=blog.profileImage%>" alt="profile image" class="stats-section_image"> 
-                    <p class="max-file-size">( Max file size is 3MB )</p>
-                    <input type="file" id="about-section-img" name="profileImage" accept=".jpg, .jpeg, .png" required>
+                <form class="trigger-form trigger-form-about-photo flex-column_1-2 section-gray"  action="/account/update-profile-image" method="POST" enctype="multipart/form-data" >
+                    <div class="home-img-info-wrapper">
+                        <label for="about-section-img">Your Photo</label>
+                        <img id="home-section-logo-image"  src="data:image/png;base64, <%=blog.profileImage%>" alt="profile image" class="stats-section_image"> 
+                        <p class="max-file-size">( Max file size is 3MB )</p>
+                        <p class="success-p_U-1-2"></p>
+                        <input type="file" id="about-section-img" name="profileImage" accept=".jpg, .jpeg, .png" required class="hidden-input">
+                    </div>
                     <button class="update">UPDATE</button>
+
                 </form>
 
             <form class="trigger-form trigger-form-about"  action="/account/edit-home-page?_method=PATCH" method="POST">
                 <label for="about-section-content">About Yourself</label>
                 <p class="max-file-size">( Max length: 2000 char )</p>
-                <h4 id="youtube-link-converter">Rich Text Area</h4>
-                <textarea name="aboutMyself" id="about-section-content" cols="30" rows="10" maxlength="2000"> <%= blog.aboutMyself %> </textarea>
+                <h4 id="youtube-link-converter" class="youtube-link-converter settings-info-disclaimer" >Rich Text Area</h4>
+                <textarea name="aboutMyself" id="about-section-content" cols="30" rows="10" maxlength="2000" class="input-full-width"> <%= blog.aboutMyself %> </textarea>
                 <button class="update">UPDATE</button>
             </form>
         </div>
+
         <!-- contact section -->
-        <div class="page-toggle contact-page-toggle">Edit Contact Page <div></div> </div>
-        <div class="div-trigger_child-wrapper">
+        <div class="page-toggle contact-page-toggle" id="header-contact-div-trigger_U-1-2">Edit Contact Page <div></div> </div>
+        <div class="div-trigger_child-wrapper" id="contact-div-trigger_U-1-2">
             <form class="trigger-form trigger-form-contact"  action="/account/edit-home-page?_method=PATCH" method="POST">
 
                 <label for="contact-section-content">Contact Message</label>
                 <p class="max-file-size">( Max length: 500 char )</p>
-                <h4 id="youtube-link-converter">Rich Text Area</h4>
-                <textarea name="contactInfo" id="contact-section-content" cols="30" rows="10" maxlength="500"> <%= blog.contactInfo %> </textarea>
+                <h4 id="youtube-link-converter" class="youtube-link-converter settings-info-disclaimer">Rich Text Area</h4>
+                <textarea name="contactInfo" id="contact-section-content" cols="30" rows="10" maxlength="500" class="input-full-width"> <%= blog.contactInfo %> </textarea>
 
                 <button class="update">UPDATE</button>
             </form>
         </div>
 
         <!-- Your Buttons -->
-        <div class="page-toggle contact-page-toggle">Your Paypal Button<div></div> </div>
-        <div class="div-trigger_child-wrapper">
+        <div class="page-toggle contact-page-toggle" id="header-buttons-div-trigger_U-1-2">More Options<div></div> </div>
+        <div class="div-trigger_child-wrapper" id="buttons-div-trigger_U-1-2">
             <form class="trigger-form trigger-form-contact"  action="/account/edit-home-page?_method=PATCH" method="POST">
                 
                 <label for="paypalButtonTitle">Button Title</label>
                 <p class="max-file-size">( Max length: 15 char )</p>
-                <input name="paypalButtonTitle" id="paypalButtonTitle" maxlength="15" value="<%=blog.paypalButtonTitle %>"> 
+                <input name="paypalButtonTitle" id="paypalButtonTitle" maxlength="15" value="<%=blog.paypalButtonTitle %>" class="input-full-width"> 
                
                 <label for="paypalButtonComment">Button Description</label>
                 <p class="max-file-size">( Max length: 30 char )</p>
-                <input name="paypalButtonComment" id="paypalButtonComment" maxlength="30" value="<%=blog.paypalButtonComment %>"> 
+                <input name="paypalButtonComment" id="paypalButtonComment" maxlength="30" value="<%=blog.paypalButtonComment %>" class="input-full-width"> 
                
                 <label for="contact-section-content">Edit your Button</label>
                 <p class="max-file-size">( No Max length  )</p>
-                <h4 id="youtube-link-converter">Rich Text Area</h4>
-                <textarea name="paypalButton" id="contact-section-content" cols="30" rows="10"> <%-blog.paypalButton %> </textarea>
+                <h4 id="youtube-link-converter" class="youtube-link-converter settings-info-disclaimer">Rich Text Area</h4>
+                <textarea name="paypalButton" id="contact-section-content" cols="30" rows="10" class="input-full-width"> <%-blog.paypalButton %> </textarea>
                 <button class="update">UPDATE</button>
             </form>
         </div>
@@ -137,8 +193,9 @@
 
 
 
-<!-- General settings Section -->
-    <div class="edit-general-settings-wrapper">
+<!-------------------------------------- General settings Section --------------------------------->
+    <div class="edit-general-settings-wrapper genrealsettings_U-1-2 ">
+        <section class="socials_U-1-2">
         <h2 class="edit-general-settings-wrapper_title">Update your social Connections</h2>
         <form action="/account/edit-home-page-sm?_method=PATCH" method="POST" class="edit-general-settings-wrapper_form trigger-form sosmed-form">
             <div id="social-media-togglers">
@@ -197,12 +254,13 @@
 
             <button class="update">UPDATE</button>
         </form>
-
+    </section>
         <!-- Categories section -->
+        <section class="tags_U-1-2">
         <h2 class="edit-general-settings-wrapper_title">Your Categories</h2>
-        <p class="youtube-link-converter">(Only one-word categories will work, if you wish to add multiple words unite them with a hyphen ex: chocolate-chip)</p>
+        <!-- <p class="youtube-link-converter settings-info-disclaimer--full">Please enter only one word categories or unite them with a hyphen if more than one word ex: 'vanilla-icecream' </p> -->
         <form action="/account/edit-categories?_method=PUT" id="add-new" class="add-new" method="POST">
-            <input type="text" placeholder="Add a new Category +" name="categories">
+            <input type="text" placeholder="Add a new Category +" name="categories" class="input-full-width item-width-shadow">
             <button class="update" id="update-new-category" type="submit">SUBMIT</button>
         </form>
         <% blog.categories.forEach( category => { %>
@@ -220,11 +278,21 @@
                 </div>
             </div>
         <% }) %> 
+    </section>
     </div>
+
+    <!---------------------- DESKTOP MENU ------------------------------>
+    <nav class="desktop-settings-nav-wrapper_U-1-2">
+        <div class="edit-home-page_U-1-2 home_U-1-2" data-set-section="home"></div>
+        <div class="edit-home-page_U-1-2 about_U-1-2" data-set-section="about"></div>
+        <div class="edit-home-page_U-1-2 contact_U-1-2" data-set-section="contact"></div>
+        <div class="edit-home-page_U-1-2 others_U-1-2" data-set-section="others"></div>
+    </nav>
     <div class="spacer"></div>
     <%- include('./partials/_profile-menu.ejs') %>
     <%- include('./partials/_footer.ejs') %> 
     <script src="/js/settings.js"></script>
     <script src="/js/index.js"></script>
+    <script src="/js/settings-update.1_2.js"></script>
 </body>
 </html>

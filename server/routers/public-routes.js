@@ -3,20 +3,27 @@ const express = require('express');
 const router = express.Router();
 const format = require('date-fns/format');
 const methodOverride = require('method-override');
-const email = require('../sendgrid/sendgrid');
 
 //middleware
 router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
 router.use(methodOverride('_method'));
 
+//models
 const Post = require('../models/post-models');
 const Blog = require('../models/blog-model');
 const Subscriber = require('../models/subscribers-model');
 const Comment = require('../models/comments-model');
+const MoreSettings = require('../models/more-settings-model');
 
-const administrator = 'John Doe';
-const ownerDomain = 'http://www.simplereflections.org';
+// helpers
+// helpers
+const {
+	newCommentEmail,
+	newSubscriberEmail,
+	newSubscriberAdminEmail,
+	newContactFormEmail,
+} = require('../helpers/nodemailer');
 
 ////===============PUBLIC POSTS ROUTES=================
 router.get('/see-post/:id', async (req, res) => {
@@ -82,20 +89,7 @@ router.post('/posts', async (req, res) => {
 });
 
 router.post('/comments', async (req, res) => {
-	const html = `<div data-role="module-unsubscribe" class="module" role="module" data-type="unsubscribe" style="color:#444444; font-size:12px; line-height:20px; padding:16px 16px 16px 16px; text-align:Center;" data-muid="4e838cf3-9892-4a6d-94d6-170e474d21e5">
-    <img src="http://cdn.mcauto-images-production.sendgrid.net/5da8ea5c103c0a36/3c40c3f0-e64c-4eac-8a09-2f40383550a5/500x500.jpeg" style="width: 50%; ">
-    
-    <p style="font:20px Arial; line-height:36px;">
-   Good news, ${administrator}!! ${req.body.name}! has commented on your blog: <br> ${req.body.comment}
-
-      <a href="${ownerDomain}/#avatar-comment" target="_blank" class="Unsubscribe--unsubscribePreferences" style="font: 800 1.3rem sans-serif;text-decoration:none; color: white; padding: 1rem 1.5rem; background-color: #119822; display: block; width: 80%; margin: 3rem auto; max-width: 500px;">
-    See it Live!
-      </a>
-    </p>
-  </div>`;
-	const subject = 'Someone just commented on your blog!';
-
-	email.newCommentContactEmail(subject, html);
+	newCommentEmail(req.body.name, req.body.comment);
 
 	const newDate = format(new Date(), 'MM/dd/yyyy h:mm');
 	const comment = new Comment({ ...req.body, createdAt: newDate });
@@ -115,11 +109,6 @@ router.get('/about', async (req, res) => {
 		let blog = await Blog.findOne({});
 		let commentCount = await Comment.find({}).countDocuments({});
 
-		console.log(count);
-		// if (postCount == undefined || postCount.length == 0) { postCount = 1}
-		// if (posts == undefined || posts.length == 0) { posts = defaults.defaultPosts}
-		// if (blog == undefined || blog.length == 0 ) { blog = defaults.defaultBlog }
-
 		res.render('about', { blog, count, postCount, commentCount });
 	} catch (error) {
 		res.status(401).render('error', { error: errors });
@@ -127,21 +116,8 @@ router.get('/about', async (req, res) => {
 });
 
 router.post('/subscribers', async (req, res) => {
-	const html = `<div data-role="module-unsubscribe" class="module" role="module" data-type="unsubscribe" style="color:#444444; font-size:12px; line-height:20px; padding:16px 16px 16px 16px; text-align:Center;" data-muid="4e838cf3-9892-4a6d-94d6-170e474d21e5">
-    <img src="http://cdn.mcauto-images-production.sendgrid.net/5da8ea5c103c0a36/3c40c3f0-e64c-4eac-8a09-2f40383550a5/500x500.jpeg" style="width: 50%; ">
-    
-    <p style="font:20px Arial; line-height:36px;">
-   Thank you, ${req.body.name}! <br> You have been subscribed to the ${ownerDomain} Blog and will start receiving updates from now on 😃!!!
-
-      <a href="http://savvysaute.com/posts" target="_blank" class="Unsubscribe--unsubscribePreferences" style="font: 800 1.3rem sans-serif;text-decoration:none; color: white; padding: 1rem 1.5rem; background-color: #119822; display: block; width: 80%; margin: 3rem auto; max-width: 500px;">
-    Start Exploring Posts
-      </a>
-    </p>
-  </div>`;
-	const subject = 'Thank you for subscribing!';
-	const recepient = req.body.email;
-
-	email.subscriberEmail(recepient, subject, html);
+	newSubscriberEmail(req.body.email);
+	newSubscriberAdminEmail(req.body.name);
 
 	const subscribredOn = format(new Date(), 'MM/dd/yyyy h:mm');
 	const subscriber = new Subscriber({
@@ -177,27 +153,13 @@ router.get('/contact', async (req, res) => {
 });
 
 router.post('/contact', async (req, res) => {
-	const html = `<div data-role="module-unsubscribe" class="module" role="module" data-type="unsubscribe" style="color:#444444; font-size:12px; line-height:20px; padding:16px 16px 16px 16px; text-align:Center;" data-muid="4e838cf3-9892-4a6d-94d6-170e474d21e5">
-    <img src="http://cdn.mcauto-images-production.sendgrid.net/5da8ea5c103c0a36/3c40c3f0-e64c-4eac-8a09-2f40383550a5/500x500.jpeg" style="width: 50%; ">
-    
-    <div style="font:20px Arial; line-height:36px;">
-   Hi ${administrator}, ${req.body.name} wants to know more about your blog! <br>
+	newContactFormEmail(
+		req.body.name,
+		req.body.email,
+		req.body.phone,
+		req.body.message
+	);
 
- <h1 style="color: #119822; font: 800 1.5rem Arial;">Here is there form:</h1>
- <h3 style="color: #97bb5d; font: 600 1.3rem Arial;">Name</h3>
- <p style="color: #242424; font: 400 1.2rem Arial;">${req.body.name}</p>
- <h3 style="color: #97bb5d; font: 600 1.3rem Arial;">Email</h3>
- <p style="color: #242424; font: 400 1.2rem Arial;">${req.body.email}</p>
- <h3 style="color: #97bb5d; font: 600 1.3rem Arial;">Phone</h3>
- <p style="color: #242424; font: 400 1.2rem Arial;">${req.body.phone}</p>
- <h3 style="color: #97bb5d; font: 600 1.3rem Arial;">Message</h3>
- <p style="color: #242424; font: 400 1.2rem Arial;">${req.body.message}</p>
-
-</div>
-  </div>`;
-	const subject = 'Someone has submitted a contact form!';
-
-	email.newCommentContactEmail(subject, html);
 	try {
 		let blog = Blog.findOne({});
 
@@ -219,16 +181,24 @@ router.get('/', async (req, res) => {
 			.sort({ createdAt: -1 })
 			.limit(20)
 			.exec();
-		let posts = await Post.find({}).sort({ date: -1 }).limit(4).exec();
+
+		let postsToShowArray = await MoreSettings.findOne({});
+
+		let posts = await Post.find({
+			_id: { $in: postsToShowArray.last_posts_to_show },
+		})
+			.sort({ date: -1 })
+			.limit(6)
+			.exec();
+
 		let blog = await Blog.findOne({});
 
-		// if (comments == undefined || comments.length == 0) { comments = defaults.defaultComments}
-		// if (posts == undefined || posts.length == 0) { posts = defaults.defaultPosts}
-		// if (blog == undefined || blog.length == 0 ) { blog = defaults.defaultBlog }
+		let moreSettings = await MoreSettings.findOne({});
 
-		res.render('index', { posts, comments, blog });
+		res.render('index', { posts, comments, blog, moreSettings });
 	} catch (error) {
-		res.status(401).render('error', { error: error });
+		console.log(error);
+		res.status(401); //.render('error', { error: error });
 	}
 });
 

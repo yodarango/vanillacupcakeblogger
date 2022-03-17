@@ -235,7 +235,7 @@
 }
 
 .youtube-link-converter {
-	width: 80%;
+	width: 100%;
 	max-width: 40re;
 	margin: 2rem auto;
 }
@@ -350,4 +350,34 @@
 		width: 33%;
 		height: 5rem;
 	}
+}
+
+.cke_toolbar {
+	padding: 0.5rem !important;
+}
+
+.cke_button_icon {
+	height: 20px !important;
+	width: 20px !important;
+}
+
+.grid-width-100 {
+	padding: 0 !important;
+}
+
+// ------------------------------- CKE Editor -----------------------------
+.cke_top {
+	background-color: #f2f2f2 !important;
+}
+
+.cke_button__easyimageupload_icon {
+	pointer-events: none;
+	display: none;
+}
+
+// ------------------------------- End CKE Editor -----------------------------
+
+.switch.switch-middle_U-1-2 {
+	margin: auto !important;
+	float: none;
 }

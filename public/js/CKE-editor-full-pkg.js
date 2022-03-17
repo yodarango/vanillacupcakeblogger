@@ -1,3 +1,13 @@
+// --------------------- replace input button for the image
+const resultImgTrigger = document.querySelector('.image-result_U-1-2');
+const newPostInputToHide = document.querySelector('#postImage');
+
+console.log('resultImgTrigger');
+
+resultImgTrigger.addEventListener('click', () => {
+	newPostInputToHide.click();
+});
+
 const arrayToFilterFrom = [];
 const allPostsArray = [];
 const cancelPostButton = document.querySelector('.cancel-post-erase-all');
@@ -223,3 +233,5 @@ sectionToggle.addEventListener('click', (thiss) => {
 			'transform: rotate(90deg); transition: transform 300ms ease-in-out;';
 	}
 });
+
+// ----------------------------------- Update 1.2 ----------------------------------

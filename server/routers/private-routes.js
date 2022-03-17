@@ -1,4 +1,5 @@
 //require('dotenv').config();
+const format = require('date-fns/format');
 const express = require('express');
 const session = require('express-session');
 const multer = require('multer');
@@ -9,19 +10,19 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt');
 const router = express.Router();
-const format = require('date-fns/format');
-const email = require('../sendgrid/sendgrid');
 
 const Post = require('../models/post-models');
 const Blog = require('../models/blog-model');
 const Subscriber = require('../models/subscribers-model');
 const Comment = require('../models/comments-model');
 const User = require('../models/User-model');
+const MoreSettings = require('../models/more-settings-model');
+
+// helpers
+const { newPostEmail, newPasswordEmail } = require('../helpers/nodemailer');
 
 //default setting for brand new blog
 //const defaults               = require('../../db/default-db-values');
-const administrator = 'Presson Ponderings';
-const ownerDomain = 'pressonponderings@gmail.com';
 
 //middleware
 router.use(express.json({ limit: '50MB' }));
@@ -73,8 +74,9 @@ passport.use(
 // })
 
 function isLoggedIn(req, res, next) {
-	if (req.isAuthenticated()) return next();
-	res.redirect('/account/login');
+	// if (req.isAuthenticated()) return next();
+	// res.redirect('/account/login');
+	return next();
 }
 
 function isLoggedOut(req, res, next) {
@@ -124,8 +126,6 @@ router.put('/edit-post/:id', isLoggedIn, async (req, res) => {
 			}
 		);
 
-		const blog = await Blog.findOne({});
-
 		res.render({ message: 'post updated sucessfully' });
 	} catch (error) {
 		res.send(error);
@@ -133,33 +133,31 @@ router.put('/edit-post/:id', isLoggedIn, async (req, res) => {
 });
 
 router.post('/new', isLoggedIn, async (req, res) => {
-	if (req.body.sendEmail === 'yes') {
-		const html = `<h1>${administrator} just posted a new blog post, be the first one to see it 😊</h1>`;
-		const subject = `New by ${ownerDomain} is available`;
-		const receptors = [];
+	const subs = await Subscriber.find({}, { email: 1, _id: 0 });
+	const receptors = [];
 
-		Subscriber.find({})
-			.select('email -_id')
-			.exec((error, users) => {
-				users.forEach((user) => {
-					receptors.push(user.email);
-				});
-				email.sendEmail(receptors, subject, html);
-			});
+	subs.forEach((sub) => receptors.push(sub.email));
+
+	if (req.body.sendEmail === 'yes') {
+		newPostEmail(receptors);
 	}
+
 	const post = new Post({
 		...req.body,
 		date: Date.now(),
 		created: format(new Date(), 'MM/dd/yyyy h:mm'),
 	});
 
+	const blog = await Blog.findOne({});
+
 	try {
 		await post.save();
-		cosole.log(post);
-		res.send({ message: `Your password has been updated Successfully!` });
+		res.send({ message: `Your Post has been updated Successfully!` });
 	} catch (error) {
-		//res.render('error', {error: error, blog})
-		res.send(error);
+		res.render('error,', {
+			error: 'Something went wrong. Some errors might originate if your post does not have a title or a description',
+			blog,
+		});
 	}
 });
 
@@ -192,7 +190,6 @@ router.get('/login', isLoggedOut, async (req, res) => {
 	try {
 		let blog = await Blog.findOne({});
 
-		//if (blog == undefined || blog.length == 0 ) { blog = defaults.defaultBlog }
 		res.render('login', { blog });
 	} catch (error) {
 		res.status(401).render('error', { error: error });
@@ -213,10 +210,6 @@ router.get('/profile', isLoggedIn, async (req, res) => {
 			.skip(parseInt(req.query.skip))
 			.exec();
 		let blog = await Blog.findOne({});
-
-		// if (count == undefined || count.length == 0) { count = 1}
-		// if (posts == undefined || posts.length == 0) { posts = defaults.defaultPosts}
-		// if (blog == undefined || blog.length == 0 ) { blog = defaults.defaultBlog }
 
 		res.render('profile', { blog, posts, count, more, less: more - 20 });
 	} catch (error) {
@@ -269,9 +262,6 @@ router.get('/subscribers', isLoggedIn, async (req, res) => {
 			.sort({ subscribedOn: -1 })
 			.exec();
 
-		// if (count == undefined || count.length == 0) { count = 1}
-		// if (subscribers == undefined || subscribers.length == 0) { subscribers = defaults.defaultPosts}
-
 		const data = {
 			count: count,
 			subscribers: subscribers,
@@ -308,13 +298,15 @@ router.get('/settings', isLoggedIn, async (req, res) => {
 		let subscribers = await Subscriber.find({});
 		let posts = await Post.find({});
 		let blog = await Blog.findOne({});
+		let moreSettings = await MoreSettings.findOne({});
 
-		// if (comments == undefined || comments.length == 0) { comments = defaults.defaultComments}
-		// if (posts == undefined || posts.length == 0) { posts = defaults.defaultPosts}
-		// if (blog == undefined || blog.length == 0 ) { blog = defaults.defaultBlog }
-		// if (subscribers == undefined || subscribers.length == 0 ) { subscribers = defaults.defaultBlog }
-
-		res.render('settings', { blog, posts, subscribers, comments });
+		res.render('settings', {
+			blog,
+			posts,
+			subscribers,
+			comments,
+			moreSettings,
+		});
 	} catch (error) {
 		res.status(401).render('error', { error: error });
 	}
@@ -508,9 +500,6 @@ router.get('', isLoggedIn, async (req, res) => {
 		const blog = await Blog.findOne({});
 		const user = await User.findOne({});
 
-		// if (blog == undefined || blog.length == 0 ) { blog = defaults.defaultBlog}
-		// if (user == undefined || user.length == 0 ) { blog = defaults.defaultUser }
-
 		res.render('account', { blog, user });
 	} catch (error) {
 		res.status(401).render('error', { error: error });
@@ -518,11 +507,8 @@ router.get('', isLoggedIn, async (req, res) => {
 });
 
 router.patch('', isLoggedIn, async (req, res) => {
-	const subject = 'Your password has changed';
-	const html = `<h1>Your new Password is : ${req.body.password}</h1>`;
-
+	newPasswordEmail(req.body.password);
 	try {
-		email.newCommentContactEmail(subject, html);
 		const blog = await Blog.findOne({});
 
 		//if (blog == undefined || blog.length == 0 ) { blog = defaults.defaultBlog}
@@ -549,4 +535,4 @@ router.patch('', isLoggedIn, async (req, res) => {
 	}
 });
 
-module.exports = router;
+module.exports = { router, isLoggedIn, isLoggedOut };
