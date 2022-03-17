@@ -2631,7 +2631,7 @@
 }
 
 .settings {
-  margin: 5rem auto;
+  margin: 5rem auto 2.5rem;
   font: 800 1.3rem "Oswald", sans-serif;
   color: #3b3b3b;
   width: 90%;
@@ -2856,7 +2856,7 @@
 .trigger-form.trifer-form-show-home-section .switch {
   width: 4rem;
   height: 2rem;
-  background-color: #242424;
+  background-color: #999999;
   border-radius: 1.5rem;
   flex-shrink: 0;
   position: relative;
@@ -3004,7 +3004,7 @@
 .edit-general-settings-wrapper form .switch {
   width: 4rem;
   height: 2rem;
-  background-color: #242424;
+  background-color: #979696;
   border-radius: 1.5rem;
   flex-shrink: 0;
   position: relative;
@@ -3412,6 +3412,16 @@
     display: block !important;
   }
 }
+.notifications-wrapper_U-1-2 {
+  padding: 0.5rem 1rem;
+  background-color: #93f077;
+  font: 400 1.2rem "Oswald", sans-serif;
+  width: 90%;
+  max-width: 56rem;
+  margin: 2rem auto 0;
+  transform: translateY(4rem);
+}
+
 .spacer-account {
   margin: 7rem;
 }

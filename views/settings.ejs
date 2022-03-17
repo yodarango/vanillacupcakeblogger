@@ -8,6 +8,9 @@
 </head>
 <body>
     <%- include('./partials/_header') %> 
+    <%if(moreSettings.notifications != ""){%>
+        <div class="notifications-wrapper_U-1-2"><%=moreSettings.notifications%></div>
+    <%}%>
     <h1 class="settings">SETTINGS</h1>
     <h1 class="youtube-link-converter settings-info-disclaimer max-width-true">What is a Rich Text Area?
         <p>it means you can paste raw HTML code and have it rendered 💻. For example, 
@@ -109,7 +112,7 @@
                 </div>
 
                 <input type="text" name='last_posts_to_show' id='posts-ids-selected' class="hidden-input"/>
-                <section class="post-card-row-wrapper-<%=moreSettings.show_last_posts%>" >
+                <section class="post-card-row-wrapper-toggle post-card-row-wrapper-<%=moreSettings.show_last_posts%>" >
                     <label class="item-with-margin">Select the posts you wish to display</label>
                     <p class="youtube-link-converter settings-info-disclaimer input-full-width">
                         You are currently showing the posts with the green indicator.

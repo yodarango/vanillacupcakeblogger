@@ -210,8 +210,16 @@ router.get('/profile', isLoggedIn, async (req, res) => {
 			.skip(parseInt(req.query.skip))
 			.exec();
 		let blog = await Blog.findOne({});
+		const moreSettings = await MoreSettings.findOne({});
 
-		res.render('profile', { blog, posts, count, more, less: more - 20 });
+		res.render('profile', {
+			blog,
+			posts,
+			count,
+			more,
+			less: more - 20,
+			moreSettings,
+		});
 	} catch (error) {
 		res.status(401).render('error', { error: error });
 	}

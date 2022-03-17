@@ -1,4 +1,4 @@
-const postsWrapper = document.querySelector('.post-card-row-wrapper-');
+const postsWrapper = document.querySelector('.post-card-row-wrapper-toggle');
 const showWrapperToggle = document.querySelector('#ball-10');
 const postCardRow = document.querySelectorAll('#post-card-row-1_2');
 

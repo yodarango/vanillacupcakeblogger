@@ -1,5 +1,5 @@
 .settings {
-	margin: 5rem auto;
+	margin: 5rem auto 2.5rem;
 	font: 800 $mobile-title-size $third-font;
 	color: $main-color;
 	width: 90%;
@@ -216,7 +216,7 @@
 	.switch {
 		width: 4rem;
 		height: 2rem;
-		background-color: $fourth-color;
+		background-color: rgb(153, 153, 153);
 		border-radius: 1.5rem;
 		flex-shrink: 0;
 		position: relative;
@@ -381,7 +381,7 @@
 		.switch {
 			width: 4rem;
 			height: 2rem;
-			background-color: $fourth-color;
+			background-color: rgb(151, 150, 150);
 			border-radius: 1.5rem;
 			flex-shrink: 0;
 			position: relative;
@@ -799,6 +799,15 @@
 	}
 }
 
+.notifications-wrapper_U-1-2 {
+	padding: 0.5rem 1rem;
+	background-color: #93f077;
+	font: 400 1.2rem $third-font;
+	width: 90%;
+	max-width: 56rem;
+	margin: 2rem auto 0;
+	transform: translateY(4rem);
+}
 // .genrealsettings_U-1-2 {
 // 	@media (min-width: 1000px) {
 // 		display: flex;

@@ -7,6 +7,9 @@
 	</head>
 	<body>
 		<%- include('./partials/_header') %>
+		<%if(moreSettings.notifications != ""){%>
+			<div class="notifications-wrapper_U-1-2"><%=moreSettings.notifications%></div>
+		<%}%>
 		<h1 class="all-posts-title-profile">
 			TOTAL POSTS
 			<span class="all-posts-title-profile" id="all-posts-count"

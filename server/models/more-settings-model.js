@@ -9,6 +9,9 @@ const moreSettingsSchema = new mongoose.Schema({
 		type: [String],
 		required: false,
 	},
+	notifications: {
+		type: String,
+	},
 });
 
 const moreSettingsModel = mongoose.model('MoreSettings', moreSettingsSchema);
