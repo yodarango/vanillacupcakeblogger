@@ -30,7 +30,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kristi&display=swap");
 * {
   font-family: "Shippori Mincho B1", serif;
-  color: #292929;
+  color: black;
   box-sizing: border-box;
 }
 
@@ -91,7 +91,7 @@
 .header_menu {
   position: relative;
   margin: 0 0 0 2rem;
-  background: #ef476f;
+  background: black;
   height: 3rem;
   width: 3rem;
   border-radius: 3rem;
@@ -115,7 +115,7 @@
   margin: 0 5vw 0 0;
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
-  color: #ef476f;
+  color: black;
   flex-grow: 7;
   font-stretch: extra-condensed;
 }
@@ -123,7 +123,7 @@
   font-family: "Kristi", cursive;
   transform: rotate(90deg);
   font-size: 2.5rem;
-  color: #2b2b2b;
+  color: #242424;
 }
 
 .menu-container {
@@ -133,7 +133,7 @@
   left: 0;
   top: 0;
   height: 100vh;
-  background-color: #ffafcc;
+  background-color: #5f5f5f;
   display: block;
   z-index: 2;
 }
@@ -143,7 +143,7 @@
   position: relative;
   left: 0;
   font: 400 2rem "Oswald", sans-serif;
-  color: #ef476f;
+  color: black;
   width: 80%;
   margin: 1rem auto;
   text-decoration: none;
@@ -151,7 +151,7 @@
 }
 .menu-container a:visited,
 .menu-container .a-open:visited {
-  color: #ef476f;
+  color: black;
 }
 .menu-container a:first-of-type,
 .menu-container .a-open:first-of-type {
@@ -159,7 +159,7 @@
 }
 .menu-container a:hover,
 .menu-container .a-open:hover {
-  color: #2b2b2b;
+  color: #242424;
 }
 .menu-container .a-close {
   color: transparent;
@@ -233,7 +233,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   margin: 1rem 0;
-  color: #ef476f;
+  color: black;
 }
 .all-posts-grid .post-card .post-card_date {
   font: 400 0.8rem "IBM Plex Sans", sans-serif;
@@ -247,14 +247,14 @@
 }
 .all-posts-grid .post-card .post-card_button--read-more {
   padding: 1rem 2rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #cdb4db, #ffafcc);
+  background: linear-gradient(45deg, #3b3b3b, #5f5f5f);
   border: none;
   box-shadow: 5px 5px 10px black;
   box-shadow: 5px 5px 5px #b3b3b3;
@@ -263,7 +263,7 @@
 .all-posts-grid .post-card .post-card_button--read-more:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 .all-posts-grid .post-card .post-card_title-and-content {
@@ -312,7 +312,7 @@
 }
 .featured-section .featured-section_title {
   font: 800 2rem "Oswald", sans-serif;
-  color: #ef476f;
+  color: black;
   margin: 0 auto;
   text-align: center;
   white-space: pre-wrap;
@@ -342,7 +342,7 @@
   }
 }
 .youtube-video-section .what-others-are-saying {
-  color: #ef476f;
+  color: black;
   background: white;
   margin: auto;
   text-align: center;
@@ -356,14 +356,14 @@
 .what-others-are-saying {
   width: 100%;
   padding: 2rem;
-  background-color: #2b2b2b;
+  background-color: #242424;
   color: white;
   text-align: center;
   font: 800 1.3rem "Oswald", sans-serif;
 }
 
 .public-comments {
-  background: #2b2b2b;
+  background: #242424;
   width: 100%;
   display: flex;
   align-items: center;
@@ -412,7 +412,7 @@
 }
 
 .leave-a-comment-wrapper {
-  background: #2b2b2b;
+  background: #242424;
   padding: 2rem;
 }
 @media (min-width: 1000px) {
@@ -422,28 +422,28 @@
 }
 .leave-a-comment-wrapper .leave-a-comment {
   padding: 1rem 2rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #cdb4db, #ffafcc);
+  background: linear-gradient(45deg, #3b3b3b, #5f5f5f);
   border: none;
   box-shadow: 5px 5px 10px black;
 }
 .leave-a-comment-wrapper .leave-a-comment:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 
 .footer {
   height: 5rem;
   width: 100%;
-  background: #ffafcc;
+  background: #5f5f5f;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -453,7 +453,7 @@
   width: 2.5rem;
   height: 2.5rem;
   margin: 0 1rem;
-  fill: #ef476f;
+  fill: black;
 }
 .footer .social-media-icon svg:hover {
   fill: white;
@@ -465,7 +465,7 @@
   text-align: center;
   font: 800 0.8rem "Oswald", sans-serif;
   color: white;
-  background: #cdb4db;
+  background: #3b3b3b;
   padding: 1rem 0;
 }
 
@@ -498,7 +498,7 @@
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  border: 5px solid #ffafcc;
+  border: 5px solid #5f5f5f;
   padding: 0.3rem;
 }
 #popup-bkg .public-comments_name {
@@ -526,14 +526,14 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  border: 5px solid #ffafcc;
+  border: 5px solid #5f5f5f;
   padding: 0.3rem;
 }
 
 .choose-your-avatar {
   width: 100%;
   margin: auto;
-  background: #2b2b2b;
+  background: #242424;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -615,7 +615,7 @@
   margin-left: 10%;
   display: block;
   max-width: 300px;
-  background: #2b2b2b;
+  background: #242424;
   border: none;
 }
 #subscribe-menu:hover,
@@ -631,12 +631,12 @@
 }
 
 #pay-button {
-  color: #2b2b2b;
+  color: #242424;
 }
 
 #button-form-wrapper {
   background: #f2f2f2;
-  color: #2b2b2b;
+  color: #242424;
   width: 90%;
   max-width: 30rem;
   margin: auto;
@@ -651,7 +651,7 @@
   text-align: center;
   margin: 0 0 2rem 0;
   font: 800 1.3rem "Oswald", sans-serif;
-  color: #cdb4db;
+  color: #3b3b3b;
 }
 #button-form-wrapper form {
   width: 80%;
@@ -669,7 +669,7 @@
   margin: 2rem auto;
   display: block;
   max-width: 300px;
-  background: #2b2b2b;
+  background: #242424;
   border: none;
 }
 .close-button-wrapper:hover {
@@ -689,7 +689,7 @@
   margin: auto;
 }
 .stats-section .about-me {
-  color: #ef476f;
+  color: black;
   font: 800 2rem "Oswald", sans-serif;
   width: 90%;
   margin: 7rem auto 2rem;
@@ -702,7 +702,7 @@
   object-fit: cover;
   object-position: center;
   padding: 0.3rem;
-  border: 5px solid #ffafcc;
+  border: 5px solid #5f5f5f;
   border-radius: 50%;
   margin: 2rem auto;
   box-shadow: 3px 3px 2px 3px #c9c9c9;
@@ -713,7 +713,7 @@
   margin: 1rem auto;
   text-align: center;
   font: 800 2rem "Oswald", sans-serif;
-  color: #2b2b2b;
+  color: #242424;
 }
 @media (min-width: 1000px) {
   .stats-section .stats-section_subscribers {
@@ -722,14 +722,14 @@
 }
 .stats-section .stats-section_subscribers #subscribers-count {
   font-family: "Oswald", sans-serif;
-  color: #2b2b2b;
+  color: #242424;
 }
 .stats-section .hidden-value {
   font-size: 1px;
   visibility: hidden;
 }
 .stats-section .hr {
-  background-color: #ffafcc;
+  background-color: #5f5f5f;
   max-width: 500px;
 }
 .stats-section .about-page-sm-icons {
@@ -770,7 +770,7 @@
   }
 }
 .stats-section .about-page-sm-icons .social-media-icon svg:hover {
-  fill: #2b2b2b;
+  fill: #242424;
 }
 .stats-section .stats-section_stats-wrapper {
   width: 90%;
@@ -785,15 +785,15 @@
 }
 .stats-section .stats-section_stats-wrapper .total-posts {
   padding-right: 2rem;
-  color: #2b2b2b;
+  color: #242424;
   font: 800 2rem "Oswald", sans-serif;
-  border-right: 1px solid #ffafcc;
+  border-right: 1px solid #5f5f5f;
   width: 100%;
   text-align: right;
 }
 .stats-section .stats-section_stats-wrapper .total-posts #posts-count {
   font-family: "Oswald", sans-serif;
-  color: #2b2b2b;
+  color: #242424;
 }
 @media (min-width: 1000px) {
   .stats-section .stats-section_stats-wrapper .total-posts #posts-count {
@@ -802,15 +802,15 @@
 }
 .stats-section .stats-section_stats-wrapper .total-likes {
   padding-left: 2rem;
-  color: #2b2b2b;
+  color: #242424;
   font: 800 2rem "Oswald", sans-serif;
-  border-left: 1px solid #ffafcc;
+  border-left: 1px solid #5f5f5f;
   width: 100%;
   text-align: left;
 }
 .stats-section .stats-section_stats-wrapper .total-likes #likes-count {
   font-family: "Oswald", sans-serif;
-  color: #2b2b2b;
+  color: #242424;
 }
 @media (min-width: 1000px) {
   .stats-section .stats-section_stats-wrapper .total-likes #likes-count {
@@ -820,14 +820,14 @@
 
 .subscribe-button {
   padding: 1rem 2rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #cdb4db, #ffafcc);
+  background: linear-gradient(45deg, #3b3b3b, #5f5f5f);
   border: none;
   box-shadow: 5px 5px 10px black;
   box-shadow: 5px 5px 3px #9c9c9c;
@@ -835,7 +835,7 @@
 .subscribe-button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 @media (min-width: 1000px) {
@@ -850,14 +850,14 @@
   margin: 3rem auto 5rem;
   font: 1.5rem "IBM Plex Sans", sans-serif;
   line-height: 200%;
-  color: #2b2b2b;
+  color: #242424;
   text-align: left;
   position: relative;
 }
 .about-me-section:first-letter {
   -webkit-initial-letter: 3;
   initial-letter: 3;
-  color: #ffafcc;
+  color: #5f5f5f;
 }
 
 #card-on-bck-subscribers {
@@ -884,10 +884,10 @@
 #card-on-bck-subscribers p {
   font: 1.5rem "Oswald", sans-serif;
   text-align: center;
-  color: #cdb4db;
+  color: #3b3b3b;
 }
 #card-on-bck-subscribers p {
-  color: #2b2b2b;
+  color: #242424;
   font-size: 1rem;
   margin: 0 auto 2rem;
 }
@@ -900,7 +900,7 @@
   margin: 8rem auto 0;
   width: 90%;
   text-align: center;
-  color: #ef476f;
+  color: black;
 }
 
 .search-form {
@@ -923,7 +923,7 @@
 }
 .search-form input {
   border: none;
-  border-bottom: 1px solid #ffafcc;
+  border-bottom: 1px solid #5f5f5f;
   height: 3rem;
   background-image: none;
   background-color: transparent;
@@ -932,7 +932,7 @@
   box-shadow: none;
   padding-left: 1rem;
   font: 1.5rem "Oswald", sans-serif;
-  color: #ef476f;
+  color: black;
   width: 60%;
   max-width: 400px;
 }
@@ -944,19 +944,19 @@
 }
 .search-form .earch-form_button {
   padding: 1rem 2rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #cdb4db, #ffafcc);
+  background: linear-gradient(45deg, #3b3b3b, #5f5f5f);
   border: none;
   box-shadow: 5px 5px 10px black;
   display: inline-block;
   box-shadow: none;
-  background: #cdb4db;
+  background: #3b3b3b;
   padding: 1rem;
   font-size: 0.8rem;
   margin: 0;
@@ -964,7 +964,7 @@
 .search-form .earch-form_button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 
@@ -975,28 +975,28 @@
 }
 .dorpdown .dropdown-button {
   padding: 1rem 2rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #cdb4db, #ffafcc);
+  background: linear-gradient(45deg, #3b3b3b, #5f5f5f);
   border: none;
   box-shadow: 5px 5px 10px black;
   display: inline-block;
   box-shadow: none;
-  background: #cdb4db;
+  background: #3b3b3b;
   padding: 1rem;
   font-size: 0.8rem;
   margin: 0;
-  background: #2b2b2b;
+  background: #242424;
 }
 .dorpdown .dropdown-button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 .dorpdown .dropdown-button .dropdown-button-arrow {
@@ -1028,9 +1028,9 @@
 }
 .dorpdown .dropdown-tag {
   padding: 1rem;
-  color: #2b2b2b;
+  color: #242424;
   font: 1rem "Oswald", sans-serif;
-  background: #ffafcc;
+  background: #5f5f5f;
   display: inline-block;
   margin: 0.3rem 0.5rem;
 }
@@ -1055,24 +1055,24 @@
 
 .all-posts-button {
   padding: 1rem 2rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #cdb4db, #ffafcc);
+  background: linear-gradient(45deg, #3b3b3b, #5f5f5f);
   border: none;
   box-shadow: 5px 5px 10px black;
   box-shadow: 5px 5px 5px #a8a8a8;
   margin: 3rem auto 0;
-  background: #cdb4db;
+  background: #3b3b3b;
 }
 .all-posts-button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 @media (min-width: 1000px) {
@@ -1112,8 +1112,8 @@
 }
 
 .no-posts-found-yet {
-  color: #ef476f;
-  background: #ffafcc;
+  color: black;
+  background: #5f5f5f;
 }
 
 .categories-wtapper-filter {
@@ -1138,7 +1138,7 @@
 }
 .paggination-buttons a {
   font: 800 1rem "Oswald", sans-serif;
-  color: #ef476f;
+  color: black;
 }
 .paggination-buttons a div {
   display: inline-block;
@@ -1161,7 +1161,7 @@
 
 #skipt-to-extreme {
   display: none;
-  color: #cdb4db;
+  color: #3b3b3b;
   text-decoration: underline;
 }
 
@@ -1182,7 +1182,9 @@
   margin: auto;
 }
 .contact-wrapper .contact-form-left .contact-svg {
-  width: 10rem;
+  min-width: 10rem;
+  max-width: 500px;
+  width: 90%;
   margin: 1rem auto;
   display: block;
 }
@@ -1197,12 +1199,13 @@
   text-align: center;
   width: 100%;
   line-height: 200%;
+  color: black;
 }
 .contact-wrapper .contact-form {
   margin: 2rem auto 5rem;
 }
 .contact-wrapper .contact-form label {
-  color: #ef476f;
+  color: black;
   font: 1.7rem "Oswald", sans-serif;
 }
 .contact-wrapper .contact-form label .contact-form-asterisk {
@@ -1213,9 +1216,9 @@
   width: 100%;
   height: 3rem;
   box-shadow: none;
-  border: 1px solid #ffafcc;
+  border: 1px solid #5f5f5f;
   margin: 0.3rem auto 2rem;
-  color: #ef476f;
+  color: black;
   font: 1.3rem "Oswald", sans-serif;
   padding: 0 1rem;
 }
@@ -1223,24 +1226,24 @@
   outline: none;
 }
 .contact-wrapper .contact-form textarea {
-  border: 1px solid #ffafcc;
+  border: 1px solid #5f5f5f;
   resize: none;
   font: 1.3rem "Oswald", sans-serif;
   padding: 1rem;
   width: 100%;
   max-width: 600px;
-  color: #ef476f;
+  color: black;
 }
 .contact-wrapper .contact-form .contact-form-button {
   padding: 1rem 2rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #cdb4db, #ffafcc);
+  background: linear-gradient(45deg, #3b3b3b, #5f5f5f);
   border: none;
   box-shadow: 5px 5px 10px black;
   box-shadow: 3px 3px 5px #cfcfcf;
@@ -1249,7 +1252,7 @@
 .contact-wrapper .contact-form .contact-form-button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 @media (min-width: 1000px) {
@@ -1281,7 +1284,7 @@
   margin-bottom: 5rem;
 }
 .login-form-wrapper .login-form label {
-  color: #ef476f;
+  color: black;
   font: 1.7rem "Oswald", sans-serif;
 }
 .login-form-wrapper .login-form input {
@@ -1289,9 +1292,9 @@
   width: 100%;
   height: 3rem;
   box-shadow: none;
-  border: 1px solid #ffafcc;
+  border: 1px solid #5f5f5f;
   margin: 0.3rem auto 2rem;
-  color: #ef476f;
+  color: black;
   font: 1.3rem "Oswald", sans-serif;
   padding: 0 1rem;
 }
@@ -1300,30 +1303,30 @@
 }
 .login-form-wrapper .login-form .contact-form-button {
   padding: 1rem 2rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #cdb4db, #ffafcc);
+  background: linear-gradient(45deg, #3b3b3b, #5f5f5f);
   border: none;
   box-shadow: 5px 5px 10px black;
-  background: #cdb4db;
+  background: #3b3b3b;
   box-shadow: 3px 3px 5px #cfcfcf;
   margin: 1rem auto;
 }
 .login-form-wrapper .login-form .contact-form-button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 
 * {
   font-family: "Shippori Mincho B1", serif;
-  color: #292929;
+  color: black;
   box-sizing: border-box;
 }
 
@@ -1384,7 +1387,7 @@
 .header_menu {
   position: relative;
   margin: 0 0 0 2rem;
-  background: #ef476f;
+  background: black;
   height: 3rem;
   width: 3rem;
   border-radius: 3rem;
@@ -1408,7 +1411,7 @@
   margin: 0 5vw 0 0;
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
-  color: #ef476f;
+  color: black;
   flex-grow: 7;
   font-stretch: extra-condensed;
 }
@@ -1416,7 +1419,7 @@
   font-family: "Kristi", cursive;
   transform: rotate(90deg);
   font-size: 2.5rem;
-  color: #2b2b2b;
+  color: #242424;
 }
 
 .menu-container {
@@ -1426,7 +1429,7 @@
   left: 0;
   top: 0;
   height: 100vh;
-  background-color: #ffafcc;
+  background-color: #5f5f5f;
   display: block;
   z-index: 2;
 }
@@ -1436,7 +1439,7 @@
   position: relative;
   left: 0;
   font: 400 2rem "Oswald", sans-serif;
-  color: #ef476f;
+  color: black;
   width: 80%;
   margin: 1rem auto;
   text-decoration: none;
@@ -1444,7 +1447,7 @@
 }
 .menu-container a:visited,
 .menu-container .a-open:visited {
-  color: #ef476f;
+  color: black;
 }
 .menu-container a:first-of-type,
 .menu-container .a-open:first-of-type {
@@ -1452,7 +1455,7 @@
 }
 .menu-container a:hover,
 .menu-container .a-open:hover {
-  color: #2b2b2b;
+  color: #242424;
 }
 .menu-container .a-close {
   color: transparent;
@@ -1526,7 +1529,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   margin: 1rem 0;
-  color: #ef476f;
+  color: black;
 }
 .all-posts-grid .post-card .post-card_date {
   font: 400 0.8rem "IBM Plex Sans", sans-serif;
@@ -1540,14 +1543,14 @@
 }
 .all-posts-grid .post-card .post-card_button--read-more {
   padding: 1rem 2rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #cdb4db, #ffafcc);
+  background: linear-gradient(45deg, #3b3b3b, #5f5f5f);
   border: none;
   box-shadow: 5px 5px 10px black;
   box-shadow: 5px 5px 5px #b3b3b3;
@@ -1556,7 +1559,7 @@
 .all-posts-grid .post-card .post-card_button--read-more:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 .all-posts-grid .post-card .post-card_title-and-content {
@@ -1605,7 +1608,7 @@
 }
 .featured-section .featured-section_title {
   font: 800 2rem "Oswald", sans-serif;
-  color: #ef476f;
+  color: black;
   margin: 0 auto;
   text-align: center;
   white-space: pre-wrap;
@@ -1635,7 +1638,7 @@
   }
 }
 .youtube-video-section .what-others-are-saying {
-  color: #ef476f;
+  color: black;
   background: white;
   margin: auto;
   text-align: center;
@@ -1649,14 +1652,14 @@
 .what-others-are-saying {
   width: 100%;
   padding: 2rem;
-  background-color: #2b2b2b;
+  background-color: #242424;
   color: white;
   text-align: center;
   font: 800 1.3rem "Oswald", sans-serif;
 }
 
 .public-comments {
-  background: #2b2b2b;
+  background: #242424;
   width: 100%;
   display: flex;
   align-items: center;
@@ -1705,7 +1708,7 @@
 }
 
 .leave-a-comment-wrapper {
-  background: #2b2b2b;
+  background: #242424;
   padding: 2rem;
 }
 @media (min-width: 1000px) {
@@ -1715,28 +1718,28 @@
 }
 .leave-a-comment-wrapper .leave-a-comment {
   padding: 1rem 2rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #cdb4db, #ffafcc);
+  background: linear-gradient(45deg, #3b3b3b, #5f5f5f);
   border: none;
   box-shadow: 5px 5px 10px black;
 }
 .leave-a-comment-wrapper .leave-a-comment:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 
 .footer {
   height: 5rem;
   width: 100%;
-  background: #ffafcc;
+  background: #5f5f5f;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -1746,7 +1749,7 @@
   width: 2.5rem;
   height: 2.5rem;
   margin: 0 1rem;
-  fill: #ef476f;
+  fill: black;
 }
 .footer .social-media-icon svg:hover {
   fill: white;
@@ -1758,7 +1761,7 @@
   text-align: center;
   font: 800 0.8rem "Oswald", sans-serif;
   color: white;
-  background: #cdb4db;
+  background: #3b3b3b;
   padding: 1rem 0;
 }
 
@@ -1791,7 +1794,7 @@
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  border: 5px solid #ffafcc;
+  border: 5px solid #5f5f5f;
   padding: 0.3rem;
 }
 #popup-bkg .public-comments_name {
@@ -1819,14 +1822,14 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  border: 5px solid #ffafcc;
+  border: 5px solid #5f5f5f;
   padding: 0.3rem;
 }
 
 .choose-your-avatar {
   width: 100%;
   margin: auto;
-  background: #2b2b2b;
+  background: #242424;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -1908,7 +1911,7 @@
   margin-left: 10%;
   display: block;
   max-width: 300px;
-  background: #2b2b2b;
+  background: #242424;
   border: none;
 }
 #subscribe-menu:hover,
@@ -1924,12 +1927,12 @@
 }
 
 #pay-button {
-  color: #2b2b2b;
+  color: #242424;
 }
 
 #button-form-wrapper {
   background: #f2f2f2;
-  color: #2b2b2b;
+  color: #242424;
   width: 90%;
   max-width: 30rem;
   margin: auto;
@@ -1944,7 +1947,7 @@
   text-align: center;
   margin: 0 0 2rem 0;
   font: 800 1.3rem "Oswald", sans-serif;
-  color: #cdb4db;
+  color: #3b3b3b;
 }
 #button-form-wrapper form {
   width: 80%;
@@ -1962,7 +1965,7 @@
   margin: 2rem auto;
   display: block;
   max-width: 300px;
-  background: #2b2b2b;
+  background: #242424;
   border: none;
 }
 .close-button-wrapper:hover {
@@ -1977,7 +1980,7 @@
   margin: 8rem auto 0;
   width: 90%;
   text-align: center;
-  color: #ef476f;
+  color: black;
 }
 
 .search-form {
@@ -2000,7 +2003,7 @@
 }
 .search-form input {
   border: none;
-  border-bottom: 1px solid #ffafcc;
+  border-bottom: 1px solid #5f5f5f;
   height: 3rem;
   background-image: none;
   background-color: transparent;
@@ -2009,7 +2012,7 @@
   box-shadow: none;
   padding-left: 1rem;
   font: 1.5rem "Oswald", sans-serif;
-  color: #ef476f;
+  color: black;
   width: 60%;
   max-width: 400px;
 }
@@ -2021,19 +2024,19 @@
 }
 .search-form .earch-form_button {
   padding: 1rem 2rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #cdb4db, #ffafcc);
+  background: linear-gradient(45deg, #3b3b3b, #5f5f5f);
   border: none;
   box-shadow: 5px 5px 10px black;
   display: inline-block;
   box-shadow: none;
-  background: #cdb4db;
+  background: #3b3b3b;
   padding: 1rem;
   font-size: 0.8rem;
   margin: 0;
@@ -2041,7 +2044,7 @@
 .search-form .earch-form_button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 
@@ -2052,28 +2055,28 @@
 }
 .dorpdown .dropdown-button {
   padding: 1rem 2rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #cdb4db, #ffafcc);
+  background: linear-gradient(45deg, #3b3b3b, #5f5f5f);
   border: none;
   box-shadow: 5px 5px 10px black;
   display: inline-block;
   box-shadow: none;
-  background: #cdb4db;
+  background: #3b3b3b;
   padding: 1rem;
   font-size: 0.8rem;
   margin: 0;
-  background: #2b2b2b;
+  background: #242424;
 }
 .dorpdown .dropdown-button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 .dorpdown .dropdown-button .dropdown-button-arrow {
@@ -2105,9 +2108,9 @@
 }
 .dorpdown .dropdown-tag {
   padding: 1rem;
-  color: #2b2b2b;
+  color: #242424;
   font: 1rem "Oswald", sans-serif;
-  background: #ffafcc;
+  background: #5f5f5f;
   display: inline-block;
   margin: 0.3rem 0.5rem;
 }
@@ -2132,24 +2135,24 @@
 
 .all-posts-button {
   padding: 1rem 2rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #cdb4db, #ffafcc);
+  background: linear-gradient(45deg, #3b3b3b, #5f5f5f);
   border: none;
   box-shadow: 5px 5px 10px black;
   box-shadow: 5px 5px 5px #a8a8a8;
   margin: 3rem auto 0;
-  background: #cdb4db;
+  background: #3b3b3b;
 }
 .all-posts-button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 @media (min-width: 1000px) {
@@ -2189,8 +2192,8 @@
 }
 
 .no-posts-found-yet {
-  color: #ef476f;
-  background: #ffafcc;
+  color: black;
+  background: #5f5f5f;
 }
 
 .categories-wtapper-filter {
@@ -2215,7 +2218,7 @@
 }
 .paggination-buttons a {
   font: 800 1rem "Oswald", sans-serif;
-  color: #ef476f;
+  color: black;
 }
 .paggination-buttons a div {
   display: inline-block;
@@ -2238,14 +2241,14 @@
 
 #skipt-to-extreme {
   display: none;
-  color: #cdb4db;
+  color: #3b3b3b;
   text-decoration: underline;
 }
 
 .all-posts-title-profile {
   margin: 10rem auto 0;
   font: 800 2rem "Oswald", sans-serif;
-  color: #cdb4db;
+  color: #3b3b3b;
   width: 100%;
   max-width: 56rem;
   text-align: center;
@@ -2261,7 +2264,7 @@
 }
 .search-form-profile input {
   border: none;
-  border-bottom: 1px solid #ffafcc;
+  border-bottom: 1px solid #5f5f5f;
   height: 3rem;
   background-image: none;
   background-color: transparent;
@@ -2270,7 +2273,7 @@
   box-shadow: none;
   padding-left: 1rem;
   font: 1.5rem "Oswald", sans-serif;
-  color: #ef476f;
+  color: black;
   width: 60%;
   max-width: 400px;
 }
@@ -2282,19 +2285,19 @@
 }
 .search-form-profile .earch-form_button {
   padding: 1rem 2rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #cdb4db, #ffafcc);
+  background: linear-gradient(45deg, #3b3b3b, #5f5f5f);
   border: none;
   box-shadow: 5px 5px 10px black;
   display: inline-block;
   box-shadow: none;
-  background: #cdb4db;
+  background: #3b3b3b;
   padding: 1rem;
   font-size: 0.8rem;
   margin: 0;
@@ -2302,7 +2305,7 @@
 .search-form-profile .earch-form_button:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 
@@ -2313,20 +2316,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 2px solid #ffafcc;
+  border-bottom: 2px solid #5f5f5f;
 }
 .posts-or-comments-wrap div {
   font: 400 0.8rem "Oswald", sans-serif;
-  background: #ffafcc;
+  background: #5f5f5f;
   color: white;
   padding: 1rem;
 }
 .posts-or-comments-wrap div:hover {
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 .posts-or-comments-wrap .posts-or-comments-wrap_posts {
-  background: #cdb4db;
+  background: #3b3b3b;
 }
 .posts-or-comments-wrap .posts-or-comments-wrap_posts,
 .posts-or-comments-wrap .posts-or-comments-wrap_comments {
@@ -2368,7 +2371,7 @@
 .all-posts-grid-profile .post-card .post-card_title-and-content .post-card_post-title {
   font: 600 1.2rem "Oswald", sans-serif;
   margin: 0.3rem;
-  color: #ef476f;
+  color: black;
 }
 .all-posts-grid-profile .post-card .post-card_title-and-content .post-card_date {
   font: 400 0.8rem "IBM Plex Sans", sans-serif;
@@ -2394,7 +2397,7 @@
   display: inline-block;
 }
 .all-posts-grid-profile .post-card .post-card_options .post-card-options_read {
-  color: #cdb4db;
+  color: #3b3b3b;
   font: 400 1.2rem "Oswald", sans-serif;
   display: inline-block;
 }
@@ -2453,7 +2456,7 @@
 .public-comments-profile .public-comments_read,
 .public-comments-profile-comments .public-comments_read,
 .public-comments-profile-subscriber .public-comments_read {
-  color: #cdb4db;
+  color: #3b3b3b;
   font: 400 1.2rem "Oswald", sans-serif;
   display: inline-block;
   margin: 0 2rem;
@@ -2475,7 +2478,7 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  border: 5px solid #ffafcc;
+  border: 5px solid #5f5f5f;
   padding: 0.3rem;
 }
 .public-comments-profile .public-comments_name,
@@ -2509,7 +2512,7 @@
 .profile-menu {
   width: 100%;
   max-width: 750px;
-  background: #cdb4db;
+  background: #3b3b3b;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -2532,7 +2535,7 @@
   height: 100%;
 }
 .profile-menu a:hover {
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 .profile-menu a svg {
@@ -2561,12 +2564,12 @@
   margin: 1rem 0.3rem;
 }
 .stats-card div {
-  color: #2b2b2b;
+  color: #242424;
   font: 400 1.2rem "Oswald", sans-serif;
   padding: 0.3rem;
 }
 .stats-card div span {
-  color: #cdb4db;
+  color: #3b3b3b;
   font: 800 1.2rem "Oswald", sans-serif;
 }
 .stats-card .stats-wrap_delete {
@@ -2630,7 +2633,7 @@
 .settings {
   margin: 5rem auto;
   font: 800 1.3rem "Oswald", sans-serif;
-  color: #cdb4db;
+  color: #3b3b3b;
   width: 90%;
   max-width: 56rem;
   text-align: center;
@@ -2654,7 +2657,7 @@
   width: 90%;
   max-width: 56rem;
   padding: 1rem;
-  color: #2b2b2b;
+  color: #242424;
   font: 800 1.3rem "Oswald", sans-serif;
   background-color: #f2f2f2;
   display: flex;
@@ -2668,7 +2671,7 @@
 @media (min-width: 1000px) {
   .home-page-wrapper .page-toggle,
 .edit-general-settings-wrapper .page-toggle {
-    background: #ffafcc;
+    background: #5f5f5f;
     color: white;
     pointer-events: none;
     padding: 0.5rem 1rem;
@@ -2682,7 +2685,7 @@
   height: 1rem;
   border-right: 0.5rem solid transparent;
   border-left: 0.5rem solid transparent;
-  border-bottom: 0.8rem solid #2b2b2b;
+  border-bottom: 0.8rem solid #242424;
   top: 1.2rem;
   transform: rotate(90deg);
   position: absolute;
@@ -2728,7 +2731,7 @@
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
-  border: 5px solid #ffafcc;
+  border: 5px solid #5f5f5f;
 }
 @media (min-width: 700px) {
   .home-page-wrapper .homepage-images img,
@@ -2752,13 +2755,13 @@
 .home-page-wrapper form:not(.flex-column_1-2) label,
 .edit-general-settings-wrapper form:not(.flex-column_1-2) label {
   font: 800 1rem "Oswald", sans-serif;
-  color: #cdb4db;
+  color: #3b3b3b;
   display: block;
   margin: 0 0 0.3rem;
 }
 .home-page-wrapper form:not(.flex-column_1-2) input,
 .edit-general-settings-wrapper form:not(.flex-column_1-2) input {
-  color: #2b2b2b;
+  color: #242424;
   font: 1rem "IBM Plex Sans", sans-serif;
   margin: 0.3rem 0.5rem 1.5rem;
   border: 2px solid #f2f2f2;
@@ -2810,7 +2813,7 @@
   color: white;
   font: 800 1rem "Oswald", sans-serif;
   border: none;
-  background-color: #cdb4db;
+  background-color: #3b3b3b;
   cursor: pointer;
 }
 @media (min-width: 700px) {
@@ -2827,7 +2830,7 @@
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
-  border: 5px solid #ffafcc;
+  border: 5px solid #5f5f5f;
 }
 @media (min-width: 700px) {
   .home-page-wrapper img,
@@ -2853,7 +2856,7 @@
 .trigger-form.trifer-form-show-home-section .switch {
   width: 4rem;
   height: 2rem;
-  background-color: #2b2b2b;
+  background-color: #242424;
   border-radius: 1.5rem;
   flex-shrink: 0;
   position: relative;
@@ -2876,7 +2879,7 @@
   transform: translateX(2rem);
 }
 .trigger-form.trifer-form-show-home-section input:checked + .switch {
-  background: #ef476f;
+  background: black;
 }
 .trigger-form.trifer-form-show-home-section .item-with-margin {
   margin: 1rem auto;
@@ -2941,7 +2944,7 @@
 .edit-general-settings-wrapper h2 {
   margin: 5rem auto 1rem;
   font: 800 1.3rem "Oswald", sans-serif;
-  color: #cdb4db;
+  color: #3b3b3b;
   width: 90%;
   max-width: 56rem;
   text-align: center;
@@ -3001,7 +3004,7 @@
 .edit-general-settings-wrapper form .switch {
   width: 4rem;
   height: 2rem;
-  background-color: #2b2b2b;
+  background-color: #242424;
   border-radius: 1.5rem;
   flex-shrink: 0;
   position: relative;
@@ -3023,7 +3026,7 @@
   transform: translateX(2rem);
 }
 .edit-general-settings-wrapper form input:checked + .switch {
-  background: #ef476f;
+  background: black;
 }
 .edit-general-settings-wrapper form .update {
   margin: 1rem 0;
@@ -3049,7 +3052,7 @@
   padding: 0.5rem 0 0.5rem 0.5rem;
   font: 1.2rem "Oswald", sans-serif;
   width: 15rem;
-  background-color: #2b2b2b;
+  background-color: #242424;
   color: white;
 }
 @media (min-width: 700px) {
@@ -3145,7 +3148,7 @@
   width: 90%;
   max-width: 56rem;
   padding: 1rem;
-  color: #2b2b2b;
+  color: #242424;
   font: 800 1.3rem "Oswald", sans-serif;
   background-color: #f2f2f2;
   display: flex;
@@ -3158,7 +3161,7 @@
 }
 @media (min-width: 1000px) {
   .page-toggle {
-    background: #ffafcc;
+    background: #5f5f5f;
     color: white;
     pointer-events: none;
     padding: 2rem 1rem;
@@ -3171,7 +3174,7 @@
   height: 1rem;
   border-right: 0.5rem solid transparent;
   border-left: 0.5rem solid transparent;
-  border-bottom: 0.8rem solid #2b2b2b;
+  border-bottom: 0.8rem solid #242424;
   transform: rotate(90deg);
   position: absolute;
   margin-left: 88%;
@@ -3245,12 +3248,12 @@
 }
 .section-gray label {
   font: 800 1rem "Oswald", sans-serif;
-  color: #cdb4db;
+  color: #3b3b3b;
   display: block;
   margin: 0 0 0.3rem;
 }
 .section-gray input {
-  color: #2b2b2b;
+  color: #242424;
   font: 1rem "IBM Plex Sans", sans-serif;
   margin: 0.3rem 0 1.5rem;
   border: 2px solid #f2f2f2;
@@ -3320,6 +3323,7 @@
   top: 2rem;
   right: 2rem;
   z-index: 5;
+  background-color: white;
 }
 @media (min-width: 1000px) {
   .desktop-settings-nav-wrapper_U-1-2 {
@@ -3341,7 +3345,7 @@
 }
 .desktop-settings-nav-wrapper_U-1-2 div:hover {
   cursor: pointer;
-  background-color: #cdb4db;
+  background-color: #3b3b3b;
 }
 .desktop-settings-nav-wrapper_U-1-2 .home_U-1-2 {
   background-image: url("../images/utility-icons/home-icon.png");
@@ -3356,7 +3360,7 @@
   background-image: url("../images/utility-icons/others-icon.png");
 }
 .desktop-settings-nav-wrapper_U-1-2 .focused {
-  background-color: #cdb4db;
+  background-color: #3b3b3b;
 }
 
 #home-div-trigger_U-1-2 {
@@ -3459,14 +3463,15 @@
 }
 
 .password-update {
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   color: white;
   font: 800 1rem "Oswald", sans-serif;
   border: none;
-  background-color: #119822;
+  background-color: black;
   cursor: pointer;
   display: block;
   margin: 2rem auto;
+  width: 300px;
 }
 
 .account-wrapper {
@@ -3501,7 +3506,7 @@
 }
 .post-title-content-wrapper label {
   font: 800 1rem "Oswald", sans-serif;
-  color: #cdb4db;
+  color: #3b3b3b;
   display: block;
   margin: 0.3rem 0;
   width: 100%;
@@ -3518,7 +3523,7 @@
 .CKE-post-title,
 .CKE-post-content,
 .CKE-post-author {
-  color: #2b2b2b;
+  color: #242424;
   font: 1rem "Oswald", sans-serif;
   margin: 0.3rem 0 1rem;
   border: 2px solid #f2f2f2;
@@ -3550,7 +3555,7 @@
 
 .standard-h3 {
   font: 800 1rem "Oswald", sans-serif;
-  color: #cdb4db;
+  color: #3b3b3b;
   display: block;
   margin: 0.3rem 0;
 }
@@ -3612,17 +3617,17 @@
 
 .send-post {
   padding: 1rem 2rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #cdb4db, #ffafcc);
+  background: linear-gradient(45deg, #3b3b3b, #5f5f5f);
   border: none;
   box-shadow: 5px 5px 10px black;
-  background: #cdb4db;
+  background: #3b3b3b;
   box-shadow: 5px 5px 5px #c4c4c4;
   display: inline-block;
   margin: 1rem;
@@ -3633,20 +3638,20 @@
 .send-post:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 
 .cancel-post {
   padding: 1rem 2rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   color: #ffffff;
   font: 800 1.2rem "Oswald", sans-serif;
   text-align: center;
   margin: auto;
   display: block;
   max-width: 300px;
-  background: linear-gradient(45deg, #cdb4db, #ffafcc);
+  background: linear-gradient(45deg, #3b3b3b, #5f5f5f);
   border: none;
   box-shadow: 5px 5px 10px black;
   background: #af3434;
@@ -3660,7 +3665,7 @@
 .cancel-post:hover {
   transform: scale(0.95);
   transition: transform 500ms;
-  background: #ef476f;
+  background: black;
   cursor: pointer;
 }
 .cancel-post:hover {
@@ -3700,7 +3705,7 @@
 .card-on-bck h3,
 #delete-route h3 {
   font-family: "Oswald", sans-serif;
-  color: #2b2b2b;
+  color: #242424;
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -3712,7 +3717,7 @@
 #getYT-data {
   padding: 0.5rem;
   margin-top: 1rem;
-  background-color: #2b2b2b;
+  background-color: #242424;
   color: white;
   width: 10rem;
   font: 0.8rem "IBM Plex Sans", sans-serif;
@@ -3821,7 +3826,7 @@
 .posts-buttons-new .switch {
   width: 4rem;
   height: 2rem;
-  background-color: #2b2b2b;
+  background-color: #242424;
   border-radius: 1.5rem;
   flex-shrink: 0;
   position: relative;
@@ -3844,7 +3849,7 @@
   transform: translateX(2rem);
 }
 .posts-buttons-new input:checked + .switch {
-  background: #ef476f;
+  background: black;
 }
 
 #raw-image-grid {
@@ -3907,13 +3912,13 @@
 }
 .error-wrapper h2 {
   font: 600 2rem "Oswald", sans-serif;
-  color: #cdb4db;
+  color: #3b3b3b;
 }
 .error-wrapper .goBack {
   font: 600 1.3rem "Oswald", sans-serif;
   color: white;
   margin: 1rem;
-  background: #cdb4db;
+  background: #3b3b3b;
   cursor: pointer;
   padding: 0.5rem 1rem;
 }
@@ -3932,14 +3937,14 @@
 }
 .success-wrapper h1 {
   font: 800 2rem "Oswald", sans-serif;
-  color: #cdb4db;
+  color: #3b3b3b;
   margin: 2rem auto;
   width: 100%;
   text-align: center;
 }
 .success-wrapper p {
   font: 600 1.5rem "Oswald", sans-serif;
-  color: #2b2b2b;
+  color: #242424;
   margin: 2rem auto;
   width: 100%;
   text-align: center;
@@ -3948,7 +3953,7 @@
   font: 600 1.3rem "Oswald", sans-serif;
   color: white;
   margin: 2rem auto;
-  background: #2b2b2b;
+  background: #242424;
   cursor: pointer;
   padding: 1rem 2rem;
 }
@@ -3958,7 +3963,7 @@
   background-color: #525252;
 }
 .success-wrapper span {
-  color: #ffafcc;
+  color: #5f5f5f;
   font: 600 1.3rem "Oswald", sans-serif;
 }
 
@@ -4157,7 +4162,7 @@
   }
   .featured-section .featured-section-title-content-wrapper .featured-section_title {
     font: 800 2.5rem "Oswald", sans-serif;
-    color: #ef476f;
+    color: black;
     margin: 0 auto;
     text-align: left;
   }
@@ -4236,6 +4241,7 @@
 
   .append-resulting-childs-subs {
     flex-wrap: wrap;
+    min-height: 50vh;
   }
   .append-resulting-childs-subs .public-comments-profile-subscriber {
     width: auto;

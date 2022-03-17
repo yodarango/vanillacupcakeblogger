@@ -80,7 +80,9 @@
 				margin: auto;
 			}
 			.contact-svg {
-				width: 10rem;
+				min-width: 10rem;
+				max-width: 500px;
+				width: 90%;
 				margin: $macro-space-around-element auto;
 				display: block;
 
@@ -95,6 +97,7 @@
 				text-align: center;
 				width: 100%;
 				line-height: $line-height;
+				color: $lettering;
 			}
 		}
 		.contact-form {

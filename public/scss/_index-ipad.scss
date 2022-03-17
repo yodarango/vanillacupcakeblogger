@@ -135,6 +135,7 @@
 
 	.append-resulting-childs-subs {
 		flex-wrap: wrap;
+		min-height: 50vh;
 
 		.public-comments-profile-subscriber {
 			width: auto;
