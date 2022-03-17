@@ -40,7 +40,7 @@ module.exports.sendTheMail = (fields) => {
         <style>
         .thumbnail{
           width: 100%;
-          background-image: url('https://res.cloudinary.com/savvysaute-com/image/upload/v1647443745/emails/mathyas-kurmann-fb7yNPbT0l8-unsplash_1_xpnrbi.jpg');
+          background-image: url('https://res.cloudinary.com/pressonponderings-com/image/upload/v1647443745/emails/mathyas-kurmann-fb7yNPbT0l8-unsplash_1_xpnrbi.jpg');
           height: 100vw;
           max-width: 500px;
           max-height: 500px;
@@ -104,7 +104,7 @@ module.exports.newPostEmail = (users) => {
         <style>
         .thumbnail{
           width: 100%;
-          background-image: url('https://res.cloudinary.com/savvysaute-com/image/upload/v1647453371/emails/food2_1_tjaxba.jpg');
+          background-image: url('https://res.cloudinary.com/pressonponderings-com/image/upload/v1647453371/emails/food2_1_tjaxba.jpg');
           height: 100vw;
           max-width: 500px;
           max-height: 500px;
@@ -170,7 +170,7 @@ module.exports.newPasswordEmail = (password) => {
         <style>
         .thumbnail{
           width: 100%;
-          background-image: url('https://res.cloudinary.com/savvysaute-com/image/upload/v1647448187/emails/lock_bp8wu4.jpg');
+          background-image: url('https://res.cloudinary.com/pressonponderings-com/image/upload/v1647448187/emails/lock_bp8wu4.jpg');
           height: 100vw;
           max-width: 500px;
           max-height: 500px;
@@ -241,7 +241,7 @@ module.exports.newCommentEmail = (name, comment) => {
         <style>
         .thumbnail{
           width: 100%;
-          background-image: url('https://res.cloudinary.com/savvysaute-com/image/upload/v1647448168/emails/comment_orm938.jpg');
+          background-image: url('https://res.cloudinary.com/pressonponderings-com/image/upload/v1647448168/emails/comment_orm938.jpg');
           height: 100vw;
           max-width: 500px;
           max-height: 500px;
@@ -313,7 +313,7 @@ module.exports.newSubscriberEmail = (email) => {
         <style>
         .thumbnail{
           width: 100%;
-          background-image: url('https://res.cloudinary.com/savvysaute-com/image/upload/v1647443805/emails/savvysaute_vkymes.png');
+          background-image: url('https://res.cloudinary.com/pressonponderings-com/image/upload/v1647443805/emails/pressonponderings_vkymes.png');
           height: 100vw;
           max-width: 500px;
           max-height: 500px;
@@ -383,7 +383,7 @@ module.exports.newSubscriberAdminEmail = (name) => {
         <style>
         .thumbnail{
           width: 100%;
-          background-image: url('https://res.cloudinary.com/savvysaute-com/image/upload/v1647443805/emails/savvysaute_vkymes.png');
+          background-image: url('https://res.cloudinary.com/pressonponderings-com/image/upload/v1647443805/emails/pressonponderings_vkymes.png');
           height: 100vw;
           max-width: 500px;
           max-height: 500px;
@@ -453,7 +453,7 @@ module.exports.newContactFormEmail = (name, email, phone, message) => {
         <style>
         .thumbnail{
           width: 100%;
-          background-image: url('https://res.cloudinary.com/savvysaute-com/image/upload/v1647443745/emails/mathyas-kurmann-fb7yNPbT0l8-unsplash_1_xpnrbi.jpg');
+          background-image: url('https://res.cloudinary.com/pressonponderings-com/image/upload/v1647443745/emails/mathyas-kurmann-fb7yNPbT0l8-unsplash_1_xpnrbi.jpg');
           height: 100vw;
           max-width: 500px;
           max-height: 500px;
