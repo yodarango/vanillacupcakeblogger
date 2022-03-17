@@ -2,7 +2,7 @@
 // const sgMail = require('@sendgrid/mail');
 // sgMail.setApiKey(process.env.SEND_GRID);
 
-// const verifiedSGSender = 'pressonponderings@gmail.com';
+// const verifiedSGSender = 'savvysaute@gmail.com';
 
 // module.exports.sendEmail = async (to, subject, html) => {
 // 	const msg = {

@@ -3421,6 +3421,11 @@
   margin: 2rem auto 0;
   transform: translateY(4rem);
 }
+@media (min-width: 1000px) {
+  .notifications-wrapper_U-1-2 {
+    margin-top: 3rem;
+  }
+}
 
 .spacer-account {
   margin: 7rem;

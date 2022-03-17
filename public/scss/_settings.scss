@@ -807,6 +807,10 @@
 	max-width: 56rem;
 	margin: 2rem auto 0;
 	transform: translateY(4rem);
+
+	@media (min-width: 1000px) {
+		margin-top: 3rem;
+	}
 }
 // .genrealsettings_U-1-2 {
 // 	@media (min-width: 1000px) {
