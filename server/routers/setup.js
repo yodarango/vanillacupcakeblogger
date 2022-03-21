@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 		secondName: 'Blog',
 		logo: 'Logog',
 		background: 'Background',
-		featuredTitle: `What is the savvy saute?`,
+		featuredTitle: `What is the presson ponderings?`,
 
 		featuredContent: `The Vanilla Cupcake Blooger is a fully customizable blog for those who take blogging seriously. 
         Built with the best SEO practices, the greatest technologies and the the latest design petterns.`,
@@ -55,7 +55,7 @@ router.get('/', async (req, res) => {
 	};
 
 	const newPost = {
-		title: `What is the savvy saute?`,
+		title: `What is the presson ponderings?`,
 		content: `Bloggin had never been so easy and 🤩🧁 !! `,
 		author: `Test`,
 		postContent: `<p>The Vanilla Cupcake Blooger is a fully customizable blog for those who take blogging seriously. 
