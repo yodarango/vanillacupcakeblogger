@@ -3427,6 +3427,11 @@
   }
 }
 
+.std-link_U-1-2 {
+  text-decoration: underline;
+  font: 800 1.2rem "Oswald", sans-serif;
+}
+
 .spacer-account {
   margin: 7rem;
 }
@@ -4130,6 +4135,20 @@
 }
 .CKPost-wrapper-ck-fill-pkg p {
   font: 400 1.2rem "Oswald", sans-serif;
+  margin: 0 !important;
+  width: 100% !important;
+}
+.CKPost-wrapper-ck-fill-pkg img {
+  width: 100% !important;
+  max-height: 30rem !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  margin: 0 auto !important;
+}
+@media (max-width: 600px) {
+  .CKPost-wrapper-ck-fill-pkg img {
+    max-height: 16rem !important;
+  }
 }
 
 @media (min-width: 700px) {
