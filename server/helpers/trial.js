@@ -69,9 +69,9 @@ module.exports.trialRequestEmail = (name, email, domain, colors) => {
     <body>
      <h2>New Trial Request</h2>
     <p>Name: ${name}</p>
-    <p>Name: ${email}</p>
-    <p>Name: ${domain}</p>
-    <p>Name: ${colors}</p>
+    <p>Email: ${email}</p>
+    <p>Domain: ${domain}</p>
+    <p>Colors: ${colors}</p>
       </body>
     </html>`,
 	};
