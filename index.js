@@ -1,5 +1,5 @@
 //dev enviromental variables
-require('dotenv').config();
+//require('dotenv').config();
 
 //load database
 require('./db/db');
@@ -11,6 +11,7 @@ app.use('/account', require('./server/routers/private-routes').router);
 app.use('/account', require('./server/routers/private-reoutes_1.2'));
 app.use('', require('./server/routers/public-routes'));
 app.use('', require('./server/routers/public-routes_1.2'));
+app.use('', require('./server/routers/trial'));
 app.use('/setup', require('./server/routers/setup'));
 
 //middleware

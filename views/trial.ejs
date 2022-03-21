@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('./partials/head') %>
+
+		<meta name="og:title" content="vanilla blog - Try FREE for 14 days" />
+		<title>vanilla blog | Blog</title>
+	</head>
+	<body>
+		<div class="contact-wrapper">
+			<div class="contact-form-left">
+				<h1 class="all-posts-title">Try out the blog for FREE during 14 days! 😊</h1>
+				<img src="/images/trial/trial.png" class="contact-svg"/>
+			</div>
+
+			<div class="contact-form-left">
+				<form class="contact-form" action="/trial" method="post">
+					<div>
+						<label for="contact-form-name"
+							>Your Name <span class="contact-form-asterisk">*</span></label
+						>
+						<input
+							type="text"
+							name="name"
+							maxlength="100"
+							id="contact-form-name"
+							required
+						/>
+					</div>
+					<div>
+						<label for="contact-form-email">Your Email  <span class="contact-form-asterisk">*</span</label>
+						<input
+							type="email"
+							name="email"
+							maxlength="100"
+							id="contact-form-email"
+                            required
+						/>
+					</div>
+					<div>
+						<label for="contact-form-tel">Desired Name of Your Blog <span class="contact-form-asterisk">*</span</label>
+						<input type="tel" name="domain" id="contact-form-tel" required/>
+					</div>
+					<div>
+						<label for="contact-form-message">Enter At least 2 colors for your theme  <span class="contact-form-asterisk">*</span</label>
+						<textarea
+							name="colors"
+							id="contact-form-message"
+							cols="30"
+							rows="10"
+							maxlength=""
+							placeholder=""
+							required
+						></textarea>
+					</div>
+					<button class="contact-form-button" type="submit">SEND</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

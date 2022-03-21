@@ -1,2 +1,6 @@
 node_modules
 .env
+# public/images/trial
+# server/helpers/trial.js
+# server/routers/trial.js
+# views/trial.ejs
