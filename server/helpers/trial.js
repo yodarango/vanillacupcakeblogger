@@ -8,6 +8,16 @@ const adminEmail = process.env.ADMIN_EMAIL;
 const authEmail = process.env.ADMIN_SMTP;
 const hostSMTP = process.env.HOST_SMTP;
 
+const transporter = nodemailer.createTransport({
+	host: hostSMTP, //'smtp.gmail.com', // hostname
+	secureConnection: false, // TLS requires secureConnection to be false
+	port: 587, // port for secure SMTP
+	auth: {
+		user: process.env.ADMIN_SMTP,
+		pass: process.env.EMAIL_PASSWORD,
+	},
+});
+
 const sendIt = (mailOptions) => {
 	console.log('reached');
 	transporter.sendMail(mailOptions, function (error, info) {
@@ -19,7 +29,7 @@ const sendIt = (mailOptions) => {
 	});
 };
 
-module.exports.trialQequestEmail = (name, email, domain, colors) => {
+module.exports.trialRequestEmail = (name, email, domain, colors) => {
 	const mailOptions = {
 		from: authEmail,
 		to: adminEmail,
